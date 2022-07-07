@@ -14,6 +14,9 @@ class MainViewController: UIViewController {
          
     @IBOutlet weak var simpleView: UIView!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         splashView.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
@@ -21,10 +24,9 @@ class MainViewController: UIViewController {
         launchImage.contentMode = .scaleAspectFit
         splashView.addSubview(launchImage)
         splashView.removeFromSuperview()
-
+    
         // FIXME: -- Change background color when design it's done.
         simpleView.backgroundColor = .green
-        
 
     }
 }
