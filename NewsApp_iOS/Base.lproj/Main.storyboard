@@ -3,8 +3,10 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="so5-mx-Flu"/>
@@ -28,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="-922" y="15"/>
         </scene>
-        <!--Item-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="initController" id="BYZ-38-t0r" customClass="MainViewController" customModule="NewsApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,18 +43,47 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="289"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="collectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-Ju-jhV">
+                                <rect key="frame" x="0.0" y="289" width="414" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bBB-hh-LDY">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CarrouselCell" id="YhN-Jt-4SL" customClass="CarrouselCell" customModule="NewsApp_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uqP-Ik-Kgw">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hSJ-AF-x43"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fjw-Jv-Xcv"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1I8-ff-aL3"/>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1I8-ff-aL3" firstAttribute="bottom" secondItem="tR8-Ju-jhV" secondAttribute="bottom" id="7D5-ZQ-ceK"/>
                             <constraint firstItem="9UZ-Zy-tT0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DIE-s1-0eu"/>
+                            <constraint firstItem="tR8-Ju-jhV" firstAttribute="top" secondItem="9UZ-Zy-tT0" secondAttribute="bottom" id="GBc-Dy-dgn"/>
                             <constraint firstAttribute="trailing" secondItem="9UZ-Zy-tT0" secondAttribute="trailing" id="W9M-PB-li2"/>
+                            <constraint firstItem="tR8-Ju-jhV" firstAttribute="leading" secondItem="1I8-ff-aL3" secondAttribute="leading" id="WjN-5l-8N6"/>
                             <constraint firstAttribute="bottom" secondItem="9UZ-Zy-tT0" secondAttribute="bottom" constant="607" id="Z2g-WS-f1j"/>
+                            <constraint firstItem="1I8-ff-aL3" firstAttribute="trailing" secondItem="tR8-Ju-jhV" secondAttribute="trailing" id="bwW-Ps-ogl"/>
                             <constraint firstItem="9UZ-Zy-tT0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="itp-hz-Ayf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xXS-yW-DYm"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="xXS-yW-DYm"/>
                     <connections>
+                        <outlet property="collectionView" destination="tR8-Ju-jhV" id="2F9-4X-zh3"/>
                         <outlet property="simpleView" destination="9UZ-Zy-tT0" id="xgn-GL-77c"/>
                     </connections>
                 </viewController>
@@ -59,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="-191" y="-874"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="xzP-2z-h9E">
             <objects>
                 <viewController id="y7z-nb-Vpc" sceneMemberID="viewController">
@@ -69,13 +101,15 @@
                         <viewLayoutGuide key="safeArea" id="Qxt-nJ-VU4"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="uOQ-nL-hn3"/>
+                    <tabBarItem key="tabBarItem" title="" id="uOQ-nL-hn3">
+                        <imageReference key="image" image="chart.xyaxis.line" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49B-gl-2gK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="862" y="-642"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="xZX-uJ-NRB">
             <objects>
                 <viewController id="LBz-ZQ-IJb" sceneMemberID="viewController">
@@ -85,13 +119,15 @@
                         <viewLayoutGuide key="safeArea" id="8ar-Cj-nH9"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Qwo-GE-soG"/>
+                    <tabBarItem key="tabBarItem" title="" id="Qwo-GE-soG">
+                        <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHO-oW-KFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="80" y="595"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="eYZ-Pa-CYb">
             <objects>
                 <viewController id="X2F-8o-xea" sceneMemberID="viewController">
@@ -101,7 +137,9 @@
                         <viewLayoutGuide key="safeArea" id="bFS-is-3oz"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jcR-ay-Dlz"/>
+                    <tabBarItem key="tabBarItem" title="" id="jcR-ay-Dlz">
+                        <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLH-Dz-P6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,6 +147,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.xyaxis.line" catalog="system" width="128" height="101"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

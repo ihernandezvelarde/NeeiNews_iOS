@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B14F4EB0287843F1004ACA5E /* CarrouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F4EAE287843F1004ACA5E /* CarrouselCell.swift */; };
+		B14F4EB1287843F1004ACA5E /* CarrouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B14F4EAF287843F1004ACA5E /* CarrouselCell.xib */; };
 		B19D256A2875CE3A0036A669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19D25692875CE3A0036A669 /* AppDelegate.swift */; };
 		B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19D256B2875CE3A0036A669 /* SceneDelegate.swift */; };
 		B19D256E2875CE3A0036A669 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19D256D2875CE3A0036A669 /* MainViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B14F4EAE287843F1004ACA5E /* CarrouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselCell.swift; sourceTree = "<group>"; };
+		B14F4EAF287843F1004ACA5E /* CarrouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarrouselCell.xib; sourceTree = "<group>"; };
 		B19D25662875CE3A0036A669 /* NewsApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19D25692875CE3A0036A669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B19D256B2875CE3A0036A669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B14F4EA328782A19004ACA5E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B14F4EAE287843F1004ACA5E /* CarrouselCell.swift */,
+				B14F4EAF287843F1004ACA5E /* CarrouselCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		B19D255D2875CE3A0036A669 = {
 			isa = PBXGroup;
 			children = (
+				B14F4EA328782A19004ACA5E /* Cells */,
 				B19D25682875CE3A0036A669 /* NewsApp_iOS */,
 				B19D25672875CE3A0036A669 /* Products */,
 			);
@@ -127,6 +141,7 @@
 			files = (
 				B19D25762875CE3C0036A669 /* LaunchScreen.storyboard in Resources */,
 				B19D25732875CE3C0036A669 /* Assets.xcassets in Resources */,
+				B14F4EB1287843F1004ACA5E /* CarrouselCell.xib in Resources */,
 				B19D25712875CE3A0036A669 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +155,7 @@
 			files = (
 				B19D256E2875CE3A0036A669 /* MainViewController.swift in Sources */,
 				B19D256A2875CE3A0036A669 /* AppDelegate.swift in Sources */,
+				B14F4EB0287843F1004ACA5E /* CarrouselCell.swift in Sources */,
 				B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
