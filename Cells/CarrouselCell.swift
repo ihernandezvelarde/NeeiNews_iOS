@@ -2,16 +2,16 @@
 //  CarrouselCell.swift
 //  NewsApp_iOS
 //
-//  Created by Irene Hernández on 8/7/22.
+//  Created by Irene Hernández on 11/7/22.
 //
 
 import UIKit
 
 class CarrouselCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var newsTitleLabel: UILabel!
-    @IBOutlet weak var newsFirstLineLabel: UILabel!
-    @IBOutlet weak var newsSecondLineLabel: UILabel!
+    @IBOutlet weak var newsFirstLine: UILabel!
+    @IBOutlet weak var newsSecondLine: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
