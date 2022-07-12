@@ -8,7 +8,9 @@
 import UIKit
 
 class ButtonCell: UICollectionViewCell {
-    
-    @IBOutlet weak var labelprueba: UILabel!
-    
+        
+    @IBOutlet weak var boton: UIButton!
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }
