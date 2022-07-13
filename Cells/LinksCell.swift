@@ -10,9 +10,7 @@ import UIKit
 class LinksCell: UICollectionViewCell {
     
     @IBOutlet weak var facebookButton: UIButton!
-    
     @IBOutlet weak var instagramButton: UIButton!
-    
     @IBOutlet weak var youtubeButton: UIButton!
     
     public override func awakeFromNib() {
@@ -27,7 +25,7 @@ class LinksCell: UICollectionViewCell {
         youtubeButton.setImage((UIImage(named: "youtube")), for: .normal)
     }
   
-    @IBAction func facebookURL(_ sender: UIButton) {
+    @IBAction func facebookURL(_ sender: UIButton!) {
         if let url = URL(string: "https://es-es.facebook.com/") {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {
@@ -35,7 +33,7 @@ class LinksCell: UICollectionViewCell {
             }
     }
     
-    @IBAction func instagramURL(_ sender: UIButton) {
+    @IBAction func instagramURL(_ sender: UIButton!) {
         if let url = URL(string: "https://www.instagram.com/") {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {
@@ -43,7 +41,7 @@ class LinksCell: UICollectionViewCell {
             }
         }
     
-    @IBAction func youtubeURL(_ sender: UIButton) {
+    @IBAction func youtubeURL(_ sender: UIButton!) {
         if let url = URL(string: "https://www.youtube.com/") {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {

@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
         splashView.removeFromSuperview()
     
         // FIXME: -- Change background color when design it's done.
-        simpleView.backgroundColor = .green
+        simpleView.backgroundColor = .purple
         
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -53,7 +53,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return CGSize(width: 414, height: 165)
     }
 
 }
