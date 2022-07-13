@@ -65,7 +65,6 @@ class ButtonCell: UICollectionViewCell {
         }
     }
 
-   
     @IBAction func firstButtonIsPressed(_ sender: UIButton!) {
         print("FIRST BUTTON IS PRESSED!")
     }
