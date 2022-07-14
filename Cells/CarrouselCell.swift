@@ -8,13 +8,17 @@
 import UIKit
 
 class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource{
-    @IBOutlet weak var carrouselCollectionView: UICollectionView!
+    
     var currentCellIndex = 0
     var newsTitle: [String] = ["Title 1","Title 2","Title 3","Title 4","Title 5","Title 6","Title 7"]
     var newsFirstLine = "This is the first line"
     var newsSecondLine = "This is the second line"
     var timer : Timer?
-
+    
+    @IBOutlet weak var carrouselCollectionView: UICollectionView!
+    @IBOutlet weak var myPageControll: UIPageControl!
+    
+    
     public override func awakeFromNib() {
         super.awakeFromNib()
         carrouselCollectionView.delegate = self
@@ -23,6 +27,8 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
+        myPageControll.numberOfPages = newsTitle.count
+        
     }
     @objc func slideToNext() {
         if currentCellIndex < newsTitle.count-1 {
@@ -30,6 +36,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         }else {
             currentCellIndex = 0
         }
+            myPageControll.currentPage = currentCellIndex
             carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
