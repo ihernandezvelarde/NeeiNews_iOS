@@ -17,13 +17,23 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
+    @IBOutlet weak var arrowRightButton: UIButton!
+    @IBOutlet weak var arrowLeftButton: UIButton!
+    
+    @IBOutlet weak var newsAccesButton: UIButton!
     
     
     public override func awakeFromNib() {
         super.awakeFromNib()
+        newsAccesButton.setTitle("", for: .normal)
+        if arrowLeftButton != nil && arrowRightButton != nil{
+        arrowLeftButton.setImage(UIImage(named: "arrow.left.circle"), for: .normal)
+        arrowRightButton.setImage(UIImage(named: "arrow.right.circle"), for: .normal)
+        
+        }
         carrouselCollectionView.delegate = self
         carrouselCollectionView.dataSource = self
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
@@ -51,6 +61,29 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         return cell
     }
 
+    @IBAction func scrollLeftCarrousel(_ sender: UIButton) {
+        if currentCellIndex <= newsTitle.count - 1 {
+            currentCellIndex = currentCellIndex - 1
+        }else {
+            currentCellIndex = 0
+        }
+            myPageControll.currentPage = currentCellIndex
+            carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .left, animated: true)
+    }
+    
+    @IBAction func scrollRightCarrousel(_ sender: UIButton) {
+        if currentCellIndex < newsTitle.count - 1 {
+            currentCellIndex = currentCellIndex + 1
+        }else {
+            currentCellIndex = 0
+        }
+            myPageControll.currentPage = currentCellIndex
+            carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+    }
+    
+    @IBAction func newsAccesActionButton(_ sender: UIButton) {
+        print("THE NEWS ACCES ACTION BUTTON IS PRESSED")
+    }
 }
 extension CarrouselCell: UICollectionViewDelegateFlowLayout {
     
