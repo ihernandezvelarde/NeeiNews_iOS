@@ -499,15 +499,177 @@
             </objects>
             <point key="canvasLocation" x="-191.30434782608697" y="-874.55357142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Time Line View Controller-->
         <scene sceneID="xzP-2z-h9E">
             <objects>
-                <viewController id="y7z-nb-Vpc" sceneMemberID="viewController">
+                <viewController id="y7z-nb-Vpc" customClass="TimeLineViewController" customModule="NewsApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Axv-HO-qQ9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="du6-G8-65k">
+                                <rect key="frame" x="33" y="102" width="282" height="282"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4h-Be-cb3">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="7SE-MQ-uXw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="s53-AG-WWX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHx-xE-NzN">
+                                        <rect key="frame" x="0.0" y="107" width="282" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="Pgj-uf-gpv"/>
+                                            <constraint firstAttribute="height" constant="68" id="fpV-Tf-JVo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOG-ku-SCt">
+                                        <rect key="frame" x="0.0" y="214" width="282" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="CET-Eu-Hdw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="yDk-Ms-wsZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="OOj-pk-VJD"/>
+                                    <constraint firstAttribute="height" constant="282" id="q9F-5b-VAY"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IrP-tT-ZVB">
+                                <rect key="frame" x="335" y="127" width="44" height="604"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAo-aN-n7D">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="radio-button" title=""/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-CP-eYn">
+                                        <rect key="frame" x="0.0" y="34" width="44" height="40"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="2vi-vX-szj">
+                                        <rect key="frame" x="0.0" y="74" width="44" height="40"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbJ-az-egc">
+                                        <rect key="frame" x="0.0" y="114" width="44" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="radio-button" title=""/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="lqh-Ec-SeX">
+                                        <rect key="frame" x="0.0" y="148" width="44" height="40"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="hbn-Be-DOK">
+                                        <rect key="frame" x="0.0" y="188" width="44" height="40"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRq-NM-DHm">
+                                        <rect key="frame" x="0.0" y="228" width="44" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="radio-button" title=""/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="HWm-4h-xfW">
+                                        <rect key="frame" x="0.0" y="262" width="44" height="40"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="9IB-Gt-UEK">
+                                        <rect key="frame" x="0.0" y="302" width="44" height="40"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41Z-pn-zTy">
+                                        <rect key="frame" x="0.0" y="342" width="44" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="radio-button" title=""/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="VR6-Wg-bHn">
+                                        <rect key="frame" x="0.0" y="376" width="44" height="40"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="ArI-HY-jYl">
+                                        <rect key="frame" x="0.0" y="416" width="44" height="40"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAd-5X-fjA">
+                                        <rect key="frame" x="0.0" y="456" width="44" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="radio-button" title=""/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Hf8-TB-zwv">
+                                        <rect key="frame" x="0.0" y="490" width="44" height="40"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="CcG-Rf-45f">
+                                        <rect key="frame" x="0.0" y="530" width="44" height="40"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOu-92-Ceh">
+                                        <rect key="frame" x="0.0" y="570" width="44" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="radio-button" title=""/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="604" id="UIi-Wt-uDn"/>
+                                    <constraint firstAttribute="width" constant="44" id="b9E-Tp-t8u"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="zHQ-ly-cjv">
+                                <rect key="frame" x="33" y="433" width="282" height="294"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-Kr-gxw">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="0Yf-Hc-vjc"/>
+                                            <constraint firstAttribute="height" constant="68" id="1X8-rr-JLi"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="MfF-A1-dq0"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="ql1-3n-Lvo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlQ-Ih-ash">
+                                        <rect key="frame" x="0.0" y="113" width="282" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="OkV-Sz-4oE"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="xW0-lP-f3i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-IA-FwX">
+                                        <rect key="frame" x="0.0" y="226" width="282" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="cSL-QX-g7h"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="282" id="zVz-nv-I3C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="294" id="1nG-nu-k53"/>
+                                    <constraint firstAttribute="width" constant="282" id="YK6-wh-0Kg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Qxt-nJ-VU4"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="Qxt-nJ-VU4" firstAttribute="trailing" secondItem="IrP-tT-ZVB" secondAttribute="trailing" constant="35" id="1jS-oC-bXj"/>
+                            <constraint firstItem="zHQ-ly-cjv" firstAttribute="top" secondItem="du6-G8-65k" secondAttribute="bottom" constant="49" id="2G8-5I-fpt"/>
+                            <constraint firstItem="IrP-tT-ZVB" firstAttribute="leading" secondItem="zHQ-ly-cjv" secondAttribute="trailing" constant="20" id="TtI-Qo-4DY"/>
+                            <constraint firstItem="du6-G8-65k" firstAttribute="top" secondItem="Qxt-nJ-VU4" secondAttribute="top" constant="58" id="WaT-UI-tvu"/>
+                            <constraint firstItem="zHQ-ly-cjv" firstAttribute="leading" secondItem="Qxt-nJ-VU4" secondAttribute="leading" constant="33" id="Xeq-nT-nrD"/>
+                            <constraint firstItem="IrP-tT-ZVB" firstAttribute="leading" secondItem="du6-G8-65k" secondAttribute="trailing" constant="20" id="bt3-VY-ONJ"/>
+                            <constraint firstItem="Qxt-nJ-VU4" firstAttribute="bottom" secondItem="IrP-tT-ZVB" secondAttribute="bottom" constant="82" id="hRy-22-Ie7"/>
+                            <constraint firstItem="du6-G8-65k" firstAttribute="leading" secondItem="Qxt-nJ-VU4" secondAttribute="leading" constant="33" id="jTg-O3-c2G"/>
+                            <constraint firstItem="IrP-tT-ZVB" firstAttribute="top" secondItem="Qxt-nJ-VU4" secondAttribute="top" constant="83" id="wme-Od-Ac4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="uOQ-nL-hn3">
                         <imageReference key="image" image="chart.xyaxis.line" catalog="system" symbolScale="large"/>
@@ -515,12 +677,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49B-gl-2gK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="-642"/>
+            <point key="canvasLocation" x="860.86956521739137" y="-642.1875"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="eYZ-Pa-CYb">
             <objects>
-                <viewController id="X2F-8o-xea" sceneMemberID="viewController">
+                <viewController id="X2F-8o-xea" customClass="MapViewController" customModule="NewsApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NeJ-Bd-p8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -742,8 +904,10 @@
         <image name="facebook" width="40" height="40"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="map" width="609" height="961"/>
+        <image name="line" width="40" height="40"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" width="609" height="961"/>
+        <image name="radio-button" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

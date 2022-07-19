@@ -33,7 +33,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         }
         carrouselCollectionView.delegate = self
         carrouselCollectionView.dataSource = self
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
