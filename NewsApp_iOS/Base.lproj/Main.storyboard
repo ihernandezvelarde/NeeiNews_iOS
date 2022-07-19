@@ -22,14 +22,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="so5-mx-Flu"/>
-                        <segue destination="y7z-nb-Vpc" kind="relationship" relationship="viewControllers" id="UuZ-90-hCP"/>
-                        <segue destination="X2F-8o-xea" kind="relationship" relationship="viewControllers" id="9ok-0Z-MKZ"/>
                         <segue destination="LBz-ZQ-IJb" kind="relationship" relationship="viewControllers" id="5BA-kx-Jqp"/>
+                        <segue destination="y7z-nb-Vpc" kind="relationship" relationship="viewControllers" id="v6y-xG-YKO"/>
+                        <segue destination="X2F-8o-xea" kind="relationship" relationship="viewControllers" id="r0Z-92-UWu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thI-Vt-TDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922" y="15"/>
+            <point key="canvasLocation" x="-955" y="-57"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -674,6 +674,30 @@
                     <tabBarItem key="tabBarItem" title="" id="uOQ-nL-hn3">
                         <imageReference key="image" image="chart.xyaxis.line" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="firsNewLabel" destination="G4h-Be-cb3" id="bre-ms-KhM"/>
+                        <outlet property="firstNewButton" destination="gAo-aN-n7D" id="iLo-LT-K9A"/>
+                        <outlet property="firstPartNextNewNineImage" destination="Hf8-TB-zwv" id="Zsj-3b-cua"/>
+                        <outlet property="firstPartNextNewOneImage" destination="mUq-CP-eYn" id="tYr-79-zQr"/>
+                        <outlet property="firstPartNextNewSevenImage" destination="VR6-Wg-bHn" id="7kY-j7-Hkk"/>
+                        <outlet property="fiveNewButton" destination="DAd-5X-fjA" id="dHR-T3-T6B"/>
+                        <outlet property="fiveNewLabel" destination="qlQ-Ih-ash" id="jrW-m9-Ujr"/>
+                        <outlet property="fivePartNextNewFiveImage" destination="HWm-4h-xfW" id="MSi-e4-ZMB"/>
+                        <outlet property="forthNewLabel" destination="Kjg-Kr-gxw" id="iWk-jq-JtP"/>
+                        <outlet property="forthPartNextNewFourImage" destination="hbn-Be-DOK" id="hcv-fd-0h1"/>
+                        <outlet property="fourthNewButton" destination="41Z-pn-zTy" id="sgp-9a-jYj"/>
+                        <outlet property="secondNewButton" destination="jbJ-az-egc" id="Zpl-dr-X9A"/>
+                        <outlet property="secondNewLabel" destination="eHx-xE-NzN" id="CLh-v3-2uN"/>
+                        <outlet property="secondPartNextNewEigthImage" destination="ArI-HY-jYl" id="rJC-SK-Uxr"/>
+                        <outlet property="secondPartNextNewTenImage" destination="CcG-Rf-45f" id="SLc-XH-rxp"/>
+                        <outlet property="secondPartNextNewTwoImage" destination="2vi-vX-szj" id="Lzj-1u-3Wf"/>
+                        <outlet property="sixNewButton" destination="LOu-92-Ceh" id="7JI-vt-t3i"/>
+                        <outlet property="sixNewLabel" destination="FPK-IA-FwX" id="UUh-Lx-577"/>
+                        <outlet property="sixPartNextNewSixImage" destination="9IB-Gt-UEK" id="56P-ZF-zs1"/>
+                        <outlet property="thirdNewButton" destination="kRq-NM-DHm" id="ZTu-Fx-5Vv"/>
+                        <outlet property="thirdNewLabel" destination="SOG-ku-SCt" id="PPT-GG-Fiv"/>
+                        <outlet property="thirdPartNextNewThreeImage" destination="lqh-Ec-SeX" id="YBM-wM-MVM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49B-gl-2gK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -905,8 +929,8 @@
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line" width="40" height="40"/>
-        <image name="map" catalog="system" width="128" height="110"/>
         <image name="map" width="609" height="961"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="radio-button" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
