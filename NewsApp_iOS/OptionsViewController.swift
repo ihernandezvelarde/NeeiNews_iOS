@@ -76,6 +76,7 @@ class OptionsViewController: UIViewController{
             sender.isSelected = true
             catalanButton.isSelected = false
             inglesButton.isSelected = false
+            print("CASTELLANO RADIO BUTTON IS SELECTED")
         }
         sender.isSelected = false
     }
@@ -93,6 +94,7 @@ class OptionsViewController: UIViewController{
             sender.isSelected = true
             castellanoButton.isSelected = false
             inglesButton.isSelected = false
+            print("CATALAN RADIO BUTTON IS SELECTED")
         }
         sender.isSelected = false
     }
@@ -110,6 +112,7 @@ class OptionsViewController: UIViewController{
             sender.isSelected = true
             catalanButton.isSelected = false
             castellanoButton.isSelected = false
+            print("INGLÉS RADIO BUTTON IS SELECTED")
         }
         sender.isSelected = false
     }
