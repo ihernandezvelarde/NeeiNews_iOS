@@ -82,61 +82,60 @@ class TimeLineViewController: UIViewController{
         let minutes = calendar.component(.minute, from: date)
         let seconds = calendar.component(.second, from: date)
         print("hours = \(hour):\(minutes):\(seconds)")
-        let hours = ("\(hour):\(minutes):\(seconds)")
-
-        if hours >= "8:0:00"{
+        
+        if hour >= 8 && minutes >= 0 {
             firstNewImage.image = UIImage(named: "radio-on-button")
             firstNewImage.tintColor = .red
         }
-        if hours >= "8:25:00"{
+        if hour >= 8 && minutes >= 25 {
             firstPartNextNewOneImage.tintColor = .red
         }
-        if hours >= "8:45:00"{
+        if hour >= 8 && minutes >= 45 {
             secondPartNextNewTwoImage.tintColor = .red
         }
-        if hours >= "9:0:00"{
-            secondNewImage.image = UIImage(named: "radio-on-button")
-            secondNewImage.tintColor = .red
-        }
-        if hours >= "9:5:00"{
-            firstPartNextNewThreeImage.tintColor = .red
-        }
-        if hours >= "9:10:00"{
-            secondPartNextNewFourImage.tintColor = .red
-        }
-        if hours >= "9:15:00"{
-            thirdNewImage.image = UIImage(named: "radio-on-button")
-            thirdNewImage.tintColor = .red
-        }
-        if hours >= "9:25:00"{
-            firstPartNextNewFiveImage.tintColor = .red
-        }
-        if hours >= "9:35:00"{
-            secondPartNextNewSixImage.tintColor = .red
-        }
-        if hours >= "9:45:00"{
-            fourthNewImage.image = UIImage(named: "radio-on-button")
-            fourthNewImage.tintColor = .red
-        }
-        if hours >= "10:0:00"{
-            firstPartNextNewSevenImage.tintColor = .red
-        }
-        if hours >= "10:15:00"{
-            secondPartNextNewEigthImage.tintColor = .red
-        }
-        if hours >= "10:30:00"{
-            fiveNewImage.image = UIImage(named: "radio-on-button")
-            fiveNewImage.tintColor = .red
-        }
-        if hours >= "11:0:00"{
-            firstPartNextNewNineImage.tintColor = UIColor.red
-        }
-        if hours >= "11:30:00"{
-            secondPartNextNewTenImage.tintColor = UIColor.red
-        }
-        if hours >= "12:0:00"{
-            sixNewImage.image = UIImage(named: "radio-on-button")
-        }
+//        if hours >= "9:00:00"{
+//            secondNewImage.image = UIImage(named: "radio-on-button")
+//            secondNewImage.tintColor = .red
+//        }
+//        if hours >= "9:5:00"{
+//            firstPartNextNewThreeImage.tintColor = .red
+//        }
+//        if hours >= "9:10:00"{
+//            secondPartNextNewFourImage.tintColor = .red
+//        }
+//        if hours >= "9:15:00"{
+//            thirdNewImage.image = UIImage(named: "radio-on-button")
+//            thirdNewImage.tintColor = .red
+//        }
+//        if hours >= "9:25:00"{
+//            firstPartNextNewFiveImage.tintColor = .red
+//        }
+//        if hours >= "9:35:00"{
+//            secondPartNextNewSixImage.tintColor = .red
+//        }
+//        if hours >= "9:45:00"{
+//            fourthNewImage.image = UIImage(named: "radio-on-button")
+//            fourthNewImage.tintColor = .red
+//        }
+//        if hours >= "10:00:00"{
+//            firstPartNextNewSevenImage.tintColor = .red
+//        }
+//        if hours >= "10:15:00"{
+//            secondPartNextNewEigthImage.tintColor = .red
+//        }
+//        if hours >= "10:30:00"{
+//            fiveNewImage.image = UIImage(named: "radio-on-button")
+//            fiveNewImage.tintColor = .red
+//        }
+//        if hours >= "11:00:00"{
+//            firstPartNextNewNineImage.tintColor = UIColor.red
+//        }
+//        if hours >= "11:30:00"{
+//            secondPartNextNewTenImage.tintColor = UIColor.red
+//        }
+//        if hours >= "12:00:00"{
+//            sixNewImage.image = UIImage(named: "radio-on-button")
+//        }
     }
 }
 
