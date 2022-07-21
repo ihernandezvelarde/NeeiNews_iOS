@@ -627,8 +627,8 @@
                                     <constraint firstItem="9IB-Gt-UEK" firstAttribute="top" secondItem="HWm-4h-xfW" secondAttribute="bottom" id="QBP-P3-Faf"/>
                                     <constraint firstItem="2vi-vX-szj" firstAttribute="top" secondItem="mUq-CP-eYn" secondAttribute="bottom" id="TTe-AW-T2l"/>
                                     <constraint firstAttribute="width" constant="44" id="bsv-Hb-Ohn"/>
-                                    <constraint firstAttribute="height" constant="520" id="dLk-b2-G5r"/>
                                     <constraint firstItem="ArI-HY-jYl" firstAttribute="top" secondItem="VR6-Wg-bHn" secondAttribute="bottom" id="jYN-R6-maa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="520" id="kQQ-VC-jjI"/>
                                     <constraint firstItem="ArI-HY-jYl" firstAttribute="top" secondItem="VR6-Wg-bHn" secondAttribute="bottom" id="mYO-Gu-37O"/>
                                 </constraints>
                             </stackView>
@@ -712,7 +712,6 @@
                         <constraints>
                             <constraint firstItem="du6-G8-65k" firstAttribute="leading" secondItem="Qxt-nJ-VU4" secondAttribute="leading" constant="40" id="3CS-Af-4FY"/>
                             <constraint firstItem="du6-G8-65k" firstAttribute="top" secondItem="Qxt-nJ-VU4" secondAttribute="top" constant="50" id="ITd-hj-eQW"/>
-                            <constraint firstItem="IrP-tT-ZVB" firstAttribute="leading" secondItem="du6-G8-65k" secondAttribute="trailing" constant="20" id="WC7-Et-sv2"/>
                             <constraint firstItem="IrP-tT-ZVB" firstAttribute="top" secondItem="Qxt-nJ-VU4" secondAttribute="top" constant="55" id="ZU2-kK-ZWd"/>
                             <constraint firstItem="eKU-ky-Raf" firstAttribute="top" secondItem="du6-G8-65k" secondAttribute="bottom" constant="35" id="cFJ-m1-JgQ"/>
                             <constraint firstItem="eKU-ky-Raf" firstAttribute="leading" secondItem="Qxt-nJ-VU4" secondAttribute="leading" constant="40" id="jjf-uE-Jp3"/>

@@ -109,9 +109,7 @@ class TimeLineViewController: UIViewController{
         if hours >= "8:0:0" {
             firstNewImage.image = UIImage(named: "radio-on-button-red")
             firstNewImage.tintColor = .red
-        }else{
-            print("chao")
-        }
+       
         if hours >= "8:25:0" {
             firstPartNextNewOneImage.tintColor = .red
         }
