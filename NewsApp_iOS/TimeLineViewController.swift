@@ -87,12 +87,12 @@ class TimeLineViewController: UIViewController{
         secondPartNextNewTenImage.tintColor = .black
 
         
-        firsNewLabel.text = "8:00 - Esta es la primera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc convallis."
-        secondNewLabel.text = "9:00 - Esta es la segunda noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc convallis."
-        thirdNewLabel.text = "9:15 - Esta es la tercera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc convallis."
-        forthNewLabel.text = "9:45 - Esta es la cuarta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc convallis."
-        fiveNewLabel.text = "10:30 - Esta es la quinta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc convallis."
-        sixNewLabel.text = "12:00 - Esta es la sexta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc convallis."
+        firsNewLabel.text = "8:00 - Esta es la primera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        secondNewLabel.text = "9:00 - Esta es la segunda noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        thirdNewLabel.text = "9:15 - Esta es la tercera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        forthNewLabel.text = "9:45 - Esta es la cuarta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        fiveNewLabel.text = "10:30 - Esta es la quinta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        sixNewLabel.text = "12:00 - Esta es la sexta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(checkTime), userInfo: nil, repeats: true)
     }
@@ -107,8 +107,10 @@ class TimeLineViewController: UIViewController{
         let hours = ("\(hour):\(minutes):\(seconds)")
         
         if hours >= "8:0:0" {
-            firstNewImage.image = UIImage(named: "radio-on-button")
+            firstNewImage.image = UIImage(named: "radio-on-button-red")
             firstNewImage.tintColor = .red
+        }else{
+            print("chao")
         }
         if hours >= "8:25:0" {
             firstPartNextNewOneImage.tintColor = .red
@@ -117,7 +119,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewTwoImage.tintColor = .red
         }
         if hours >= "9:0:0" {
-            secondNewImage.image = UIImage(named: "radio-on-button")
+            secondNewImage.image = UIImage(named: "radio-on-button-red")
             secondNewImage.tintColor = .red
         }
         if hours >= "9:05:0" {
@@ -127,7 +129,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewFourImage.tintColor = .red
         }
         if hours >= "9:15:0" {
-            thirdNewImage.image = UIImage(named: "radio-on-button")
+            thirdNewImage.image = UIImage(named: "radio-on-button-red")
             thirdNewImage.tintColor = .red
         }
         if hours >= "9:25:0" {
@@ -137,7 +139,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewSixImage.tintColor = .red
         }
         if hours >= "9:45:0" {
-            fourthNewImage.image = UIImage(named: "radio-on-button")
+            fourthNewImage.image = UIImage(named: "radio-on-button-red")
             fourthNewImage.tintColor = .red
         }
         if hours >= "10:0:0" {
@@ -147,7 +149,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewEigthImage.tintColor = .red
         }
         if hours >= "10:30:0" {
-            fiveNewImage.image = UIImage(named: "radio-on-button")
+            fiveNewImage.image = UIImage(named: "radio-on-button-red")
             fiveNewImage.tintColor = .red
         }
         if hours >= "11:0:0" {
@@ -157,7 +159,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewTenImage.tintColor = UIColor.red
         }
         if hours >= "12:0:0" {
-            sixNewImage.image = UIImage(named: "radio-on-button")
+            sixNewImage.image = UIImage(named: "radio-on-button-red")
         }
     }
 }
