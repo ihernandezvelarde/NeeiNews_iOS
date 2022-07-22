@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12279F3287C7C4D009B96EE /* LinksCell.swift */; };
-		B17792DC287ED386008E8334 /* celdita.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17792DB287ED386008E8334 /* celdita.swift */; };
+		B17792DC287ED386008E8334 /* InnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17792DB287ED386008E8334 /* InnerCell.swift */; };
 		B17792E2287F0901008E8334 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17792E1287F0901008E8334 /* OptionsViewController.swift */; };
 		B18525652886BB9700A4C1EF /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18525642886BB9700A4C1EF /* TimeLineViewController.swift */; };
 		B18525672886BBED00A4C1EF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18525662886BBED00A4C1EF /* MapViewController.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		B12279F3287C7C4D009B96EE /* LinksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksCell.swift; sourceTree = "<group>"; };
-		B17792DB287ED386008E8334 /* celdita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdita.swift; sourceTree = "<group>"; };
+		B17792DB287ED386008E8334 /* InnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCell.swift; sourceTree = "<group>"; };
 		B17792E1287F0901008E8334 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		B18525642886BB9700A4C1EF /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		B18525662886BBED00A4C1EF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				B1A46E46287C1E3B00235467 /* CarrouselCell.swift */,
+				B17792DB287ED386008E8334 /* InnerCell.swift */,
 				B1F83EA3287C6F9A00B2A228 /* ButtonCell.swift */,
 				B12279F3287C7C4D009B96EE /* LinksCell.swift */,
-				B17792DB287ED386008E8334 /* celdita.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 				B1A46E48287C1E3B00235467 /* CarrouselCell.swift in Sources */,
 				B1F83EA4287C6F9A00B2A228 /* ButtonCell.swift in Sources */,
 				B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */,
-				B17792DC287ED386008E8334 /* celdita.swift in Sources */,
+				B17792DC287ED386008E8334 /* InnerCell.swift in Sources */,
 				B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */,
 				B18525652886BB9700A4C1EF /* TimeLineViewController.swift in Sources */,
 			);

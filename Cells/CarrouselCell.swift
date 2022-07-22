@@ -54,7 +54,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as! celdita
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as! InnerCell
         cell.newsTitleLabel.text = newsTitle[indexPath.row]
         cell.newsFirstLineLabel.text  = newsFirstLine
         cell.newsSecondLineLabel.text = newsSecondLine
@@ -90,17 +90,4 @@ extension CarrouselCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 414, height: 128)
     }
-    
-////      timer = Timer.scheduledTimer(timeInterval: 8.0, target: NewsCarrousel.self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
-//
-////        @objc func slideToNext() {
-////            if currentCellIndex < newsTitle.count-1 {
-////                currentCellIndex = currentCellIndex + 1
-////            }else {
-////                currentCellIndex = 0
-////            }
-////            carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
-////        }
-    
-
 }
