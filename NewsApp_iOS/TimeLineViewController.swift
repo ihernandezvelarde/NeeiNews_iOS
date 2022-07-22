@@ -106,57 +106,74 @@ class TimeLineViewController: UIViewController{
         print("hours = \(hour):\(minutes):\(seconds)")
         let hours = ("\(hour):\(minutes):\(seconds)")
         
-        if hours >= "8:0:0" {
+        let hourEightAM = "8:0:0"
+        let hourEightTwentyFive = "8:25:00"
+        let hourEightFourtyFive = "8:45:00"
+        let hourNineAM = "9:00:00"
+        let hourNineFive = "9:05:00"
+        let hourNineTen = "9:10:00"
+        let hourNineFifteen = "9:15:00"
+        let hourNineTwentyFive = "9:25:00"
+        let hourNineThirtyFive = "9:35:00"
+        let hourNineFourtyFive = "9:45:00"
+        let hourTen = "10:00:00"
+        let hourTenFifteen = "10:15:00"
+        let hourTenThirty = "10:30:00"
+        let hourEleven = "11:00:00"
+        let hourElevenThirty = "11:30:00"
+        let hourTwelve = "12:00:00"
+        
+        if hours.compare(hourEightAM, options: .numeric) == .orderedDescending {
             firstNewImage.image = UIImage(named: "radio-on-button-red")
             firstNewImage.tintColor = .red
-       
-        if hours >= "8:25:0" {
+        }
+        if hours.compare(hourEightTwentyFive, options: .numeric) == .orderedDescending {
             firstPartNextNewOneImage.tintColor = .red
         }
-        if hours >= "8:45:0" {
+        if hours.compare(hourEightFourtyFive, options: .numeric) == .orderedDescending {
             secondPartNextNewTwoImage.tintColor = .red
         }
-        if hours >= "9:0:0" {
+        if hours.compare(hourNineAM, options: .numeric) == .orderedDescending {
             secondNewImage.image = UIImage(named: "radio-on-button-red")
             secondNewImage.tintColor = .red
         }
-        if hours >= "9:05:0" {
+        if hours.compare(hourNineFive, options: .numeric) == .orderedDescending {
             firstPartNextNewThreeImage.tintColor = .red
         }
-        if hours >= "9:10:0" {
+        if hours.compare(hourNineTen, options: .numeric) == .orderedDescending {
             secondPartNextNewFourImage.tintColor = .red
         }
-        if hours >= "9:15:0" {
+        if hours.compare(hourNineFifteen, options: .numeric) == .orderedDescending {
             thirdNewImage.image = UIImage(named: "radio-on-button-red")
             thirdNewImage.tintColor = .red
         }
-        if hours >= "9:25:0" {
+        if hours.compare(hourNineTwentyFive, options: .numeric) == .orderedDescending {
             firstPartNextNewFiveImage.tintColor = .red
         }
-        if hours >= "9:35:0" {
+        if hours.compare(hourNineThirtyFive, options: .numeric) == .orderedDescending {
             secondPartNextNewSixImage.tintColor = .red
         }
-        if hours >= "9:45:0" {
+        if hours.compare(hourNineFourtyFive, options: .numeric) == .orderedDescending {
             fourthNewImage.image = UIImage(named: "radio-on-button-red")
             fourthNewImage.tintColor = .red
         }
-        if hours >= "10:0:0" {
+        if hours.compare(hourTen, options: .numeric) == .orderedDescending {
             firstPartNextNewSevenImage.tintColor = .red
         }
-        if hours >= "10:25:0" {
+        if hours.compare(hourTenFifteen, options: .numeric) == .orderedDescending {
             secondPartNextNewEigthImage.tintColor = .red
         }
-        if hours >= "10:30:0" {
+        if hours.compare(hourTenThirty, options: .numeric) == .orderedDescending {
             fiveNewImage.image = UIImage(named: "radio-on-button-red")
             fiveNewImage.tintColor = .red
         }
-        if hours >= "11:0:0" {
+        if hours.compare(hourEleven, options: .numeric) == .orderedDescending {
             firstPartNextNewNineImage.tintColor = UIColor.red
         }
-        if hours >= "11:30:0" {
+        if hours.compare(hourElevenThirty, options: .numeric) == .orderedDescending {
             secondPartNextNewTenImage.tintColor = UIColor.red
         }
-        if hours >= "12:0:0" {
+        if hours.compare(hourTwelve, options: .numeric) == .orderedDescending {
             sixNewImage.image = UIImage(named: "radio-on-button-red")
         }
     }
