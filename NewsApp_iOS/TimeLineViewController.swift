@@ -97,13 +97,13 @@ class TimeLineViewController: UIViewController{
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(checkTime), userInfo: nil, repeats: true)
     }
     @objc func checkTime(){
+        
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
         let seconds = calendar.component(.second, from: date)
-        
-        print("hours = \(hour):\(minutes):\(seconds)")
+    
         let hours = ("\(hour):\(minutes):\(seconds)")
         
         let hourEightAM = "8:0:0"
