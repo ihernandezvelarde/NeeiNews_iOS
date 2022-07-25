@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsCarrouselCellViewModel{
+class NewsCarrouselCellViewModel {
     let title: String
     let subtitle: String
     let description: String
@@ -22,7 +22,7 @@ class NewsCarrouselCellViewModel{
         self.description = description
     }
 }
-class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource{
+class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
    
     var currentCellIndex = 0
     

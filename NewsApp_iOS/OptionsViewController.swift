@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionsViewController: UIViewController{
+class OptionsViewController: UIViewController {
     
     @IBOutlet weak var lenguageLabel: UILabel!
     

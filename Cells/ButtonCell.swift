@@ -27,12 +27,12 @@ class ButtonCell: UICollectionViewCell {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
-        if firstViewButton != nil && secondViewButton != nil && thirdViewButton != nil{
+        if firstViewButton != nil && secondViewButton != nil && thirdViewButton != nil {
             firstViewButton.setTitle("", for: .normal)
             secondViewButton.setTitle("", for: .normal)
             thirdViewButton.setTitle("", for: .normal)
         }
-        if firstViewImage != nil && secondViewImage != nil && thirdViewImage != nil{
+        if firstViewImage != nil && secondViewImage != nil && thirdViewImage != nil {
             firstViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate);
             firstViewImage.tintColor = UIColor.red
                 
@@ -43,22 +43,22 @@ class ButtonCell: UICollectionViewCell {
             thirdViewImage.tintColor = UIColor.red
         }
         
-        if firstView != nil && secondView != nil && thirdView != nil{
+        if firstView != nil && secondView != nil && thirdView != nil {
             firstView.layer.cornerRadius = 10
             secondView.layer.cornerRadius = 10
             thirdView.layer.cornerRadius = 10
             
-            firstView.layer.shadowOffset = CGSize(width: -5,height: 5);
-            firstView.layer.shadowOpacity = 0.7;
-            firstView.layer.shadowRadius = 1.0;
+            firstView.layer.shadowOffset = CGSize(width: -5,height: 5)
+            firstView.layer.shadowOpacity = 0.7
+            firstView.layer.shadowRadius = 1.0
             
-            secondView.layer.shadowOffset = CGSize(width: -5,height: 5);
-            secondView.layer.shadowOpacity = 0.7;
-            secondView.layer.shadowRadius = 1.0;
-            
-            thirdView.layer.shadowOffset = CGSize(width: -5,height: 5);
-            thirdView.layer.shadowOpacity = 0.7;
-            thirdView.layer.shadowRadius = 1.0;
+            secondView.layer.shadowOffset = CGSize(width: -5,height: 5)
+            secondView.layer.shadowOpacity = 0.7
+            secondView.layer.shadowRadius = 1.0
+        
+            thirdView.layer.shadowOffset = CGSize(width: -5,height: 5)
+            thirdView.layer.shadowOpacity = 0.7
+            thirdView.layer.shadowRadius = 1.0
 
         } else {
             print("Doesn’t contain a value.")

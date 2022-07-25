@@ -56,34 +56,34 @@ class TimeLineViewController: UIViewController{
         fiveNewImage.image = UIImage(named: "radio-button")
         sixNewImage.image = UIImage(named: "radio-button")
         
-        firstPartNextNewOneImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        firstPartNextNewOneImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewOneImage.tintColor = .black
         
-        secondPartNextNewTwoImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        secondPartNextNewTwoImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewTwoImage.tintColor = .black
         
-        firstPartNextNewThreeImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        firstPartNextNewThreeImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewThreeImage.tintColor = .black
         
-        secondPartNextNewFourImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        secondPartNextNewFourImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewFourImage.tintColor = .black
 
-        firstPartNextNewFiveImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        firstPartNextNewFiveImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewFiveImage.tintColor = .black
 
-        secondPartNextNewSixImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        secondPartNextNewSixImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewSixImage.tintColor = .black
 
-        firstPartNextNewSevenImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        firstPartNextNewSevenImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewSevenImage.tintColor = .black
 
-        secondPartNextNewEigthImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        secondPartNextNewEigthImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewEigthImage.tintColor = .black
 
-        firstPartNextNewNineImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        firstPartNextNewNineImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewNineImage.tintColor = .black
 
-        secondPartNextNewTenImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate);
+        secondPartNextNewTenImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewTenImage.tintColor = .black
 
         

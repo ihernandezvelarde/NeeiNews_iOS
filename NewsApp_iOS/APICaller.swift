@@ -11,13 +11,13 @@ final class APICaller{
     struct Constants{
         static let topHeadLinesURL = URL(string: "https://newsapi.org/v2/top-headlines?category=general&country=us&apiKey=b0081229f02648eb81057b78f3de9b87")
     }
-    private init(){}
-    public func getTopStories(completion: @escaping(Result<[String], Error>)-> Void){
+    private init() { }
+    public func getTopStories(completion: @escaping(Result <[String], Error> ) -> Void) {
         guard let url = Constants.topHeadLinesURL else {
             return
         }
         let task = URLSession.shared.dataTask(with: url) {
-            data, _, error in if let error = error{
+            data, _, error in if let error = error {
                 completion(.failure(error))
             }
             else if let data = data {

@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-class MapViewController: UIViewController{
+class MapViewController: UIViewController {
     
 }
