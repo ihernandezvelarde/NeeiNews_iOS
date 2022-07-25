@@ -7,9 +7,25 @@
 
 import UIKit
 
-class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource{
+class NewsCarrouselCellViewModel{
+    let title: String
+    let subtitle: String
+    let description: String
     
+    init(
+        title: String,
+        subtitle: String,
+        description: String
+    ){
+        self.title = title
+        self.subtitle = subtitle
+        self.description = description
+    }
+}
+class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource{
+   
     var currentCellIndex = 0
+    
     var newsTitle: [String] = ["Title 1","Title 2","Title 3","Title 4","Title 5","Title 6","Title 7"]
     var newsFirstLine = "This is the first line"
     var newsSecondLine = "This is the second line"
