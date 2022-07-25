@@ -20,6 +20,7 @@
 		B19D25732875CE3C0036A669 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19D25722875CE3C0036A669 /* Assets.xcassets */; };
 		B19D25762875CE3C0036A669 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19D25742875CE3C0036A669 /* LaunchScreen.storyboard */; };
 		B1A46E48287C1E3B00235467 /* CarrouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A46E46287C1E3B00235467 /* CarrouselCell.swift */; };
+		B1F744AD288E9846004DB82C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F744AC288E9845004DB82C /* APICaller.swift */; };
 		B1F83EA4287C6F9A00B2A228 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F83EA3287C6F9A00B2A228 /* ButtonCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		B19D25752875CE3C0036A669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B19D25772875CE3C0036A669 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A46E46287C1E3B00235467 /* CarrouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselCell.swift; sourceTree = "<group>"; };
+		B1F744AC288E9845004DB82C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		B1F83EA3287C6F9A00B2A228 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				B18525642886BB9700A4C1EF /* TimeLineViewController.swift */,
 				B18525662886BBED00A4C1EF /* MapViewController.swift */,
 				B17792E1287F0901008E8334 /* OptionsViewController.swift */,
+				B1F744AC288E9845004DB82C /* APICaller.swift */,
 				B19D25692875CE3A0036A669 /* AppDelegate.swift */,
 				B19D25742875CE3C0036A669 /* LaunchScreen.storyboard */,
 				B19D256F2875CE3A0036A669 /* Main.storyboard */,
@@ -177,6 +180,7 @@
 				B1A46E48287C1E3B00235467 /* CarrouselCell.swift in Sources */,
 				B1F83EA4287C6F9A00B2A228 /* ButtonCell.swift in Sources */,
 				B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */,
+				B1F744AD288E9846004DB82C /* APICaller.swift in Sources */,
 				B1911DB5288AE262004FE91B /* Reachability.swift in Sources */,
 				B17792DC287ED386008E8334 /* InnerCell.swift in Sources */,
 				B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */,

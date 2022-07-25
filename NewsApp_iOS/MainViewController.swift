@@ -28,7 +28,9 @@ class MainViewController: UIViewController {
     
         // FIXME: -- Change background color when design it's done.
         simpleView.backgroundColor = .purple
-        
+        APICaller.shared.getTopStories { result in 
+            
+        }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollView.bounces = scrollView.contentOffset.y > 100
