@@ -16,4 +16,5 @@ class InnerCell: UICollectionViewCell {
     public override func awakeFromNib() {
         super.awakeFromNib()
     }
+ 
 }

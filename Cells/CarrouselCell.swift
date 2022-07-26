@@ -6,26 +6,19 @@
 //
 
 import UIKit
+import Foundation
 
-class NewsCarrouselCellViewModel {
-    let title: String
-    let subtitle: String
-    let description: String
-    
-    init(
-        title: String,
-        subtitle: String,
-        description: String
-    ){
-        self.title = title
-        self.subtitle = subtitle
-        self.description = description
-    }
+class News {
+    let title: String = ""
+    let subtitle: String = ""
+    let description: String = ""
 }
+
+
 class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-   
+        
     var currentCellIndex = 0
-    
+    var theNews : News?
     var newsTitle: [String] = ["Title 1","Title 2","Title 3","Title 4","Title 5","Title 6","Title 7"]
     var newsFirstLine = "This is the first line"
     var newsSecondLine = "This is the second line"
@@ -37,11 +30,10 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     @IBOutlet weak var arrowLeftButton: UIButton!
     
     @IBOutlet weak var newsAccesButton: UIButton!
-    
-    
+
     public override func awakeFromNib() {
         super.awakeFromNib()
-        newsAccesButton.setTitle("", for: .normal)
+        
         if arrowLeftButton != nil && arrowRightButton != nil{
         arrowLeftButton.setImage(UIImage(named: "arrow.left.circle"), for: .normal)
         arrowRightButton.setImage(UIImage(named: "arrow.right.circle"), for: .normal)
@@ -54,7 +46,15 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
         myPageControll.numberOfPages = newsTitle.count
-        
+        newsAccesButton.setTitle("", for: .normal)
+        APICaller.shared.getTopStories { result in
+            switch result {
+            case .success(_):
+                break
+            case.failure(let error):
+                print(error)
+            }
+        }
     }
     @objc func slideToNext() {
         if currentCellIndex < newsTitle.count-1 {
@@ -71,9 +71,9 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as! InnerCell
-        cell.newsTitleLabel.text = newsTitle[indexPath.row]
-        cell.newsFirstLineLabel.text  = newsFirstLine
-        cell.newsSecondLineLabel.text = newsSecondLine
+        cell.newsTitleLabel.text = theNews?.title//newsTitle[indexPath.row]
+        cell.newsFirstLineLabel.text  = theNews?.subtitle//newsFirstLine
+        cell.newsSecondLineLabel.text = theNews?.description//newsSecondLine
         return cell
     }
 
