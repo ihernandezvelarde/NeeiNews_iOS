@@ -57,7 +57,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="outherCell" id="TZu-It-hKy" customClass="CarrouselCell" customModule="NewsApp_iOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TZu-It-hKy" customClass="CarrouselCell" customModule="NewsApp_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="I37-wG-9Cg">
@@ -196,6 +196,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <string key="reuseIdentifier" base64-UTF8="YES">
+EENhcnJvdXNlbENlbGw
+</string>
                                         <size key="customSize" width="414" height="128"/>
                                         <connections>
                                             <outlet property="arrowLeftButton" destination="pjK-qh-eS2" id="I66-wz-Nvv"/>

@@ -12,7 +12,7 @@ final class APICaller{
         static let topHeadLinesURL = URL(string: "https://newsapi.org/v2/top-headlines?category=general&country=us&apiKey=b0081229f02648eb81057b78f3de9b87")
     }
     private init() { }
-    public func getTopStories(completion: @escaping(Result <[String], Error> ) -> Void) {
+    public func getTopStories(completion: @escaping(Result <[Article], Error> ) -> Void) {
         guard let url = Constants.topHeadLinesURL else {
             return
         }
@@ -24,6 +24,7 @@ final class APICaller{
                 do{
                     let result = try JSONDecoder().decode(APIResponse.self, from: data)
                     print("Articles: \(result.articles.count)")
+                    completion(.success(result.articles))
                 }
                 catch{
                     completion(.failure(error))
@@ -39,6 +40,7 @@ struct APIResponse: Codable {
 struct Article: Codable {
     let source: Source
     let title: String
+    let subtitle: String?
     let description: String?
     let url: String?
     let urlToImage: String?
