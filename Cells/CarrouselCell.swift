@@ -8,20 +8,17 @@
 import UIKit
 import Foundation
 
-class News {
-    var title: String = ""
-    var subtitle: String = ""
-    var description: String = ""
-    
-    init(title: String,
-        subtitle: String,
-        description: String
-    ) {
-        self.title = title
-        self.subtitle = subtitle
-        self.description = description
-    }
-}
+//class News {
+//    var title: String = ""
+//    var description: String = ""
+//
+//    init(title: String,
+//        description: String
+//    ) {
+//        self.title = title
+//        self.description = description
+//    }
+//}
 
 
 class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -32,7 +29,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     var newsFirstLine = "This is the first line"
     var newsSecondLine = "This is the second line"
     var timer : Timer?
-    private var viewModels = [News]()
+   // private var viewModels = [News]()
     
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
@@ -57,22 +54,21 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         self.carrouselCollectionView.collectionViewLayout = layout
         myPageControll.numberOfPages = newsTitle.count
         newsAccesButton.setTitle("", for: .normal)
-        APICaller.shared.getTopStories { [weak self] result in
-            switch result {
-            case .success(let articles):
-                self?.viewModels = articles.compactMap({ News(title: $0.title,
-                                                              subtitle: $0.subtitle ?? "No subtitle",
-                                                              description: $0.description ?? "No description"
-                    )
-                })
-                DispatchQueue.main.async {
-                    self?.carrouselCollectionView.reloadData()
-                }
-            case.failure(let error):
-                print(error)
-            }
-            
-        }
+//        APICaller.shared.getTopStories { [weak self] result in
+//            switch result {
+//            case .success(let articles):
+//                self?.viewModels = articles.compactMap({ News(title: $0.title,
+//                                                              description: $0.description ?? "No description"
+//                    )
+//                })
+//                DispatchQueue.main.async {
+//                    self?.carrouselCollectionView.reloadData()
+//                }
+//            case.failure(let error):
+//                print(error)
+//            }
+//
+//        }
     }
     
     @objc func slideToNext() {
@@ -90,11 +86,10 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as! InnerCell
-        
-        cell.configure(with: viewModels[indexPath.row])
-//        cell.newsTitleLabel.text = theNews?.title//newsTitle[indexPath.row]
-//        cell.newsFirstLineLabel.text  = theNews?.subtitle//newsFirstLine
-//        cell.newsSecondLineLabel.text = theNews?.description//newsSecondLine
+     //   cell.configure(with: viewModels[indexPath.row])
+        cell.newsTitleLabel.text = newsTitle[indexPath.row] //theNews?.title
+        cell.newsFirstLineLabel.text  = newsFirstLine // theNews?.subtitle
+        cell.newsSecondLineLabel.text = newsSecondLine //theNews?.description
         return cell
     }
 
