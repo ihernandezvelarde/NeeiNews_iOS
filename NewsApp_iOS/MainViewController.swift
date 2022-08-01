@@ -41,7 +41,18 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return 3
     }
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as! CarrouselCell
+        
+        //TODO: - MOSTRAR LOS 3 TIPOS DE CELDA.
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? CarrouselCell {
+            APICaller.shared.getTopStories { result in
+                    cell.generate(articles: result)
+                    print(result)
+            }
+            
+            return cell
+        } else{
+            return UICollectionViewCell()
+        }
         let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
         let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "LinksCell", for: indexPath) as! LinksCell
         
@@ -52,7 +63,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if indexPath.row == 2 {
             return cell3
         }
-        return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 414, height: 165)

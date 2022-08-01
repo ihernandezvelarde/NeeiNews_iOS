@@ -16,9 +16,4 @@ class InnerCell: UICollectionViewCell {
     public override func awakeFromNib() {
         super.awakeFromNib()
     }
-//    func configure(with viewModel: News){
-//        newsTitleLabel.text = viewModel.title
-//        newsFirstLineLabel.text  = viewModel.description
-//        newsSecondLineLabel.text = viewModel.description
-//    }
 }
