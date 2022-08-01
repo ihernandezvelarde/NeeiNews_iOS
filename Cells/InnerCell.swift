@@ -10,7 +10,7 @@ import UIKit
 class InnerCell: UICollectionViewCell {
     @IBOutlet weak var newsTitleLabel: UILabel!
     @IBOutlet weak var newsFirstLineLabel: UILabel!
-    @IBOutlet weak var newsSecondLineLabel: UILabel!
+    //@IBOutlet weak var newsSecondLineLabel: UILabel!
    
     
     public override func awakeFromNib() {

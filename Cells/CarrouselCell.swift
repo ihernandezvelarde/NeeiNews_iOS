@@ -8,32 +8,12 @@
 import UIKit
 import Foundation
 
-// TODO: - QUITAR CÓDIGO QUE NO SIRVE.
-class News {
-    var title: String = ""
-    var description: String = ""
-    var content: String = ""
-
-    init(title: String,
-        description: String,
-         content : String
-    ) {
-        self.title = title
-        self.description = description
-        self.content = content
-    }
-}
-
-
 class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var currentCellIndex = 0
-    var theNews = [News]()
-    
-    // TODO: - CAMBIAR NEWSTITLE,NEWSFIRSTLINE,NEWSSECONDLINE POR CARGANDO.
-    var newsTitle: [String] = ["Title 1","Title 2","Title 3","Title 4","Title 5","Title 6","Title 7"]
-    var newsFirstLine = "This is the first line"
-    var newsSecondLine = "This is the second line"
+    var newsTitle: [String] = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsFirstLine = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    //var newsSecondLine = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var timer : Timer?    
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
@@ -62,7 +42,13 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     
     internal func generate(articles: [Article]) {
         print(articles)
-        newsTitle[0] = articles[0].title ?? ""
+        for i in 0...6 {
+            newsTitle[i] = articles[i].title ?? ""
+            newsFirstLine[i] = articles[i].content ?? ""
+            //newsSecondLine[i] = articles[i].content ?? ""
+        }
+        
+        
     }
     @objc func slideToNext() {
         if currentCellIndex < newsTitle.count-1 {
@@ -80,7 +66,8 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as! InnerCell
         cell.newsTitleLabel.text = newsTitle[indexPath.row]
-        cell.newsSecondLineLabel.text = newsSecondLine
+        cell.newsFirstLineLabel.text = newsFirstLine[indexPath.row]
+        //cell.newsSecondLineLabel.text = newsSecondLine[indexPath.row]
         return cell
     }
 

@@ -16,8 +16,6 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var simpleView: UIView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         splashView.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
@@ -42,26 +40,23 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        //TODO: - MOSTRAR LOS 3 TIPOS DE CELDA.
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? CarrouselCell {
             APICaller.shared.getTopStories { result in
                     cell.generate(articles: result)
-                    print(result)
             }
-            
+        if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
+            if indexPath.row == 1 {
+                return cell2
+            }
+        }
+        if let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "LinksCell", for: indexPath) as? LinksCell {
+            if indexPath.row == 2 {
+                return cell3
+            }
+        }
             return cell
         } else{
             return UICollectionViewCell()
-        }
-        let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as! ButtonCell
-        let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "LinksCell", for: indexPath) as! LinksCell
-        
-        if indexPath.row == 1 {
-            return cell2
-        }
-        
-        if indexPath.row == 2 {
-            return cell3
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
