@@ -90,7 +90,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bl-Q7-kxa">
-                                                                        <rect key="frame" x="51" y="43" width="311" height="41"/>
+                                                                        <rect key="frame" x="52" y="43" width="310" height="41"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="3Wa-Zf-oDR"/>
                                                                             <constraint firstAttribute="height" constant="38" id="qGG-CJ-0VN"/>
@@ -101,7 +101,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="8bl-Q7-kxa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6P3-jv-tsD" secondAttribute="leading" symbolic="YES" id="4wP-xZ-rjt"/>
+                                                                    <constraint firstItem="8bl-Q7-kxa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6P3-jv-tsD" secondAttribute="leading" constant="52" id="4wP-xZ-rjt"/>
                                                                     <constraint firstAttribute="trailing" secondItem="8bl-Q7-kxa" secondAttribute="trailing" constant="52" id="5vG-ne-cNp"/>
                                                                     <constraint firstItem="8bl-Q7-kxa" firstAttribute="top" secondItem="pZJ-dQ-aoG" secondAttribute="bottom" constant="5" id="TQ2-p4-V02"/>
                                                                     <constraint firstItem="pZJ-dQ-aoG" firstAttribute="leading" secondItem="6P3-jv-tsD" secondAttribute="leading" constant="19" id="jVS-fe-YfI"/>
@@ -962,8 +962,8 @@
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line" width="40" height="40"/>
-        <image name="map" width="609" height="961"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" width="609" height="961"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

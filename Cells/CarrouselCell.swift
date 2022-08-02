@@ -41,14 +41,11 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
     
     internal func generate(articles: [Article]) {
-        print(articles)
         for i in 0...6 {
             newsTitle[i] = articles[i].title ?? ""
             newsFirstLine[i] = articles[i].content ?? ""
             //newsSecondLine[i] = articles[i].content ?? ""
         }
-        
-        
     }
     @objc func slideToNext() {
         if currentCellIndex < newsTitle.count-1 {
