@@ -39,7 +39,6 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         myPageControll.numberOfPages = newsTitle.count
         newsAccesButton.setTitle("", for: .normal)
     }
-    
     internal func generate(articles: [Article]) {
         for i in 0...6 {
             newsTitle[i] = articles[i].title ?? ""
