@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04752C1D28A256F7006115FF /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04752C1C28A256F7006115FF /* NewsDetailView.swift */; };
 		B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12279F3287C7C4D009B96EE /* LinksCell.swift */; };
 		B17792DC287ED386008E8334 /* InnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17792DB287ED386008E8334 /* InnerCell.swift */; };
 		B17792E2287F0901008E8334 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17792E1287F0901008E8334 /* OptionsViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04752C1C28A256F7006115FF /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		B12279F3287C7C4D009B96EE /* LinksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksCell.swift; sourceTree = "<group>"; };
 		B17792DB287ED386008E8334 /* InnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerCell.swift; sourceTree = "<group>"; };
 		B17792E1287F0901008E8334 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				B1911DB4288AE262004FE91B /* Reachability.swift */,
 				B19D256B2875CE3A0036A669 /* SceneDelegate.swift */,
 				B19D256D2875CE3A0036A669 /* MainViewController.swift */,
+				04752C1C28A256F7006115FF /* NewsDetailView.swift */,
 				B18525642886BB9700A4C1EF /* TimeLineViewController.swift */,
 				B18525662886BBED00A4C1EF /* MapViewController.swift */,
 				B17792E1287F0901008E8334 /* OptionsViewController.swift */,
@@ -185,6 +188,7 @@
 				B17792DC287ED386008E8334 /* InnerCell.swift in Sources */,
 				B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */,
 				B18525652886BB9700A4C1EF /* TimeLineViewController.swift in Sources */,
+				04752C1D28A256F7006115FF /* NewsDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
