@@ -11,13 +11,14 @@ import Foundation
 class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     var detail = NewsDetailView()
     var currentCellIndex = 0
-    var newsTitle: [String] = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsTitle: [String] = ["EL PRIMERO","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsDescription = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsPublishedAt = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsPhoto = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var timer : Timer?
+    var contador = 0
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
     @IBOutlet weak var arrowRightButton: UIButton!
@@ -35,12 +36,13 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         }
         carrouselCollectionView.delegate = self
         carrouselCollectionView.dataSource = self
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
         myPageControll.numberOfPages = newsTitle.count
         newsAccesButton.setTitle("", for: .normal)
+        
     }
     internal func generate(articles: [Article]) {
         for i in 0...6 {
@@ -50,23 +52,20 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
             newsPhoto[i] = articles[i].urlToImage ?? ""
             newsContent[i] = articles[i].content ?? ""
             newsLink[i] = articles[i].url ?? ""
-            if currentCellIndex == 0 {
-                if detail.titleLabel != nil  && detail.descriptionLabel != nil {
-                    detail.titleLabel.text = newsTitle[0]
-                    detail.descriptionLabel.text = newsDescription[0]
-                }
-            }
         }
     }
     
     @objc func slideToNext() {
         if currentCellIndex < newsTitle.count - 1 {
             currentCellIndex = currentCellIndex + 1
+            
         }else {
             currentCellIndex = 0
         }
             myPageControll.currentPage = currentCellIndex
             carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+            contador = currentCellIndex
+            
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7
