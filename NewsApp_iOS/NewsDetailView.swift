@@ -15,16 +15,15 @@ class NewsDetailView: UIViewController {
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!
-    var newsTitle = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsDescription = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsPublishedAt = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsPhoto = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+//    var newsTitleDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+//    var newsDescriptionDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+//    var newsPublishedAtDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+//    var newsPhotoDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+//    var newsContentDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+//    var newsLinkDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print("AQUI \(newsTitle[0])")
     }
 
     

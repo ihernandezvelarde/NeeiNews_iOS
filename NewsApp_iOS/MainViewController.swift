@@ -43,6 +43,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? CarrouselCell {
             APICaller.shared.getTopStories { result in
                     cell.generate(articles: result)
+                
             }
         if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
             if indexPath.row == 1 {

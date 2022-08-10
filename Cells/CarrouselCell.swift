@@ -53,8 +53,6 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
             newsContent[i] = articles[i].content ?? ""
             newsLink[i] = articles[i].url ?? ""
         }
-        detail.titleLabel?.text = newsTitle[0]
-        print("AQUI \(newsTitle[0])")
     }
 
     @objc func slideToNext() {
