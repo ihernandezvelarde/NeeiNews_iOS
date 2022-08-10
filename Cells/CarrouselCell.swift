@@ -9,9 +9,8 @@ import UIKit
 import Foundation
 
 class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-    var detail = NewsDetailView()
     var currentCellIndex = 0
-    var newsTitle: [String] = ["EL PRIMERO","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsTitle: [String] = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsDescription = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsPublishedAt = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsPhoto = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
@@ -19,6 +18,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var timer : Timer?
     var contador = 0
+    var detail = NewsDetailView()
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
     @IBOutlet weak var arrowRightButton: UIButton!
@@ -53,8 +53,10 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
             newsContent[i] = articles[i].content ?? ""
             newsLink[i] = articles[i].url ?? ""
         }
+        detail.titleLabel?.text = newsTitle[0]
+        print("AQUI \(newsTitle[0])")
     }
-    
+
     @objc func slideToNext() {
         if currentCellIndex < newsTitle.count - 1 {
             currentCellIndex = currentCellIndex + 1

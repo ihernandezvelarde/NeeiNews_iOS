@@ -15,21 +15,17 @@ class NewsDetailView: UIViewController {
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!
-   // var carrousel = CarrouselCell()
+    var newsTitle = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsDescription = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsPublishedAt = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsPhoto = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     
     override func viewDidLoad() {
-       // print("AQUI \(carrousel.contador)")
-
         super.viewDidLoad()
-        
-//        if carrousel.contador == 0 {
-//            titleLabel.text = carrousel.newsTitle[0]
-//        }else if carrousel.currentCellIndex == 1{
-//            titleLabel.text = carrousel.newsTitle[1]
-//        }
+        //print("AQUI \(newsTitle[0])")
     }
 
-
-
+    
 }
-
