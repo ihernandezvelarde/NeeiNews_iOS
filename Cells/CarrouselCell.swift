@@ -17,8 +17,8 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var timer : Timer?
-    var contador = 0
     var detail = NewsDetailView()
+
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
     @IBOutlet weak var arrowRightButton: UIButton!
@@ -32,7 +32,6 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         if arrowLeftButton != nil && arrowRightButton != nil{
         arrowLeftButton.setImage(UIImage(named: "arrow.left.circle"), for: .normal)
         arrowRightButton.setImage(UIImage(named: "arrow.right.circle"), for: .normal)
-        
         }
         carrouselCollectionView.delegate = self
         carrouselCollectionView.dataSource = self
@@ -42,8 +41,8 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         self.carrouselCollectionView.collectionViewLayout = layout
         myPageControll.numberOfPages = newsTitle.count
         newsAccesButton.setTitle("", for: .normal)
-        
     }
+    
     internal func generate(articles: [Article]) {
         for i in 0...6 {
             newsTitle[i] = articles[i].title ?? ""
@@ -54,7 +53,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
             newsLink[i] = articles[i].url ?? ""
         }
     }
-
+    
     @objc func slideToNext() {
         if currentCellIndex < newsTitle.count - 1 {
             currentCellIndex = currentCellIndex + 1
@@ -64,9 +63,8 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         }
             myPageControll.currentPage = currentCellIndex
             carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
-            contador = currentCellIndex
-            
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7
     }
