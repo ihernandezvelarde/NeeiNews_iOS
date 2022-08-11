@@ -17,7 +17,6 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var timer : Timer?
-    var detail = NewsDetailView()
 
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
@@ -28,7 +27,6 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
 
     public override func awakeFromNib() {
         super.awakeFromNib()
-        
         if arrowLeftButton != nil && arrowRightButton != nil{
         arrowLeftButton.setImage(UIImage(named: "arrow.left.circle"), for: .normal)
         arrowRightButton.setImage(UIImage(named: "arrow.right.circle"), for: .normal)

@@ -29,7 +29,7 @@ class NewsDetailView: UIViewController {
             cell.generate(articles: result)
             self.newsTitleDetail = cell.newsTitle
             print("AQUI\(self.newsTitleDetail)")
-            self.titleLabel.text = self.newsTitleDetail[0]
+            //self.titleLabel.text = self.newsTitleDetail[0]
         }
     }
    

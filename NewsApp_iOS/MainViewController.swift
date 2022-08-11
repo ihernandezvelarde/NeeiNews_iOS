@@ -44,6 +44,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             APICaller.shared.getTopStories { result in
                     cell.generate(articles: result)
             }
+            
         if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
             if indexPath.row == 1 {
                 return cell2
