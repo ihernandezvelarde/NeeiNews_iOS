@@ -103,6 +103,17 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     @IBAction func newsAccesActionButton(_ sender: UIButton) {
         print("THE NEWS ACCES ACTION BUTTON IS PRESSED")
         self.inputViewController?.performSegue(withIdentifier: "mySegue", sender: self)
+        // self.performSegue(withIdentifier: "mySegue", sender: self)
+
+    }
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mySegue" {
+            if let destination = segue.destination as? NewsDetailView {
+                destination.titleLabel.text = newsTitle[0]// you can pass value to destination view controller
+
+                // destination.nomb = arrayNombers[(sender as! UIButton).tag] // Using button Tag
+            }
+        }
     }
 }
 extension CarrouselCell: UICollectionViewDelegateFlowLayout {

@@ -22,16 +22,6 @@ class NewsDetailView: UIViewController {
     var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        let cell = CarrouselCell()
-////        APICaller.shared.getTopStories { result in
-////            cell.generate(articles: result)
-//            self.newsTitleDetail = cell.newsTitle
-//            print("AQUI\(self.newsTitleDetail)")
-//            //self.titleLabel.text = self.newsTitleDetail[0]
-        titleLabel.text = newsLink[0]
-    }
     internal func generate(articles: [Article]) {
         for i in 0...6 {
             newsTitle[i] = articles[i].title ?? ""
@@ -42,4 +32,16 @@ class NewsDetailView: UIViewController {
             newsLink[i] = articles[i].url ?? ""
         }
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        let cell = CarrouselCell()
+////        APICaller.shared.getTopStories { result in
+////            cell.generate(articles: result)
+//            self.newsTitleDetail = cell.newsTitle
+//            print("AQUI\(self.newsTitleDetail)")
+//            //self.titleLabel.text = self.newsTitleDetail[0]
+        //titleLabel.text = newsTitle[0]
+        //descriptionLabel.text = newsDescription[0]
+    }
+ 
 }
