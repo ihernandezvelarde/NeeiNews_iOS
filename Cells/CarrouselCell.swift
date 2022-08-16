@@ -100,6 +100,9 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
             carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
     }
     
+    //Esto(IBAction del button y la prepare func) deberia estar en el MainViewController? Se que si está en él la funcion es override pero si debe estar ahí no existe newsTitle y aparte deberia volver a hacer llamada a api y eso no es viable(?)
+    //Pero de esta manera no está haciendo nada el segue
+    
     @IBAction func newsAccesActionButton(_ sender: UIButton) {
         print("THE NEWS ACCES ACTION BUTTON IS PRESSED")
         self.inputViewController?.performSegue(withIdentifier: "mySegue", sender: self)
@@ -110,8 +113,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         if segue.identifier == "mySegue" {
             if let destination = segue.destination as? NewsDetailView {
                 destination.titleLabel.text = newsTitle[0]// you can pass value to destination view controller
-
-                // destination.nomb = arrayNombers[(sender as! UIButton).tag] // Using button Tag
+                print("HOLA") //Aqui no entra
             }
         }
     }

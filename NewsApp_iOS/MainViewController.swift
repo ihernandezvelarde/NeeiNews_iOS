@@ -26,9 +26,6 @@ class MainViewController: UIViewController {
     
         // FIXME: -- Change background color when design it's done.
         simpleView.backgroundColor = .purple
-       // self.performSegue(withIdentifier: "mySegue", sender: self)
-
-
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollView.bounces = scrollView.contentOffset.y > 100
