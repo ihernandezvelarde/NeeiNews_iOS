@@ -39,6 +39,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         self.carrouselCollectionView.collectionViewLayout = layout
         myPageControll.numberOfPages = newsTitle.count
         newsAccesButton.setTitle("", for: .normal)
+        
     }
     
     internal func generate(articles: [Article]) {
@@ -64,7 +65,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return newsTitle.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,7 +74,12 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         cell.newsFirstLineLabel.text = newsDescription[indexPath.row]
         return cell
     }
-
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let selectedData = newsTitle[indexPath.item]
+//        self.inputViewController?.performSegue(withIdentifier: "NewsDetailView", sender: selectedData)
+//    //Para cuando seleccionas una celda, tienes el indexPath
+//    }
     @IBAction func scrollLeftCarrousel(_ sender: UIButton) {
         if currentCellIndex <= newsTitle.count - 1 {
             currentCellIndex = currentCellIndex - 1
@@ -96,6 +102,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     
     @IBAction func newsAccesActionButton(_ sender: UIButton) {
         print("THE NEWS ACCES ACTION BUTTON IS PRESSED")
+        self.inputViewController?.performSegue(withIdentifier: "mySegue", sender: self)
     }
 }
 extension CarrouselCell: UICollectionViewDelegateFlowLayout {

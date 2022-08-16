@@ -26,6 +26,8 @@ class MainViewController: UIViewController {
     
         // FIXME: -- Change background color when design it's done.
         simpleView.backgroundColor = .purple
+       // self.performSegue(withIdentifier: "mySegue", sender: self)
+
 
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -43,6 +45,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? CarrouselCell {
             APICaller.shared.getTopStories { result in
                     cell.generate(articles: result)
+                    
             }
             
         if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {

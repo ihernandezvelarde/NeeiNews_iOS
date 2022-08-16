@@ -152,7 +152,7 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                     <connections>
                                                         <action selector="newsAccesActionButton:" destination="TZu-It-hKy" eventType="touchUpInside" id="nfS-uc-bbM"/>
-                                                        <segue destination="T70-f0-4eN" kind="show" id="rV0-CK-bbh"/>
+                                                        <segue destination="T70-f0-4eN" kind="show" identifier="mySegue" id="rV0-CK-bbh"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

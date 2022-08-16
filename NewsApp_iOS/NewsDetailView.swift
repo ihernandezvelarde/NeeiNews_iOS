@@ -15,22 +15,31 @@ class NewsDetailView: UIViewController {
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!
-    var newsTitleDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsDescriptionDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsPublishedAtDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsPhotoDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsContentDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsLinkDetail = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsTitle = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsDescription = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsPublishedAt = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsPhoto = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cell = CarrouselCell()
-        APICaller.shared.getTopStories { result in
-            cell.generate(articles: result)
-            self.newsTitleDetail = cell.newsTitle
-            print("AQUI\(self.newsTitleDetail)")
-            //self.titleLabel.text = self.newsTitleDetail[0]
+//        let cell = CarrouselCell()
+////        APICaller.shared.getTopStories { result in
+////            cell.generate(articles: result)
+//            self.newsTitleDetail = cell.newsTitle
+//            print("AQUI\(self.newsTitleDetail)")
+//            //self.titleLabel.text = self.newsTitleDetail[0]
+        titleLabel.text = newsLink[0]
+    }
+    internal func generate(articles: [Article]) {
+        for i in 0...6 {
+            newsTitle[i] = articles[i].title ?? ""
+            newsDescription[i] = articles[i].description ?? ""
+            newsPublishedAt[i] = articles[i].publishedAt ?? ""
+            newsPhoto[i] = articles[i].urlToImage ?? ""
+            newsContent[i] = articles[i].content ?? ""
+            newsLink[i] = articles[i].url ?? ""
         }
     }
-   
 }
