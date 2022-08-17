@@ -122,16 +122,6 @@
                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-9Y-Zt2">
                                                     <rect key="frame" x="110" y="102" width="195" height="26"/>
                                                 </pageControl>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjK-qh-eS2">
-                                                    <rect key="frame" x="36" y="102" width="45" height="26"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="arrow.left.circle" catalog="system" title="">
-                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="scrollLeftCarrousel:" destination="TZu-It-hKy" eventType="touchUpInside" id="OoH-rN-Kde"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eN-5N-e1k">
                                                     <rect key="frame" x="334" y="102" width="45" height="26"/>
                                                     <state key="normal" title="Button"/>
@@ -140,6 +130,16 @@
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="scrollRightCarrousel:" destination="TZu-It-hKy" eventType="touchUpInside" id="D25-Eq-rD4"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjK-qh-eS2">
+                                                    <rect key="frame" x="36" y="102" width="45" height="26"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="arrow.left.circle" catalog="system" title="">
+                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="scrollLeftCarrousel:" destination="TZu-It-hKy" eventType="touchUpInside" id="OoH-rN-Kde"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-LP-Gjz">
@@ -152,7 +152,7 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                     <connections>
                                                         <action selector="newsAccesActionButton:" destination="TZu-It-hKy" eventType="touchUpInside" id="nfS-uc-bbM"/>
-                                                        <segue destination="T70-f0-4eN" kind="show" identifier="mySegue" id="rV0-CK-bbh"/>
+                                                        <segue destination="T70-f0-4eN" kind="show" identifier="mySegue" id="ZvO-d0-nze"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -483,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="-1176"/>
+            <point key="canvasLocation" x="-213.04347826086959" y="-1176.5625"/>
         </scene>
         <!--News Detail View-->
         <scene sceneID="14R-QY-DzO">

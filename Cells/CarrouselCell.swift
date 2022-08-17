@@ -76,10 +76,16 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if indexPath.row == 0 {
+//            print("INDEX PATH 0")
+//        } else if indexPath.row == 1 {
+//            print("INDEX PATH 1")
+//        }
+//    }
 //        let selectedData = newsTitle[indexPath.item]
 //        self.inputViewController?.performSegue(withIdentifier: "NewsDetailView", sender: selectedData)
 //    //Para cuando seleccionas una celda, tienes el indexPath
-//    }
+   // }
     @IBAction func scrollLeftCarrousel(_ sender: UIButton) {
         if currentCellIndex <= newsTitle.count - 1 {
             currentCellIndex = currentCellIndex - 1
@@ -106,20 +112,23 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     @IBAction func newsAccesActionButton(_ sender: UIButton) {
         print("THE NEWS ACCES ACTION BUTTON IS PRESSED")
         self.inputViewController?.performSegue(withIdentifier: "mySegue", sender: self)
+        let cell = NewsDetailView()
+        if cell.titleLabel != nil {
+            cell.titleLabel.text = newsTitle[0]
         // self.performSegue(withIdentifier: "mySegue", sender: self)
-
-    }
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "mySegue" {
-            if let destination = segue.destination as? NewsDetailView {
-                destination.titleLabel.text = newsTitle[0]// you can pass value to destination view controller
-                print("HOLA") //Aqui no entra
-            }
         }
     }
+// Esta función no se ejecuta.
+//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "mySegue" {
+//            if let destination = segue.destination as? NewsDetailView {
+//                destination.titleLabel.text = newsTitle[0]
+//                print("HOLA") //Aqui no entra.
+//            }
+//        }
+//    }
 }
 extension CarrouselCell: UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 414, height: 128)
     }
