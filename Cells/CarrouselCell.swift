@@ -76,6 +76,50 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let view = UIView()
+//        view.backgroundColor = UIColor.blue
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//
+//        let id = newsTitle[indexPath.item]
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewsDetailView") as! NewsDetailView
+//        vc.id = id
+//        self.navigationController?.pushViewController(vc, animated: false)
+//}
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//         let cell = collectionView.cellForItem(at: indexPath)
+//         cell?.backgroundColor = UIColor.blue
+//         let lbl = cell?.subviews[1] as! UILabel
+//         lbl.textColor = UIColor.white
+//         performSegue(withIdentifier: "NewsDetailView", sender: nil)
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let vc = storyboard.instantiateViewController(withIdentifier: "NewsDetailView") as? NewsDetailView
+//        vc?.titleLabel = newsTitle[indexPath.row]
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "mySegue", sender: newsTitle[indexPath.item])
+//    }
+//   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let newsTit = newsTitle[indexPath.row]
+//        let newsDetailsVC = NewsDetailView()
+//        newsDetailsVC.newsTitle = [newsTit]
+//        let navController = UINavigationController(rootViewController: newsDetailsVC)
+//        present(navController, animated: true, completion: nil)
+//   }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//          guard let yourCell = collectionView.cellForItem(at: indexPath) as? InnerCell else {
+//              return
+//          }
+//        let yourModel = Article(from: <#Decoder#>, title: InnerCell.title, image: InnerCell.image)
+//          let targetViewController = TargetViewController(model: Article)
+//          navigationController?.pushViewController(targetViewController, animated: true)
+          // or if it's not in navigation controller
+          // present(targetViewController, animated: true, completion: nil)
+     //  }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        if indexPath.row == 0 {
 //            print("INDEX PATH 0")
 //        } else if indexPath.row == 1 {
@@ -111,10 +155,10 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     
     @IBAction func newsAccesActionButton(_ sender: UIButton) {
         print("THE NEWS ACCES ACTION BUTTON IS PRESSED")
-        self.inputViewController?.performSegue(withIdentifier: "mySegue", sender: self)
-        let cell = NewsDetailView()
-        if cell.titleLabel != nil {
-            cell.titleLabel.text = newsTitle[0]
+        //self.inputViewController?.performSegue(withIdentifier: "mySegue", sender: self)
+//        let cell = NewsDetailView()
+//        if cell.titleLabel != nil {
+//            cell.titleLabel.text = newsTitle[0]
         // self.performSegue(withIdentifier: "mySegue", sender: self)
         }
     }
@@ -127,7 +171,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
 //            }
 //        }
 //    }
-}
+
 extension CarrouselCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 414, height: 128)
