@@ -1,5 +1,5 @@
 //
-//  celdita.swift
+//  InnerCell.swift
 //  NewsApp_iOS
 //
 //  Created by Irene Hernández on 13/7/22.

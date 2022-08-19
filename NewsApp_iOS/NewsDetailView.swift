@@ -34,6 +34,7 @@ class NewsDetailView: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemPink
 //        let cell = CarrouselCell()
 ////        APICaller.shared.getTopStories { result in
 ////            cell.generate(articles: result)
