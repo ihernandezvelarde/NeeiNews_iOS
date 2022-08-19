@@ -76,8 +76,8 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let view = UIView()
-//        view.backgroundColor = UIColor.blue
+//        let modalVC = ModalVC.instantiateFromStoryboard(self.storyboard!)
+//        self.presentViewController(modalVC, animated: true, completion: nil)
 //    }
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //
@@ -153,6 +153,10 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     //Esto(IBAction del button y la prepare func) deberia estar en el MainViewController? Se que si está en él la funcion es override pero si debe estar ahí no existe newsTitle y aparte deberia volver a hacer llamada a api y eso no es viable(?)
     //Pero de esta manera no está haciendo nada el segue
     
+    
+    
+    
+    //Des de aquí no puedo hacer nada, el Botón al estar en la celda y no ser un viewController no deja.
     @IBAction func newsAccesActionButton(_ sender: UIButton) {
         print("THE NEWS ACCES ACTION BUTTON IS PRESSED")
         //self.inputViewController?.performSegue(withIdentifier: "mySegue", sender: self)
