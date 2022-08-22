@@ -37,7 +37,7 @@ struct Article: Codable {
     var title: String? = "Cargando"
     var description: String? = "Cargando"
     var url: String? = "Cargando"
-    var urlToImage: String? = "Cargando"
+    var urlToImage: String = "Cargando"
     var content: String? = "Cargando"
     var publishedAt: String? = "Cargando"
     var source: Source = Source(id: "Id", name: "Name")
