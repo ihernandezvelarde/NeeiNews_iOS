@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
 
     let launchImage = UIImageView(image: UIImage(named: "news_icon")!)
     let splashView = UIView()
+    var articlesArrray: [Article] = []
     
     @IBOutlet weak var simpleView: UIView!
     override func viewDidLoad() {
@@ -38,7 +39,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = ModalViewController()
+        var vc = UIViewController()
+        if articlesArrray.count != 0 {
+            vc = ModalViewController(article: articlesArrray[indexPath.row])
+        } else {
+            vc = ModalViewController(article: Article())
+        }
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
@@ -48,6 +54,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? CarrouselCell {
             APICaller.shared.getTopStories { result in
                     cell.generate(articles: result)
+                    self.articlesArrray = result
             }
             
         if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
