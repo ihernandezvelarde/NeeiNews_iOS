@@ -10,12 +10,9 @@ import Foundation
 
 class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     var currentCellIndex = 0
-    var newsTitle: [String] = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsDescription = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsPublishedAt = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsPhoto = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsContent = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
-    var newsLink = ["Cargando","Cargando","Cargando","Cargando","Cargando","Cargando","Cargando"]
+    
+    var article = Article()
+    var articlesArray: [Article]? = []
     var timer : Timer?
 
     @IBOutlet weak var carrouselCollectionView: UICollectionView!
@@ -31,27 +28,21 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         }
         carrouselCollectionView.delegate = self
         carrouselCollectionView.dataSource = self
+        carrouselCollectionView.isScrollEnabled = false
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
-        myPageControll.numberOfPages = newsTitle.count
+        myPageControll.numberOfPages = 6
         
     }
     
     internal func generate(articles: [Article]) {
-        for i in 0...6 {
-            newsTitle[i] = articles[i].title ?? ""
-            newsDescription[i] = articles[i].description ?? ""
-            newsPublishedAt[i] = articles[i].publishedAt ?? ""
-            newsPhoto[i] = articles[i].urlToImage ?? ""
-            newsContent[i] = articles[i].content ?? ""
-            newsLink[i] = articles[i].url ?? ""
-        }
+        self.articlesArray = articles
     }
     
     @objc func slideToNext() {
-        if currentCellIndex < newsTitle.count - 1 {
+        if currentCellIndex < 5 {
             currentCellIndex = currentCellIndex + 1
             
         }else {
@@ -62,17 +53,22 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return newsTitle.count
+        return 6
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as! InnerCell
-        cell.newsTitleLabel.text = newsTitle[indexPath.row]
-        cell.newsFirstLineLabel.text = newsDescription[indexPath.row]
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as? InnerCell
+    
+        if articlesArray?.count != 0 {
+            cell?.generate(article: articlesArray?[indexPath.row] ?? article)
+        } else {
+            cell?.generate(article: article)
+        }
+        
+        return cell ?? UICollectionViewCell()
     }
     @IBAction func scrollLeftCarrousel(_ sender: UIButton) {
-        if currentCellIndex <= newsTitle.count - 1 {
+        if currentCellIndex <= 5 {
             currentCellIndex = currentCellIndex - 1
         }else {
             currentCellIndex = 0
@@ -82,7 +78,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
     
     @IBAction func scrollRightCarrousel(_ sender: UIButton) {
-        if currentCellIndex < newsTitle.count - 1 {
+        if currentCellIndex < 5 {
             currentCellIndex = currentCellIndex + 1
         }else {
             currentCellIndex = 0

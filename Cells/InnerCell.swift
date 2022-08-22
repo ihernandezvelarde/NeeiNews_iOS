@@ -12,8 +12,12 @@ class InnerCell: UICollectionViewCell {
     @IBOutlet weak var newsFirstLineLabel: UILabel!
     //@IBOutlet weak var newsSecondLineLabel: UILabel!
    
-    
     public override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func generate(article: Article) {
+        newsTitleLabel.text = article.title
+        newsFirstLineLabel.text = article.description
     }
 }
