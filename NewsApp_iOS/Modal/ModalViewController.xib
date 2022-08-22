@@ -10,10 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalViewController" customModule="NewsApp_iOS" customModuleProvider="target">
             <connections>
-                <outlet property="contentLabel" destination="vtz-Vf-qSv" id="GRs-f1-0iN"/>
-                <outlet property="linkLabel" destination="kDV-VN-dlz" id="veV-eD-9Kn"/>
-                <outlet property="newsImage" destination="gyF-ca-40f" id="oet-de-hlc"/>
-                <outlet property="titleLabel" destination="1zP-d9-0Nt" id="4oI-WT-EsG"/>
+                <outlet property="titleLabel" destination="1zP-d9-0Nt" id="P2V-lr-IxB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,37 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zP-d9-0Nt">
-                    <rect key="frame" x="35" y="59" width="344" height="120"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="344" id="Aqa-pC-gbE"/>
-                        <constraint firstAttribute="height" constant="120" id="Cwj-hx-nwa"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gyF-ca-40f">
-                    <rect key="frame" x="35" y="194" width="344" height="200"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="344" id="RA3-WK-GYx"/>
-                        <constraint firstAttribute="height" constant="200" id="c0V-SI-cyd"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtz-Vf-qSv">
-                    <rect key="frame" x="35" y="409" width="344" height="400"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="92W-f8-gdj"/>
-                        <constraint firstAttribute="width" constant="344" id="i0k-lK-GCK"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDV-VN-dlz">
-                    <rect key="frame" x="35" y="824" width="344" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="344" id="o5M-tj-jP4"/>
-                    </constraints>
+                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -62,18 +29,8 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemIndigoColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1zP-d9-0Nt" secondAttribute="trailing" constant="35" id="2ho-Hj-jO8"/>
-                <constraint firstItem="gyF-ca-40f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="7rj-bY-Zlp"/>
-                <constraint firstItem="vtz-Vf-qSv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="8Jo-6y-eDP"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gyF-ca-40f" secondAttribute="trailing" constant="35" id="YuI-gc-ffx"/>
-                <constraint firstItem="kDV-VN-dlz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="bTW-4I-T1g"/>
-                <constraint firstItem="vtz-Vf-qSv" firstAttribute="top" secondItem="gyF-ca-40f" secondAttribute="bottom" constant="15" id="caJ-e7-aB0"/>
-                <constraint firstItem="kDV-VN-dlz" firstAttribute="top" secondItem="vtz-Vf-qSv" secondAttribute="bottom" constant="15" id="jQE-as-wBo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kDV-VN-dlz" secondAttribute="trailing" constant="35" id="jQJ-OY-4pa"/>
-                <constraint firstItem="1zP-d9-0Nt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="mZU-Vx-WHh"/>
-                <constraint firstItem="gyF-ca-40f" firstAttribute="top" secondItem="1zP-d9-0Nt" secondAttribute="bottom" constant="15" id="s9I-TW-5xc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vtz-Vf-qSv" secondAttribute="trailing" constant="35" id="x51-qs-7Z9"/>
-                <constraint firstItem="1zP-d9-0Nt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="zlS-3s-2gb"/>
+                <constraint firstItem="1zP-d9-0Nt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gpc-Gp-QsS"/>
+                <constraint firstItem="1zP-d9-0Nt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WWw-bf-OnN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="64.955357142857139"/>

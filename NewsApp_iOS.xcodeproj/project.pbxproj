@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04752C1D28A256F7006115FF /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04752C1C28A256F7006115FF /* NewsDetailView.swift */; };
+		04B0C39528AE452500033824 /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0C39428AE452500033824 /* PopupVC.swift */; };
 		04C9EB2328AFE69E0020EF4F /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */; };
 		04C9EB2428AFE69E0020EF4F /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C9EB2228AFE69E0020EF4F /* ModalViewController.xib */; };
 		B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12279F3287C7C4D009B96EE /* LinksCell.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04752C1C28A256F7006115FF /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		04B0C39428AE452500033824 /* PopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
 		04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		04C9EB2228AFE69E0020EF4F /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 		B12279F3287C7C4D009B96EE /* LinksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				B1911DB4288AE262004FE91B /* Reachability.swift */,
 				B19D256B2875CE3A0036A669 /* SceneDelegate.swift */,
 				B19D256D2875CE3A0036A669 /* MainViewController.swift */,
+				04752C1C28A256F7006115FF /* NewsDetailView.swift */,
 				B18525642886BB9700A4C1EF /* TimeLineViewController.swift */,
 				B18525662886BBED00A4C1EF /* MapViewController.swift */,
 				B17792E1287F0901008E8334 /* OptionsViewController.swift */,
@@ -99,6 +104,7 @@
 				B19D25692875CE3A0036A669 /* AppDelegate.swift */,
 				B19D25742875CE3C0036A669 /* LaunchScreen.storyboard */,
 				B19D256F2875CE3A0036A669 /* Main.storyboard */,
+				04B0C39428AE452500033824 /* PopupVC.swift */,
 				B19D25722875CE3C0036A669 /* Assets.xcassets */,
 				B19D25772875CE3C0036A669 /* Info.plist */,
 			);
@@ -192,6 +198,7 @@
 				04C9EB2328AFE69E0020EF4F /* ModalViewController.swift in Sources */,
 				B17792E2287F0901008E8334 /* OptionsViewController.swift in Sources */,
 				B19D256A2875CE3A0036A669 /* AppDelegate.swift in Sources */,
+				04B0C39528AE452500033824 /* PopupVC.swift in Sources */,
 				B18525672886BBED00A4C1EF /* MapViewController.swift in Sources */,
 				B1A46E48287C1E3B00235467 /* CarrouselCell.swift in Sources */,
 				B1F83EA4287C6F9A00B2A228 /* ButtonCell.swift in Sources */,
@@ -201,6 +208,7 @@
 				B17792DC287ED386008E8334 /* InnerCell.swift in Sources */,
 				B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */,
 				B18525652886BB9700A4C1EF /* TimeLineViewController.swift in Sources */,
+				04752C1D28A256F7006115FF /* NewsDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

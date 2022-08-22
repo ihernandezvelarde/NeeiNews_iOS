@@ -33,13 +33,13 @@ class ButtonCell: UICollectionViewCell {
             thirdViewButton.setTitle("", for: .normal)
         }
         if firstViewImage != nil && secondViewImage != nil && thirdViewImage != nil {
-            firstViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate)
+            firstViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate);
             firstViewImage.tintColor = UIColor.red
                 
-            secondViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate)
+            secondViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate);
             secondViewImage.tintColor = UIColor.red
                 
-            thirdViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate)
+            thirdViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate);
             thirdViewImage.tintColor = UIColor.red
         }
         
