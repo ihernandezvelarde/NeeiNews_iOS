@@ -29,7 +29,7 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         carrouselCollectionView.delegate = self
         carrouselCollectionView.dataSource = self
         carrouselCollectionView.isScrollEnabled = false
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+        startTimer()
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
@@ -40,16 +40,24 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     internal func generate(articles: [Article]) {
         self.articlesArray = articles
     }
-    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
+    }
     @objc func slideToNext() {
         if currentCellIndex < 5 {
             currentCellIndex = currentCellIndex + 1
+            timer?.invalidate()
+            startTimer()
             
         }else {
             currentCellIndex = 0
+            timer?.invalidate()
+            startTimer()
         }
             myPageControll.currentPage = currentCellIndex
             carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+            timer?.invalidate()
+            startTimer()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -70,21 +78,33 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     @IBAction func scrollLeftCarrousel(_ sender: UIButton) {
         if currentCellIndex <= 5 {
             currentCellIndex = currentCellIndex - 1
+            timer?.invalidate()
+            startTimer()
         }else {
             currentCellIndex = 0
+            timer?.invalidate()
+            startTimer()
         }
             myPageControll.currentPage = currentCellIndex
             carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .left, animated: true)
+            timer?.invalidate()
+            startTimer()
     }
     
     @IBAction func scrollRightCarrousel(_ sender: UIButton) {
         if currentCellIndex < 5 {
             currentCellIndex = currentCellIndex + 1
+            timer?.invalidate()
+            startTimer()
         }else {
             currentCellIndex = 0
+            timer?.invalidate()
+            startTimer()
         }
             myPageControll.currentPage = currentCellIndex
             carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+            timer?.invalidate()
+            startTimer()
     }
 }
 extension CarrouselCell: UICollectionViewDelegateFlowLayout {
