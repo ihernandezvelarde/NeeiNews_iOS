@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 class TimeLineViewController: UIViewController{
 
     @IBOutlet weak var firsNewLabel: UILabel!
@@ -43,56 +44,55 @@ class TimeLineViewController: UIViewController{
     @IBOutlet weak var secondPartNextNewTenImage: UIImageView!
     
     @IBOutlet weak var sixNewImage: UIImageView!
-    
+    var config = TimeLineConfig()
     var timer : Timer?
-    var prueba = "10:0:0"
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstNewImage.image = UIImage(named: "radio-button")
-        secondNewImage.image = UIImage(named: "radio-button")
-        thirdNewImage.image = UIImage(named: "radio-button")
-        fourthNewImage.image = UIImage(named: "radio-button")
-        fiveNewImage.image = UIImage(named: "radio-button")
-        sixNewImage.image = UIImage(named: "radio-button")
+        firstNewImage.image = UIImage(named: config.radioButton)
+        secondNewImage.image = UIImage(named: config.radioButton)
+        thirdNewImage.image = UIImage(named: config.radioButton)
+        fourthNewImage.image = UIImage(named: config.radioButton)
+        fiveNewImage.image = UIImage(named: config.radioButton)
+        sixNewImage.image = UIImage(named: config.radioButton)
         
-        firstPartNextNewOneImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        firstPartNextNewOneImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewOneImage.tintColor = .black
         
-        secondPartNextNewTwoImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        secondPartNextNewTwoImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewTwoImage.tintColor = .black
         
-        firstPartNextNewThreeImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        firstPartNextNewThreeImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewThreeImage.tintColor = .black
         
-        secondPartNextNewFourImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        secondPartNextNewFourImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewFourImage.tintColor = .black
 
-        firstPartNextNewFiveImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        firstPartNextNewFiveImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewFiveImage.tintColor = .black
 
-        secondPartNextNewSixImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        secondPartNextNewSixImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewSixImage.tintColor = .black
 
-        firstPartNextNewSevenImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        firstPartNextNewSevenImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewSevenImage.tintColor = .black
 
-        secondPartNextNewEigthImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        secondPartNextNewEigthImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewEigthImage.tintColor = .black
 
-        firstPartNextNewNineImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        firstPartNextNewNineImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         firstPartNextNewNineImage.tintColor = .black
 
-        secondPartNextNewTenImage.image = UIImage(named: "line")?.withRenderingMode(.alwaysTemplate)
+        secondPartNextNewTenImage.image = UIImage(named: config.line)?.withRenderingMode(.alwaysTemplate)
         secondPartNextNewTenImage.tintColor = .black
 
         
-        firsNewLabel.text = "8:00 - Esta es la primera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        secondNewLabel.text = "9:00 - Esta es la segunda noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        thirdNewLabel.text = "9:15 - Esta es la tercera noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        forthNewLabel.text = "9:45 - Esta es la cuarta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        fiveNewLabel.text = "10:30 - Esta es la quinta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        sixNewLabel.text = "12:00 - Esta es la sexta noticia. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        firsNewLabel.text = config.hourEightAM + " - " + config.loremIpsum
+        secondNewLabel.text = config.hourNineAM + " - " + config.loremIpsum
+        thirdNewLabel.text = config.hourNineFifteen + " - " + config.loremIpsum
+        forthNewLabel.text = config.hourNineFourtyFive + " - " + config.loremIpsum
+        fiveNewLabel.text = config.hourTenThirty + " - " + config.loremIpsum
+        sixNewLabel.text = config.hourTwelve + " - " + config.loremIpsum
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(checkTime), userInfo: nil, repeats: true)
     }
@@ -106,75 +106,58 @@ class TimeLineViewController: UIViewController{
     
         let hours = ("\(hour):\(minutes):\(seconds)")
         
-        let hourEightAM = "8:0:0"
-        let hourEightTwentyFive = "8:25:00"
-        let hourEightFourtyFive = "8:45:00"
-        let hourNineAM = "9:00:00"
-        let hourNineFive = "9:05:00"
-        let hourNineTen = "9:10:00"
-        let hourNineFifteen = "9:15:00"
-        let hourNineTwentyFive = "9:25:00"
-        let hourNineThirtyFive = "9:35:00"
-        let hourNineFourtyFive = "9:45:00"
-        let hourTen = "10:00:00"
-        let hourTenFifteen = "10:15:00"
-        let hourTenThirty = "10:30:00"
-        let hourEleven = "11:00:00"
-        let hourElevenThirty = "11:30:00"
-        let hourTwelve = "12:00:00"
-        
-        if hours.compare(hourEightAM, options: .numeric) == .orderedDescending {
-            firstNewImage.image = UIImage(named: "radio-on-button-red")
+        if hours.compare(config.hourEightAM, options: .numeric) == .orderedDescending {
+            firstNewImage.image = UIImage(named: config.redRadioButton)
             firstNewImage.tintColor = .red
         }
-        if hours.compare(hourEightTwentyFive, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourEightTwentyFive, options: .numeric) == .orderedDescending {
             firstPartNextNewOneImage.tintColor = .red
         }
-        if hours.compare(hourEightFourtyFive, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourEightFourtyFive, options: .numeric) == .orderedDescending {
             secondPartNextNewTwoImage.tintColor = .red
         }
-        if hours.compare(hourNineAM, options: .numeric) == .orderedDescending {
-            secondNewImage.image = UIImage(named: "radio-on-button-red")
+        if hours.compare(config.hourNineAM, options: .numeric) == .orderedDescending {
+            secondNewImage.image = UIImage(named: config.redRadioButton)
             secondNewImage.tintColor = .red
         }
-        if hours.compare(hourNineFive, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourNineFive, options: .numeric) == .orderedDescending {
             firstPartNextNewThreeImage.tintColor = .red
         }
-        if hours.compare(hourNineTen, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourNineTen, options: .numeric) == .orderedDescending {
             secondPartNextNewFourImage.tintColor = .red
         }
-        if hours.compare(hourNineFifteen, options: .numeric) == .orderedDescending {
-            thirdNewImage.image = UIImage(named: "radio-on-button-red")
+        if hours.compare(config.hourNineFifteen, options: .numeric) == .orderedDescending {
+            thirdNewImage.image = UIImage(named: config.redRadioButton)
             thirdNewImage.tintColor = .red
         }
-        if hours.compare(hourNineTwentyFive, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourNineTwentyFive, options: .numeric) == .orderedDescending {
             firstPartNextNewFiveImage.tintColor = .red
         }
-        if hours.compare(hourNineThirtyFive, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourNineThirtyFive, options: .numeric) == .orderedDescending {
             secondPartNextNewSixImage.tintColor = .red
         }
-        if hours.compare(hourNineFourtyFive, options: .numeric) == .orderedDescending {
-            fourthNewImage.image = UIImage(named: "radio-on-button-red")
+        if hours.compare(config.hourNineFourtyFive, options: .numeric) == .orderedDescending {
+            fourthNewImage.image = UIImage(named: config.redRadioButton)
             fourthNewImage.tintColor = .red
         }
-        if hours.compare(hourTen, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourTen, options: .numeric) == .orderedDescending {
             firstPartNextNewSevenImage.tintColor = .red
         }
-        if hours.compare(hourTenFifteen, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourTenFifteen, options: .numeric) == .orderedDescending {
             secondPartNextNewEigthImage.tintColor = .red
         }
-        if hours.compare(hourTenThirty, options: .numeric) == .orderedDescending {
-            fiveNewImage.image = UIImage(named: "radio-on-button-red")
+        if hours.compare(config.hourTenThirty, options: .numeric) == .orderedDescending {
+            fiveNewImage.image = UIImage(named: config.redRadioButton)
             fiveNewImage.tintColor = .red
         }
-        if hours.compare(hourEleven, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourEleven, options: .numeric) == .orderedDescending {
             firstPartNextNewNineImage.tintColor = UIColor.red
         }
-        if hours.compare(hourElevenThirty, options: .numeric) == .orderedDescending {
+        if hours.compare(config.hourElevenThirty, options: .numeric) == .orderedDescending {
             secondPartNextNewTenImage.tintColor = UIColor.red
         }
-        if hours.compare(hourTwelve, options: .numeric) == .orderedDescending {
-            sixNewImage.image = UIImage(named: "radio-on-button-red")
+        if hours.compare(config.hourTwelve, options: .numeric) == .orderedDescending {
+            sixNewImage.image = UIImage(named: config.redRadioButton)
         }
     }
 }

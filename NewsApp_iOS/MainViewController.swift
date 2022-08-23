@@ -8,9 +8,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
-   
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var simpleView: UIView!
+    
+    var config = MainConfig()
     
     let launchImage = UIImageView(image: UIImage(named: "news_icon")!)
     let splashView = UIView()
@@ -29,7 +31,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        splashView.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
+        splashView.backgroundColor = UIColor(red: CGFloat(config.redColor), green: CGFloat(config.greenColor), blue: CGFloat(config.blueColor), alpha: 1.0)
         view.addSubview(splashView)
         launchImage.contentMode = .scaleAspectFit
         splashView.addSubview(launchImage)
@@ -40,15 +42,15 @@ class MainViewController: UIViewController {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        scrollView.bounces = scrollView.contentOffset.y > 100
-        scrollView.bounces = scrollView.contentOffset.x > 100
+        scrollView.bounces = scrollView.contentOffset.y > CGFloat(config.bounceY)
+        scrollView.bounces = scrollView.contentOffset.x > CGFloat(config.bounceX)
     }
     
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
         
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return config.numberOfCells
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -90,6 +92,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 414, height: 165)
+        return CGSize(width: config.widthLayout, height: config.heightLayout)
     }
 }
