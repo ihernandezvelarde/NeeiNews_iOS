@@ -25,6 +25,8 @@ class ButtonCell: UICollectionViewCell {
     @IBOutlet weak var secondViewButton: UIButton!
     @IBOutlet weak var thirdViewButton: UIButton!
     
+    var config = ButtonCellConfig()
+    
     public override func awakeFromNib() {
         super.awakeFromNib()
         if firstViewButton != nil && secondViewButton != nil && thirdViewButton != nil {
@@ -33,32 +35,32 @@ class ButtonCell: UICollectionViewCell {
             thirdViewButton.setTitle("", for: .normal)
         }
         if firstViewImage != nil && secondViewImage != nil && thirdViewImage != nil {
-            firstViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate)
+            firstViewImage.image = UIImage(named: config.square)?.withRenderingMode(.alwaysTemplate)
             firstViewImage.tintColor = UIColor.red
                 
-            secondViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate)
+            secondViewImage.image = UIImage(named: config.square)?.withRenderingMode(.alwaysTemplate)
             secondViewImage.tintColor = UIColor.red
                 
-            thirdViewImage.image = UIImage(named: "square")?.withRenderingMode(.alwaysTemplate)
+            thirdViewImage.image = UIImage(named: config.square)?.withRenderingMode(.alwaysTemplate)
             thirdViewImage.tintColor = UIColor.red
         }
         
         if firstView != nil && secondView != nil && thirdView != nil {
-            firstView.layer.cornerRadius = 10
-            secondView.layer.cornerRadius = 10
-            thirdView.layer.cornerRadius = 10
+            firstView.layer.cornerRadius = config.cornerRadius
+            secondView.layer.cornerRadius = config.cornerRadius
+            thirdView.layer.cornerRadius = config.cornerRadius
             
-            firstView.layer.shadowOffset = CGSize(width: -5,height: 5)
-            firstView.layer.shadowOpacity = 0.7
-            firstView.layer.shadowRadius = 1.0
+            firstView.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
+            firstView.layer.shadowOpacity = config.shadowOpacity
+            firstView.layer.shadowRadius = config.shadowRadius
             
-            secondView.layer.shadowOffset = CGSize(width: -5,height: 5)
-            secondView.layer.shadowOpacity = 0.7
-            secondView.layer.shadowRadius = 1.0
+            secondView.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
+            secondView.layer.shadowOpacity = config.shadowOpacity
+            secondView.layer.shadowRadius = config.shadowRadius
         
-            thirdView.layer.shadowOffset = CGSize(width: -5,height: 5)
-            thirdView.layer.shadowOpacity = 0.7
-            thirdView.layer.shadowRadius = 1.0
+            thirdView.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
+            thirdView.layer.shadowOpacity = config.shadowOpacity
+            thirdView.layer.shadowRadius = config.shadowRadius
 
         } else {
             print("Doesn’t contain a value.")

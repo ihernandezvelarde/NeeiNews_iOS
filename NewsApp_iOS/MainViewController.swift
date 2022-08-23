@@ -7,17 +7,6 @@
 
 import UIKit
 
-struct MainConfig {
-    var redColor: Int = 209/255
-    var greenColor: Int = 209/255
-    var blueColor: Int = 214/255
-    var bounceY: Int = 100
-    var bounceX: Int = 100
-    var numberOfCells: Int = 3
-    var widthLayout: Int = 414
-    var heightLayout: Int = 165
-}
-
 class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
