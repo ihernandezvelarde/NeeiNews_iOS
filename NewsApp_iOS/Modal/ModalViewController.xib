@@ -13,6 +13,7 @@
                 <outlet property="closeModalButton" destination="cCc-Wd-pFr" id="Vk2-UM-9NG"/>
                 <outlet property="myContentLabel" destination="goN-xk-Qba" id="ZlW-tw-axW"/>
                 <outlet property="myDescriptionLabel" destination="Olr-RD-uab" id="dAf-Wl-6HD"/>
+                <outlet property="myLinkLabel" destination="8Qn-24-Sut" id="jJi-Rj-Lag"/>
                 <outlet property="myNewsImage" destination="JAf-8q-L2F" id="PYJ-zW-Yht"/>
                 <outlet property="myTitleLabel" destination="D0u-Hl-qUM" id="HAU-Ik-l7s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -23,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="wDQ-NR-P6T">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" bouncesZoom="NO" id="wDQ-NR-P6T">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -83,8 +84,17 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qn-24-Sut">
+                                    <rect key="frame" x="25" y="1421" width="354" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="z4H-v6-ZFl"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="goN-xk-Qba" secondAttribute="trailing" constant="45" id="2gl-kl-Pdj"/>
                                 <constraint firstItem="D0u-Hl-qUM" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="35" id="A3b-Yp-6q7"/>
@@ -93,11 +103,13 @@
                                 <constraint firstItem="JAf-8q-L2F" firstAttribute="top" secondItem="Olr-RD-uab" secondAttribute="bottom" constant="8" symbolic="YES" id="RwB-eI-SBN"/>
                                 <constraint firstItem="D0u-Hl-qUM" firstAttribute="top" secondItem="lf0-gS-40a" secondAttribute="top" constant="12" id="UWD-wD-6UY"/>
                                 <constraint firstAttribute="trailing" secondItem="Olr-RD-uab" secondAttribute="trailing" constant="45" id="UnY-1R-Kcr"/>
-                                <constraint firstAttribute="height" constant="1500" id="iqw-eF-vmK"/>
+                                <constraint firstItem="8Qn-24-Sut" firstAttribute="top" secondItem="goN-xk-Qba" secondAttribute="bottom" constant="15" id="acK-d2-FRv"/>
+                                <constraint firstItem="8Qn-24-Sut" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="25" id="g1d-UV-2xH"/>
                                 <constraint firstAttribute="trailing" secondItem="JAf-8q-L2F" secondAttribute="trailing" constant="45" id="jQ6-oh-Gb0"/>
                                 <constraint firstItem="goN-xk-Qba" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="25" id="oRd-vE-ddB"/>
                                 <constraint firstItem="cCc-Wd-pFr" firstAttribute="top" secondItem="lf0-gS-40a" secondAttribute="top" constant="35" id="oyK-ax-4Vd"/>
                                 <constraint firstItem="Olr-RD-uab" firstAttribute="top" secondItem="D0u-Hl-qUM" secondAttribute="bottom" constant="15" id="tXR-aR-SQq"/>
+                                <constraint firstAttribute="trailing" secondItem="8Qn-24-Sut" secondAttribute="trailing" constant="45" id="xCe-3R-qaP"/>
                                 <constraint firstItem="goN-xk-Qba" firstAttribute="top" secondItem="JAf-8q-L2F" secondAttribute="bottom" constant="8" symbolic="YES" id="zFy-Ov-ZnE"/>
                             </constraints>
                         </view>
@@ -120,11 +132,11 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

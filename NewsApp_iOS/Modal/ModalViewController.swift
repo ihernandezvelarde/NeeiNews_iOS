@@ -10,14 +10,10 @@ import UIKit
 class ModalViewController: UIViewController {
 
     @IBOutlet weak var myTitleLabel: UILabel!
-    
     @IBOutlet weak var myDescriptionLabel: UILabel!
-    
     @IBOutlet weak var myNewsImage: UIImageView!
-    
-    
     @IBOutlet weak var myContentLabel: UILabel!
-    
+    @IBOutlet weak var myLinkLabel: UILabel!
     @IBOutlet weak var closeModalButton: UIButton!
     
     var article = Article()
@@ -38,9 +34,14 @@ class ModalViewController: UIViewController {
         myDescriptionLabel.text = article.description
         let url = URL(string: article.urlToImage)
         let data = try? Data(contentsOf: url!)
-        myNewsImage.image = UIImage(data: data!)
-        myContentLabel.text = article.content
+        if data != nil {
+            myNewsImage.image = UIImage(data: data!)
+        } else {
+            myNewsImage.image = UIImage(named: "wrong")
+        }
         
+        myContentLabel.text = article.content
+        myLinkLabel.text = article.url
     }
     
     @IBAction func closeModalView(_ sender: Any) {
