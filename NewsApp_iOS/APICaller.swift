@@ -6,6 +6,26 @@
 //
 
 import Foundation
+
+struct APIResponse: Codable {
+    let articles: [Article]
+}
+
+struct Article: Codable {
+    var title: String? = "Cargando"
+    var description: String? = "Cargando"
+    var url: String? = "Cargando"
+    var urlToImage: String = "Cargando"
+    var content: String? = "Cargando"
+    var publishedAt: String? = "Cargando"
+    var source: Source = Source(id: "Id", name: "Name")
+}
+
+struct Source: Codable {
+    let id: String?
+    let name: String?
+}
+
 final class APICaller {
     static let shared = APICaller()
     struct Constants{
@@ -30,20 +50,5 @@ final class APICaller {
         task.resume()
     }
 }
-struct APIResponse: Codable {
-    let articles: [Article]
-}
-struct Article: Codable {
-    var title: String? = "Cargando"
-    var description: String? = "Cargando"
-    var url: String? = "Cargando"
-    var urlToImage: String = "Cargando"
-    var content: String? = "Cargando"
-    var publishedAt: String? = "Cargando"
-    var source: Source = Source(id: "Id", name: "Name")
-}
-struct Source: Codable {
-    let id: String?
-    let name: String?
-}
+
 
