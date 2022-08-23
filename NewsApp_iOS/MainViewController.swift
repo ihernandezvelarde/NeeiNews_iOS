@@ -10,12 +10,23 @@ import UIKit
 class MainViewController: UIViewController {
    
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var simpleView: UIView!
+    
     let launchImage = UIImageView(image: UIImage(named: "news_icon")!)
     let splashView = UIView()
     var articlesArrray: [Article] = []
     
-    @IBOutlet weak var simpleView: UIView!
+    override func viewDidAppear(_ animated: Bool) {
+        if Reachability.isConnectedToNetwork() == true {
+            print("Connected")
+        }else {
+            let controller = UIAlertController(title: "No Internet Detected", message: "This app requires an Internet connection", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(ok)
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         splashView.backgroundColor = UIColor(red: 209/255, green: 209/255, blue: 214/255, alpha: 1.0)
@@ -27,10 +38,12 @@ class MainViewController: UIViewController {
         // FIXME: -- Change background color when design it's done.
         simpleView.backgroundColor = .purple
     }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollView.bounces = scrollView.contentOffset.y > 100
         scrollView.bounces = scrollView.contentOffset.x > 100
     }
+    
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
         
@@ -62,19 +75,21 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 return cell2
             }
         }
+            
         if let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "LinksCell", for: indexPath) as? LinksCell {
+            
             if indexPath.row == 2 {
                 return cell3
             }
         }
             return cell
-        } else{
+            
+        } else {
             return UICollectionViewCell()
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 414, height: 165)
     }
-
-
 }
