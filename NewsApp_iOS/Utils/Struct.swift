@@ -12,6 +12,9 @@ import UIKit
 
 struct UtilsConfig {
     var text: [String] = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dolor at urna elementum ultricies vitae id tortor. Suspendisse aliquam viverra lorem, ac consectetur nulla vulputate elementum. Aenean rhoncus lectus nec efficitur pulvinar. Proin lacinia porta scelerisque. Praesent sagittis, leo sed tincidunt vehicula, nulla felis sollicitudin nisi, in aliquam eros enim nec sapien. Etiam augue est, euismod sit amet turpis ac, mollis auctor sapien. Integer nunc diam, varius vel molestie et, fringilla quis lacus. Suspendisse potenti. Proin semper augue suscipit, tempor ante in, tincidunt est.","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis tincidunt ultrices. Sed in quam arcu. Nunc nibh odio, tristique bibendum sollicitudin sed, tincidunt quis magna. Etiam sed turpis tempor, lacinia odio nec, lobortis leo. Donec convallis a elit at pharetra. Proin sed orci non elit porta auctor. Integer ornare dignissim lectus sed iaculis." ]
+    var description: String = "This is the description,consectetur adipiscing elit. Nunc cursus convallis sapien eget semper. Nulla a metus nec nisl volutpat vulputate a sed metus. Etiam aliquam malesuada arcu vitae pellentesque."
+    var published: String = "24-08-2022 11:00:05"
+    var url: String = "https://dino-chrome.com/"
 }
 
 struct CarrouselConfig {
