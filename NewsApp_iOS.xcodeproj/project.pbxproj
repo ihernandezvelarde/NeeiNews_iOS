@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047C395528B624D8002C6A9E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C395428B624D8002C6A9E /* Utils.swift */; };
+		047C395728B62615002C6A9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C395628B62615002C6A9E /* Extensions.swift */; };
 		04C9EB2328AFE69E0020EF4F /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */; };
 		04C9EB2428AFE69E0020EF4F /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C9EB2228AFE69E0020EF4F /* ModalViewController.xib */; };
 		04F7B07B28B51ADD00408270 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7B07A28B51ADD00408270 /* Struct.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047C395428B624D8002C6A9E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		047C395628B62615002C6A9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		04C9EB2228AFE69E0020EF4F /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 		04F7B07A28B51ADD00408270 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047C395328B624B6002C6A9E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				047C395428B624D8002C6A9E /* Utils.swift */,
+				047C395628B62615002C6A9E /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		04C9EB2028AFE64C0020EF4F /* Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,7 @@
 		B19D25682875CE3A0036A669 /* NewsApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				047C395328B624B6002C6A9E /* Utils */,
 				04C9EB2028AFE64C0020EF4F /* Modal */,
 				B1911DB4288AE262004FE91B /* Reachability.swift */,
 				04F7B07A28B51ADD00408270 /* Struct.swift */,
@@ -196,11 +210,13 @@
 				B17792E2287F0901008E8334 /* OptionsViewController.swift in Sources */,
 				B19D256A2875CE3A0036A669 /* AppDelegate.swift in Sources */,
 				B18525672886BBED00A4C1EF /* MapViewController.swift in Sources */,
+				047C395528B624D8002C6A9E /* Utils.swift in Sources */,
 				B1A46E48287C1E3B00235467 /* CarrouselCell.swift in Sources */,
 				B1F83EA4287C6F9A00B2A228 /* ButtonCell.swift in Sources */,
 				B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */,
 				B1F744AD288E9846004DB82C /* APICaller.swift in Sources */,
 				B1911DB5288AE262004FE91B /* Reachability.swift in Sources */,
+				047C395728B62615002C6A9E /* Extensions.swift in Sources */,
 				B17792DC287ED386008E8334 /* InnerCell.swift in Sources */,
 				B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */,
 				04F7B07B28B51ADD00408270 /* Struct.swift in Sources */,
