@@ -68,10 +68,22 @@
 		047C395328B624B6002C6A9E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				04F7B07A28B51ADD00408270 /* Struct.swift */,
 				047C395428B624D8002C6A9E /* Utils.swift */,
 				047C395628B62615002C6A9E /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		047C395828B63424002C6A9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B19D256D2875CE3A0036A669 /* MainViewController.swift */,
+				B18525642886BB9700A4C1EF /* TimeLineViewController.swift */,
+				B17792E1287F0901008E8334 /* OptionsViewController.swift */,
+				B18525662886BBED00A4C1EF /* MapViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		04C9EB2028AFE64C0020EF4F /* Modal */ = {
@@ -86,7 +98,6 @@
 		B19D255D2875CE3A0036A669 = {
 			isa = PBXGroup;
 			children = (
-				B1A46E45287C1E2500235467 /* Cells */,
 				B19D25682875CE3A0036A669 /* NewsApp_iOS */,
 				B19D25672875CE3A0036A669 /* Products */,
 			);
@@ -103,14 +114,11 @@
 		B19D25682875CE3A0036A669 /* NewsApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				047C395328B624B6002C6A9E /* Utils */,
+				047C395828B63424002C6A9E /* Views */,
+				B1A46E45287C1E2500235467 /* Cells */,
 				04C9EB2028AFE64C0020EF4F /* Modal */,
+				047C395328B624B6002C6A9E /* Utils */,
 				B1911DB4288AE262004FE91B /* Reachability.swift */,
-				04F7B07A28B51ADD00408270 /* Struct.swift */,
-				B19D256D2875CE3A0036A669 /* MainViewController.swift */,
-				B18525642886BB9700A4C1EF /* TimeLineViewController.swift */,
-				B18525662886BBED00A4C1EF /* MapViewController.swift */,
-				B17792E1287F0901008E8334 /* OptionsViewController.swift */,
 				B1F744AC288E9845004DB82C /* APICaller.swift */,
 				B19D25692875CE3A0036A669 /* AppDelegate.swift */,
 				B19D256B2875CE3A0036A669 /* SceneDelegate.swift */,
