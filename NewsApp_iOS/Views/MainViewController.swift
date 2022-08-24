@@ -44,8 +44,7 @@ class MainViewController: UIViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollView.bounces = scrollView.contentOffset.y > CGFloat(config.bounceY)
         scrollView.bounces = scrollView.contentOffset.x > CGFloat(config.bounceX)
-    }
-    
+    }    
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
         
@@ -58,7 +57,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if articlesArrray.count != 0 {
             vc = ModalViewController(article: articlesArrray[indexPath.row])
         } else {
-            vc = ModalViewController(article: Article())
+            vc = ModalViewController(article: Utils().factory(number: 6)[indexPath.row])
         }
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
