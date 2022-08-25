@@ -44,7 +44,8 @@ class MainViewController: UIViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollView.bounces = scrollView.contentOffset.y > CGFloat(config.bounceY)
         scrollView.bounces = scrollView.contentOffset.x > CGFloat(config.bounceX)
-    }    
+    }
+    
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
         

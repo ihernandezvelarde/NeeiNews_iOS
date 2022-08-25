@@ -37,7 +37,6 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
         layout.scrollDirection = .horizontal
         self.carrouselCollectionView.collectionViewLayout = layout
         myPageControll.numberOfPages = config.numberOfNews
-        
     }
     
     internal func generate(articles: [Article]) {
@@ -51,16 +50,16 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
             currentCellIndex = currentCellIndex + 1
             timer?.invalidate()
             startTimer()
-            
+        
         }else {
             currentCellIndex = config.cero
             timer?.invalidate()
             startTimer()
         }
             myPageControll.currentPage = currentCellIndex
-        carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: config.cero), at: .right, animated: true)
-            timer?.invalidate()
-            startTimer()
+            carrouselCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+//            timer?.invalidate()
+//            startTimer()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,16 +67,17 @@ class CarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "innerCell", for: indexPath) as? InnerCell
-    
         if articlesArray?.count != config.cero {
-            cell?.generate(article: articlesArray?[indexPath.row] ?? article)
+            cell?.generate(article: articlesArray?[indexPath.row] ?? Utils().factory(number: 6)[indexPath.row])
         } else {
-            cell?.generate(article: article)
+            cell?.generate(article: Utils().factory(number: 6)[indexPath.row])
         }
         
         return cell ?? UICollectionViewCell()
     }
+    
     @IBAction func scrollLeftCarrousel(_ sender: UIButton) {
         if currentCellIndex <= config.numberOfNews - 1 {
             currentCellIndex = currentCellIndex - 1
