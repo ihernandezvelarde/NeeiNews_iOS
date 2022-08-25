@@ -66,11 +66,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? CarrouselCell {
-            APICaller.shared.getTopStories { result in
-                    cell.generate(articles: result)
-                    self.articlesArrray = result
-            }
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? NewsCarrouselCell {
+//            APICaller.shared.getTopStories { result in
+//                    cell.generate(articles: result)
+//                    self.articlesArrray = result
+//            }
             
         if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
             if indexPath.row == 1 {
