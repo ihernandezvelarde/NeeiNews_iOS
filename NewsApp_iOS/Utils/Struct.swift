@@ -19,7 +19,7 @@ struct CarrouselConfig {
     var arrowLeft: String = "arrow.left.circle"
     var arrowRight: String = "arrow.right.circle"
     var numberOfNews: Int = 6
-    var widthLayout: Int = 414
+    var widthLayout: Int = 409
     var heightLayout: Int = 128
     var cero: Int = 0
 }
