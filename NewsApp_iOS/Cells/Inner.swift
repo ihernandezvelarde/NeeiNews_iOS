@@ -7,13 +7,17 @@
 
 import UIKit
 
-class Inner: UICollectionViewCell {
-    
-    @IBOutlet weak var myfisrtLabel: UILabel!
+class Inner: UICollectionViewCell,UICollectionViewDelegate {
 
+    @IBOutlet weak var myfisrtLabel: UILabel!
     @IBOutlet weak var mySecondLabel: UILabel!
+    
     override func awakeFromNib() {
-        myfisrtLabel.text = "HOLA"
-        mySecondLabel.text = "ADIOS"
     }
+    
+    func generate(article: Article) {
+        myfisrtLabel.text = article.title
+        mySecondLabel.text = article.description
+       }
+
 }
