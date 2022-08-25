@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
         splashView.removeFromSuperview()
     
         // FIXME: -- Change background color when design it's done.
-        simpleView.backgroundColor = .purple
+        simpleView?.backgroundColor = .purple
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
