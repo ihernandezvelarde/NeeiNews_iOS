@@ -34,7 +34,7 @@ class ModalViewController: UIViewController {
         myDescriptionLabel.text = article.description
         let url = URL(string: article.urlToImage)
         let data = try? Data(contentsOf: url!)
-        if data != nil {
+        if data != nil{
             myNewsImage.image = UIImage(data: data!)
         } else {
             myNewsImage.image = UIImage(named: "wrong")

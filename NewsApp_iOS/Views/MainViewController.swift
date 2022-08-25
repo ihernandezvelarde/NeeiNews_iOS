@@ -13,10 +13,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var simpleView: UIView!
     
     var config = MainConfig()
-    
     let launchImage = UIImageView(image: UIImage(named: "news_icon")!)
     let splashView = UIView()
-    var articlesArrray: [Article] = []
     
     override func viewDidAppear(_ animated: Bool) {
         if Reachability.isConnectedToNetwork() == true {
@@ -38,13 +36,14 @@ class MainViewController: UIViewController {
         splashView.removeFromSuperview()
     
         // FIXME: -- Change background color when design it's done.
-        simpleView.backgroundColor = .purple
+        simpleView?.backgroundColor = .purple
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         scrollView.bounces = scrollView.contentOffset.y > CGFloat(config.bounceY)
         scrollView.bounces = scrollView.contentOffset.x > CGFloat(config.bounceX)
-    }    
+    }
+    
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
         
@@ -52,23 +51,22 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return config.numberOfCells
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var vc = UIViewController()
-        if articlesArrray.count != 0 {
-            vc = ModalViewController(article: articlesArrray[indexPath.row])
-        } else {
-            vc = ModalViewController(article: Utils().factory(number: 6)[indexPath.row])
-        }
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        var vc = UIViewController()
+//        if articlesArray.count != 0 {
+//            vc = ModalViewController(article: articlesArray[indexPath.row])
+//        } else {
+//            vc = ModalViewController(article: Utils().factory(number: 6)[indexPath.row])
+//        }
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
+//    }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? CarrouselCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outherCell", for: indexPath) as? NewsCarrouselCell {
             APICaller.shared.getTopStories { result in
                     cell.generate(articles: result)
-                    self.articlesArrray = result
             }
             
         if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
