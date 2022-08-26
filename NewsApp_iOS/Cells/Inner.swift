@@ -11,8 +11,12 @@ class Inner: UICollectionViewCell,UICollectionViewDelegate {
 
     @IBOutlet weak var myfisrtLabel: UILabel!
     @IBOutlet weak var mySecondLabel: UILabel!
+    var cornerRadius: CGFloat = 25.0
+
     
     override func awakeFromNib() {
+        contentView.layer.cornerRadius = cornerRadius
+        layer.cornerRadius = cornerRadius
     }
     
     func generate(article: Article) {

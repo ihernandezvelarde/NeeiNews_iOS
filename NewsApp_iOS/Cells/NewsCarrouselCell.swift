@@ -7,9 +7,11 @@
 
 import UIKit
 
-class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-    @IBOutlet weak var myCollectionView: UICollectionView!
+
+
+class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate {
     
+    @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
     
     @IBOutlet weak var leftButton: UIButton!
@@ -21,20 +23,20 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
     var currentCellIndex = 0
     var timer : Timer?
     var config = CarrouselConfig()
-  
+
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         leftButton.setImage(UIImage(named: config.arrowLeft), for: .normal)
         rightButton.setImage(UIImage(named: config.arrowRight), for: .normal)
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         myCollectionView.isScrollEnabled = false
-        myCollectionView.backgroundColor = .red
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.myCollectionView.collectionViewLayout = layout
         startTimer()
-        myPageControll.numberOfPages = 6
+        myPageControll.numberOfPages = config.numberOfNews
         print("AQUI\(article)")
     }
     
@@ -42,18 +44,18 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
            timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil, repeats: true)
        }
        @objc func slideToNext() {
-           if currentCellIndex < 6 - 1 {
+           if currentCellIndex < config.numberOfNews - 1 {
                currentCellIndex = currentCellIndex + 1
                timer?.invalidate()
                startTimer()
            
            }else {
-               currentCellIndex = 0
+               currentCellIndex = config.cero
                timer?.invalidate()
                startTimer()
            }
            myPageControll.currentPage = currentCellIndex
-           myCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+           myCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: config.cero), at: .right, animated: true)
    //            timer?.invalidate()
    //            startTimer()
        }
@@ -62,63 +64,62 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
     }
     
     @IBAction func leftScroll(_ sender: UIButton) {
-        if currentCellIndex <= 6 - 1 {
+        if currentCellIndex <= config.numberOfNews - 1 {
                    currentCellIndex = currentCellIndex - 1
                    timer?.invalidate()
                    startTimer()
                }else {
-                   currentCellIndex = 0
+                   currentCellIndex = config.cero
                    timer?.invalidate()
                    startTimer()
                }
                    myPageControll.currentPage = currentCellIndex
-               myCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .left, animated: true)
+               myCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: config.cero), at: .left, animated: true)
                    timer?.invalidate()
                    startTimer()
     }
     @IBAction func rightScroll(_ sender: UIButton) {
-        if currentCellIndex < 6 - 1 {
+        if currentCellIndex < config.numberOfNews - 1 {
                     currentCellIndex = currentCellIndex + 1
                     timer?.invalidate()
                     startTimer()
                 }else {
-                    currentCellIndex = 0
+                    currentCellIndex = config.cero
                     timer?.invalidate()
                     startTimer()
                 }
                     myPageControll.currentPage = currentCellIndex
-                myCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .right, animated: true)
+                myCollectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: config.cero), at: .right, animated: true)
                     timer?.invalidate()
                     startTimer()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return config.numberOfNews
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inner", for: indexPath) as? Inner
               if articlesArray?.count != config.cero {
-                  cell?.generate(article: articlesArray?[indexPath.row] ?? Utils().factory(number: 6)[indexPath.row])
+                  cell?.generate(article: articlesArray?[indexPath.row] ?? Utils().factory(number: config.numberOfNews)[indexPath.row])
               } else {
-                  cell?.generate(article: Utils().factory(number: 6)[indexPath.row])
+                  cell?.generate(article: Utils().factory(number: config.numberOfNews)[indexPath.row])
               }
               return cell ?? UICollectionViewCell()
         }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
         var vc = UIViewController()
-        if articlesArray?.count != 0 {
-            vc = ModalViewController(article: articlesArray?[indexPath.row] ?? Utils().factory(number: 6)[indexPath.row])
+        if articlesArray?.count != config.cero {
+            vc = ModalViewController(article: articlesArray?[indexPath.row] ?? Utils().factory(number: config.numberOfNews)[indexPath.row])
         } else {
-            vc = ModalViewController(article: Utils().factory(number: 6)[indexPath.row])
+            vc = ModalViewController(article: Utils().factory(number: config.numberOfNews)[indexPath.row])
         }
         vc.modalPresentationStyle = .fullScreen
-        MainViewController().present(vc, animated: true, completion: nil)
+        self.window?.rootViewController?.present(vc, animated: true, completion: nil)
         }
-    }
+}
 extension NewsCarrouselCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 409, height: 128)
+        return CGSize(width: 375, height: 165)
     }
 
 }

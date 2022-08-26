@@ -29,6 +29,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        collectionView.backgroundColor = UIColor(red: CGFloat(188), green: CGFloat(170), blue: CGFloat(255), alpha: 1.0)
+
         splashView.backgroundColor = UIColor(red: CGFloat(config.redColor), green: CGFloat(config.greenColor), blue: CGFloat(config.blueColor), alpha: 1.0)
         view.addSubview(splashView)
         launchImage.contentMode = .scaleAspectFit
@@ -36,7 +38,7 @@ class MainViewController: UIViewController {
         splashView.removeFromSuperview()
     
         // FIXME: -- Change background color when design it's done.
-        simpleView?.backgroundColor = .purple
+        //simpleView?.backgroundColor = .systemPurple
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -70,6 +72,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
             
         if let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCell", for: indexPath) as? ButtonCell {
+
             if indexPath.row == 1 {
                 return cell2
             }

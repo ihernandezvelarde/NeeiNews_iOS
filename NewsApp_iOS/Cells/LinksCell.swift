@@ -13,8 +13,11 @@ class LinksCell: UICollectionViewCell {
     @IBOutlet weak var instagramButton: UIButton!
     @IBOutlet weak var youtubeButton: UIButton!
     var config = LinkCellConfig()
-    
+    var cornerRadius: CGFloat = 25.0
+
     public override func awakeFromNib() {
+        contentView.layer.cornerRadius = cornerRadius
+        layer.cornerRadius = cornerRadius
         super.awakeFromNib()
         facebookButton.imageView?.contentMode = .scaleAspectFill
         facebookButton.frame = CGRect(x: config.buttonSize, y: config.buttonSize, width: config.buttonSize, height: config.buttonSize)
