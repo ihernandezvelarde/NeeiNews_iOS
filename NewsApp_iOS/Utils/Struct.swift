@@ -50,7 +50,7 @@ struct MainConfig {
     var bounceY: Int = 100
     var bounceX: Int = 100
     var numberOfCells: Int = 3
-    var widthLayout: Int = 414
+    var widthLayout: Int = 375
     var heightLayout: Int = 165
 }
 
@@ -58,7 +58,7 @@ struct TimeLineConfig {
     var radioButton: String = "radio-button"
     var redRadioButton: String = "radio-on-button-red"
     var line: String = "line"
-    var hourEightAM: String = "8:0:0"
+    var hourEightAM: String = "8:00:00"
     var hourEightTwentyFive: String  = "8:25:00"
     var hourEightFourtyFive: String  = "8:45:00"
     var hourNineAM: String  = "9:00:00"

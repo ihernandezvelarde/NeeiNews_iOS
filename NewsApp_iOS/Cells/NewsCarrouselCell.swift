@@ -7,9 +7,11 @@
 
 import UIKit
 
-class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-    @IBOutlet weak var myCollectionView: UICollectionView!
+
+
+class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate {
     
+    @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var myPageControll: UIPageControl!
     
     @IBOutlet weak var leftButton: UIButton!
@@ -21,15 +23,15 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
     var currentCellIndex = 0
     var timer : Timer?
     var config = CarrouselConfig()
-  
+
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         leftButton.setImage(UIImage(named: config.arrowLeft), for: .normal)
         rightButton.setImage(UIImage(named: config.arrowRight), for: .normal)
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         myCollectionView.isScrollEnabled = false
-        myCollectionView.backgroundColor = .red
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.myCollectionView.collectionViewLayout = layout
@@ -105,7 +107,6 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
               return cell ?? UICollectionViewCell()
         }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
         var vc = UIViewController()
         if articlesArray?.count != config.cero {
             vc = ModalViewController(article: articlesArray?[indexPath.row] ?? Utils().factory(number: config.numberOfNews)[indexPath.row])
@@ -113,12 +114,12 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
             vc = ModalViewController(article: Utils().factory(number: config.numberOfNews)[indexPath.row])
         }
         vc.modalPresentationStyle = .fullScreen
-        MainViewController().present(vc, animated: true, completion: nil)
+        self.window?.rootViewController?.present(vc, animated: true, completion: nil)
         }
-    }
+}
 extension NewsCarrouselCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: config.widthLayout, height: config.heightLayout)
+        return CGSize(width: 375, height: 165)
     }
 
 }
