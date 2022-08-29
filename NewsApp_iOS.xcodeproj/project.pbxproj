@@ -14,10 +14,10 @@
 		04C9EB2328AFE69E0020EF4F /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */; };
 		04C9EB2428AFE69E0020EF4F /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C9EB2228AFE69E0020EF4F /* ModalViewController.xib */; };
 		04F7B07B28B51ADD00408270 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7B07A28B51ADD00408270 /* Struct.swift */; };
+		04FA6CE728BCF6C100689793 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA6CE628BCF6C100689793 /* MapsViewController.swift */; };
 		B12279F4287C7C4D009B96EE /* LinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12279F3287C7C4D009B96EE /* LinksCell.swift */; };
 		B17792E2287F0901008E8334 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17792E1287F0901008E8334 /* OptionsViewController.swift */; };
 		B18525652886BB9700A4C1EF /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18525642886BB9700A4C1EF /* TimeLineViewController.swift */; };
-		B18525672886BBED00A4C1EF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18525662886BBED00A4C1EF /* MapViewController.swift */; };
 		B1911DB5288AE262004FE91B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1911DB4288AE262004FE91B /* Reachability.swift */; };
 		B19D256A2875CE3A0036A669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19D25692875CE3A0036A669 /* AppDelegate.swift */; };
 		B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19D256B2875CE3A0036A669 /* SceneDelegate.swift */; };
@@ -37,10 +37,10 @@
 		04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		04C9EB2228AFE69E0020EF4F /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
 		04F7B07A28B51ADD00408270 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		04FA6CE628BCF6C100689793 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		B12279F3287C7C4D009B96EE /* LinksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksCell.swift; sourceTree = "<group>"; };
 		B17792E1287F0901008E8334 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		B18525642886BB9700A4C1EF /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
-		B18525662886BBED00A4C1EF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B1911DB4288AE262004FE91B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B19D25662875CE3A0036A669 /* NewsApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19D25692875CE3A0036A669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				B19D256D2875CE3A0036A669 /* MainViewController.swift */,
 				B18525642886BB9700A4C1EF /* TimeLineViewController.swift */,
 				B17792E1287F0901008E8334 /* OptionsViewController.swift */,
-				B18525662886BBED00A4C1EF /* MapViewController.swift */,
+				04FA6CE628BCF6C100689793 /* MapsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,9 +224,9 @@
 				B19D256E2875CE3A0036A669 /* MainViewController.swift in Sources */,
 				04C9EB2328AFE69E0020EF4F /* ModalViewController.swift in Sources */,
 				044F22CF28B7D3250075CA2B /* Inner.swift in Sources */,
+				04FA6CE728BCF6C100689793 /* MapsViewController.swift in Sources */,
 				B17792E2287F0901008E8334 /* OptionsViewController.swift in Sources */,
 				B19D256A2875CE3A0036A669 /* AppDelegate.swift in Sources */,
-				B18525672886BBED00A4C1EF /* MapViewController.swift in Sources */,
 				047C395528B624D8002C6A9E /* Utils.swift in Sources */,
 				B1F83EA4287C6F9A00B2A228 /* ButtonCell.swift in Sources */,
 				B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */,

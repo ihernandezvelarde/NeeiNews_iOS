@@ -23,13 +23,13 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="so5-mx-Flu"/>
                         <segue destination="y7z-nb-Vpc" kind="relationship" relationship="viewControllers" id="v6y-xG-YKO"/>
-                        <segue destination="X2F-8o-xea" kind="relationship" relationship="viewControllers" id="r0Z-92-UWu"/>
+                        <segue destination="X2F-8o-xea" kind="relationship" relationship="viewControllers" id="YKh-Nb-5ov"/>
                         <segue destination="LBz-ZQ-IJb" kind="relationship" relationship="viewControllers" id="5BA-kx-Jqp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thI-Vt-TDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1338" y="-41"/>
+            <point key="canvasLocation" x="-1249" y="-154"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -674,7 +674,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qxt-nJ-VU4"/>
-                        <color key="backgroundColor" red="0.83700658760000002" green="0.81797279860000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.83529411764705885" green="0.81797279860000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="du6-G8-65k" firstAttribute="leading" secondItem="Qxt-nJ-VU4" secondAttribute="leading" constant="40" id="3CS-Af-4FY"/>
                             <constraint firstItem="du6-G8-65k" firstAttribute="top" secondItem="Qxt-nJ-VU4" secondAttribute="top" constant="50" id="ITd-hj-eQW"/>
@@ -715,58 +715,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49B-gl-2gK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="-446"/>
+            <point key="canvasLocation" x="1388" y="-534"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Maps View Controller-->
         <scene sceneID="eYZ-Pa-CYb">
             <objects>
-                <viewController id="X2F-8o-xea" customClass="MapViewController" customModule="NewsApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NeJ-Bd-p8u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="Wmw-NR-8nA">
-                                <rect key="frame" x="0.0" y="159" width="414" height="654"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="654" id="Wkk-jn-2ZG"/>
-                                    <constraint firstAttribute="width" constant="414" id="h46-Ox-RQk"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A52-3b-l1b">
-                                <rect key="frame" x="0.0" y="102" width="414" height="58"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="58" id="JPb-hl-JY9"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="Y0J-fW-wqO"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="dOq-qw-wZz"/>
-                                    <constraint firstAttribute="height" constant="58" id="ye5-e9-43o"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bFS-is-3oz"/>
-                        <color key="backgroundColor" red="0.83700658760000002" green="0.77781778999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="Wmw-NR-8nA" firstAttribute="trailing" secondItem="bFS-is-3oz" secondAttribute="trailing" id="78Q-NI-MCN"/>
-                            <constraint firstItem="A52-3b-l1b" firstAttribute="leading" secondItem="NeJ-Bd-p8u" secondAttribute="leading" id="7eQ-pp-RIK"/>
-                            <constraint firstItem="bFS-is-3oz" firstAttribute="bottom" secondItem="A52-3b-l1b" secondAttribute="bottom" constant="653" id="JHI-tR-vWl"/>
-                            <constraint firstItem="A52-3b-l1b" firstAttribute="leading" secondItem="bFS-is-3oz" secondAttribute="leading" id="SNK-VA-llx"/>
-                            <constraint firstItem="Wmw-NR-8nA" firstAttribute="leading" secondItem="bFS-is-3oz" secondAttribute="leading" id="Zvi-HO-S2d"/>
-                            <constraint firstItem="bFS-is-3oz" firstAttribute="bottom" secondItem="A52-3b-l1b" secondAttribute="bottom" constant="653" id="ffP-0W-4vR"/>
-                            <constraint firstItem="Wmw-NR-8nA" firstAttribute="bottom" secondItem="bFS-is-3oz" secondAttribute="bottom" id="gD7-Lz-uY9"/>
-                            <constraint firstAttribute="trailing" secondItem="A52-3b-l1b" secondAttribute="trailing" id="qae-ss-VoJ"/>
-                            <constraint firstItem="A52-3b-l1b" firstAttribute="trailing" secondItem="bFS-is-3oz" secondAttribute="trailing" id="vLj-hq-UTg"/>
-                        </constraints>
-                    </view>
+                <viewController id="X2F-8o-xea" customClass="MapsViewController" customModule="NewsApp_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="jcR-ay-Dlz">
                         <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="OPb-eF-MuM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLH-Dz-P6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="281"/>
+            <point key="canvasLocation" x="1245" y="133"/>
         </scene>
         <!--OptionsViewController-->
         <scene sceneID="xZX-uJ-NRB">
@@ -930,7 +892,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHO-oW-KFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-75.362318840579718" y="552.45535714285711"/>
+            <point key="canvasLocation" x="106" y="438"/>
         </scene>
     </scenes>
     <resources>
@@ -942,7 +904,6 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line" width="40" height="40"/>
         <image name="map" catalog="system" width="128" height="110"/>
-        <image name="map" width="609" height="961"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
