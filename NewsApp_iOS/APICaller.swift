@@ -10,9 +10,9 @@ import Foundation
 final class APICaller {
     static let shared = APICaller()
     struct Constants{
-        static let topHeadLinesURL = URL(string: "https://newsapi.org/v2/everything?q=apple&from=2022-08-25&to=2022-08-25&sortBy=popularity&apiKey=b0081229f02648eb81057b78f3de9b87")
+        static let topHeadLinesURL = URL(string: "https://newsapi.org/v2/everything?q=apple&sortBy=popularity&apiKey=b0081229f02648eb81057b78f3de9b87")
         //https://newsapi.org/v2/everything?q=tesla&from=2022-07-24&sortBy=publishedAt&apiKey=b0081229f02648eb81057b78f3de9b87
-        
+        //https://newsapi.org/v2/everything?q=apple&sortBy=popularity&apiKey=b0081229f02648eb81057b78f3de9b87
         //https://newsapi.org/v2/top-headlines?country=US&apiKey=b0081229f02648eb81057b78f3de9b87
     }
     private init() { }

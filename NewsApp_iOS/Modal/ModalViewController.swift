@@ -12,11 +12,12 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var myTitleLabel: UILabel!
     @IBOutlet weak var myDescriptionLabel: UILabel!
     @IBOutlet weak var myNewsImage: UIImageView!
-    @IBOutlet weak var myContentLabel: UILabel!
     @IBOutlet weak var closeModalButton: UIButton!
     
+    @IBOutlet weak var myPublishedAtLabel: UILabel!
     @IBOutlet weak var linkButton: UIButton!
     
+    @IBOutlet weak var myTodayLabel: UILabel!
     
     var article = Article()
     
@@ -24,6 +25,8 @@ class ModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         myNewsImage.layer.cornerRadius = 10
+        linkButton.configuration?.cornerStyle = .capsule
+        //linkButton.clipsToBounds = true
         setUpUi(article: self.article)
 
     }
@@ -43,7 +46,8 @@ class ModalViewController: UIViewController {
         } else {
             myNewsImage.image = UIImage(named: "wrong")
         }
-        myContentLabel.text = article.content
+        myPublishedAtLabel.text = article.publishedAt
+        myTodayLabel.text = "Today"
     }
     
     @IBAction func pressLinkButton(_ sender: UIButton) {
