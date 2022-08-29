@@ -81,7 +81,7 @@ struct TimeLineConfig {
 struct OptionsConfig {
     var radioButton: String = "radio-button"
     var radioButtonOn: String = "radio-on-button"
-    var lenguage: String = "LENGUAGE"
+    var language: String = "LANGUAGE"
     var textFont: String = "Copperplate-Bold"
     var sobreLaApp: String = "About app"
     var permisos: String = "Dermissions"

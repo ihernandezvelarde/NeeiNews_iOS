@@ -28,21 +28,18 @@ class OptionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myview.backgroundColor = .darkGray
-        lenguageLabel.text = config.lenguage
-        lenguageLabel.textColor = .white
-        lenguageLabel.font = UIFont(name: config.textFont, size: 25)
+        //myview.backgroundColor = .darkGray
+        lenguageLabel.text = config.language
+        lenguageLabel.textColor = .black
         
+        sobreLaAppButton.configuration?.cornerStyle = .capsule
         sobreLaAppButton.setTitle(config.sobreLaApp, for: .normal)
         sobreLaAppButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        sobreLaAppButton.backgroundColor = .white
-        sobreLaAppButton.layer.cornerRadius = 7
         sobreLaAppButton.setTitleColor(UIColor.black, for: .normal)
         
+        permisosButton.configuration?.cornerStyle = .capsule
         permisosButton.setTitle(config.permisos, for: .normal)
         permisosButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        permisosButton.backgroundColor = .white
-        permisosButton.layer.cornerRadius = 7
         permisosButton.setTitleColor(UIColor.black, for: .normal)
         
         castellanoButton.setTitle("", for: .normal)
@@ -55,13 +52,13 @@ class OptionsViewController: UIViewController {
         
         
         castellanoLabel.text = config.castellano
-        castellanoLabel.textColor = .white
+        castellanoLabel.textColor = .black
         
         catalanLabel.text = config.catalan
-        catalanLabel.textColor = .white
+        catalanLabel.textColor = .black
         
         inglesLabel.text = config.ingles
-        inglesLabel.textColor = .white
+        inglesLabel.textColor = .black
     }
     
     @IBAction func castellanoButtonPressed(_ sender: UIButton) {

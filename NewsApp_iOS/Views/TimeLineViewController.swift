@@ -87,12 +87,12 @@ class TimeLineViewController: UIViewController{
         secondPartNextNewTenImage.tintColor = .black
 
         
-        firsNewLabel.text = config.hourEightAM + " - " + config.loremIpsum
-        secondNewLabel.text = config.hourNineAM + " - " + config.loremIpsum
-        thirdNewLabel.text = config.hourNineFifteen + " - " + config.loremIpsum
-        forthNewLabel.text = config.hourNineFourtyFive + " - " + config.loremIpsum
-        fiveNewLabel.text = config.hourTenThirty + " - " + config.loremIpsum
-        sixNewLabel.text = config.hourTwelve + " - " + config.loremIpsum
+        firsNewLabel.text = config.hourEightAM + " - Morning news. National and international themes. Society, culture and economy."
+        secondNewLabel.text = config.hourNineAM + " - Weather information. Know today's and the rest of the week weather."
+        thirdNewLabel.text = config.hourNineFifteen + " - Breaking news information about the most popular sports."
+        forthNewLabel.text = config.hourNineFourtyFive + " - Informative about the most watched series and movies on Netflix and Disney plus."
+        fiveNewLabel.text = config.hourTenThirty + " - Informative about the new games that are going to come out for different platforms."
+        sixNewLabel.text = config.hourTwelve + " - Local news. Current affairs on society, culture and economy."
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(checkTime), userInfo: nil, repeats: true)
     }
