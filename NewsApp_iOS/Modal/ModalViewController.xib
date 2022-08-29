@@ -75,21 +75,6 @@
                                         <constraint firstAttribute="width" constant="344" id="pOS-mz-pMs"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-au-HaG">
-                                    <rect key="frame" x="120" y="769" width="158" height="31"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="31" id="KLh-ZK-86Q"/>
-                                        <constraint firstAttribute="width" constant="158" id="ttx-vq-m1a"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="News Link">
-                                        <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
-                                    </buttonConfiguration>
-                                    <connections>
-                                        <action selector="pressLinkButton:" destination="-1" eventType="touchUpInside" id="c6c-bZ-KC7"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX3-EO-ZPy">
                                     <rect key="frame" x="25" y="52" width="262" height="21"/>
                                     <constraints>
@@ -110,18 +95,32 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-au-HaG">
+                                    <rect key="frame" x="145" y="767" width="110" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="110" id="5GT-oC-ceP"/>
+                                        <constraint firstAttribute="height" constant="31" id="QKR-ex-im8"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="News Link">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="pressLinkButton:" destination="-1" eventType="touchUpInside" id="c6c-bZ-KC7"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.87251788377761841" green="0.83541327714920044" blue="0.95384186506271362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="JAf-8q-L2F" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="25" id="4Jj-rz-zkt"/>
-                                <constraint firstAttribute="trailing" secondItem="k7q-au-HaG" secondAttribute="trailing" constant="136" id="8QJ-fB-HNd"/>
                                 <constraint firstAttribute="trailing" secondItem="cCc-Wd-pFr" secondAttribute="trailing" constant="30" id="DEz-W9-UiU"/>
                                 <constraint firstItem="JAf-8q-L2F" firstAttribute="top" secondItem="ROm-IR-UlF" secondAttribute="bottom" constant="7" id="Hxz-CV-pPr"/>
+                                <constraint firstAttribute="bottom" secondItem="k7q-au-HaG" secondAttribute="bottom" constant="702" id="IV4-zU-qww"/>
+                                <constraint firstItem="k7q-au-HaG" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="145" id="M13-BZ-2eO"/>
                                 <constraint firstItem="D0u-Hl-qUM" firstAttribute="top" secondItem="JAf-8q-L2F" secondAttribute="bottom" constant="10" id="WTi-Gm-piY"/>
-                                <constraint firstItem="k7q-au-HaG" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="120" id="adx-0s-ntB"/>
                                 <constraint firstItem="ROm-IR-UlF" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="25" id="dys-HY-gwb"/>
                                 <constraint firstItem="Olr-RD-uab" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="25" id="eTY-Hf-k0C"/>
-                                <constraint firstAttribute="bottom" secondItem="k7q-au-HaG" secondAttribute="bottom" constant="700" id="gMw-Yi-gUJ"/>
                                 <constraint firstItem="UX3-EO-ZPy" firstAttribute="top" secondItem="lf0-gS-40a" secondAttribute="top" constant="52" id="oHC-bU-ngk"/>
                                 <constraint firstItem="cCc-Wd-pFr" firstAttribute="top" secondItem="lf0-gS-40a" secondAttribute="top" id="oyK-ax-4Vd"/>
                                 <constraint firstItem="UX3-EO-ZPy" firstAttribute="leading" secondItem="lf0-gS-40a" secondAttribute="leading" constant="25" id="q2o-lI-wne"/>

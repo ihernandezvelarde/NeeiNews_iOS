@@ -862,20 +862,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-9A-sf4">
-                                <rect key="frame" x="134" y="742" width="147" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="hK9-tm-zuF"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="lfc-0J-zoY"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button" titleAlignment="center">
-                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="permisosButtonPressed:" destination="LBz-ZQ-IJb" eventType="touchUpInside" id="c4F-m0-iUe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-eG-IUm">
                                 <rect key="frame" x="143" y="698" width="128" height="31"/>
                                 <constraints>
@@ -891,24 +877,38 @@
                                     <action selector="sobreLaAppButtonPressed:" destination="LBz-ZQ-IJb" eventType="touchUpInside" id="OxK-kA-4tZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARr-9A-sf4">
+                                <rect key="frame" x="135" y="742" width="145" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="TzG-x0-AWq"/>
+                                    <constraint firstAttribute="height" constant="31" id="tkm-6Y-k3h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button" titleAlignment="center">
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="permisosButtonPressed:" destination="LBz-ZQ-IJb" eventType="touchUpInside" id="c4F-m0-iUe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8ar-Cj-nH9"/>
                         <color key="backgroundColor" red="0.83700658760000002" green="0.77781778999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ARr-9A-sf4" firstAttribute="top" secondItem="jBq-eG-IUm" secondAttribute="bottom" constant="13" id="4HN-FH-zvU"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="sQE-87-xHd" secondAttribute="trailing" constant="179" id="4aJ-1r-ZKd"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="bottom" secondItem="put-Aa-Cl5" secondAttribute="bottom" constant="500" id="6i0-Vx-7NZ"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="bottom" secondItem="bpo-yH-vBr" secondAttribute="bottom" constant="500" id="ArY-rG-YxA"/>
                             <constraint firstItem="bpo-yH-vBr" firstAttribute="leading" secondItem="put-Aa-Cl5" secondAttribute="trailing" constant="10" id="DGC-ui-Hal"/>
+                            <constraint firstItem="ARr-9A-sf4" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="135" id="LS4-4x-eHh"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="bpo-yH-vBr" secondAttribute="trailing" constant="187" id="NH4-AP-0e3"/>
                             <constraint firstItem="put-Aa-Cl5" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="15" id="Ohb-Lb-IFc"/>
-                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="ARr-9A-sf4" secondAttribute="trailing" constant="133" id="Wvn-7b-Nnn"/>
-                            <constraint firstItem="ARr-9A-sf4" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="134" id="Xko-XQ-VtL"/>
+                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="ARr-9A-sf4" secondAttribute="trailing" constant="134" id="Zrn-nM-P7x"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="jBq-eG-IUm" secondAttribute="trailing" constant="143" id="fFT-Lf-HwV"/>
+                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="bottom" secondItem="ARr-9A-sf4" secondAttribute="bottom" constant="40" id="gGL-N3-KKN"/>
                             <constraint firstItem="sQE-87-xHd" firstAttribute="top" secondItem="8ar-Cj-nH9" secondAttribute="top" constant="35" id="jCg-YI-zKv"/>
                             <constraint firstItem="sQE-87-xHd" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="35" id="l3F-cc-Z2S"/>
                             <constraint firstItem="jBq-eG-IUm" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="143" id="llo-BL-SAS"/>
-                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="bottom" secondItem="ARr-9A-sf4" secondAttribute="bottom" constant="40" id="qlx-BV-RkU"/>
+                            <constraint firstItem="ARr-9A-sf4" firstAttribute="top" secondItem="jBq-eG-IUm" secondAttribute="bottom" constant="13" id="pSb-8r-QBm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="Qwo-GE-soG">
@@ -941,8 +941,8 @@
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="line" width="40" height="40"/>
-        <image name="map" width="609" height="961"/>
         <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" width="609" height="961"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
