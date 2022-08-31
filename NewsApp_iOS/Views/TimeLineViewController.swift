@@ -10,6 +10,8 @@ import UIKit
 
 class TimeLineViewController: UIViewController{
 
+    
+    @IBOutlet weak var timelineTitle: UILabel!
     @IBOutlet weak var firsNewLabel: UILabel!
     @IBOutlet weak var secondNewLabel: UILabel!
     @IBOutlet weak var thirdNewLabel: UILabel!
@@ -48,7 +50,7 @@ class TimeLineViewController: UIViewController{
     var timer : Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        timelineTitle.text = "NEWS TIMELINE"
         firstNewImage.image = UIImage(named: config.radioButton)
         secondNewImage.image = UIImage(named: config.radioButton)
         thirdNewImage.image = UIImage(named: config.radioButton)
@@ -108,53 +110,53 @@ class TimeLineViewController: UIViewController{
         
         if hours.compare(config.hourEightAM, options: .numeric) == .orderedDescending {
             firstNewImage.image = UIImage(named: config.redRadioButton)
-            firstNewImage.tintColor = .red
+            firstNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourEightTwentyFive, options: .numeric) == .orderedDescending {
-            firstPartNextNewOneImage.tintColor = .red
+            firstPartNextNewOneImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourEightFourtyFive, options: .numeric) == .orderedDescending {
-            secondPartNextNewTwoImage.tintColor = .red
+            secondPartNextNewTwoImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineAM, options: .numeric) == .orderedDescending {
             secondNewImage.image = UIImage(named: config.redRadioButton)
-            secondNewImage.tintColor = .red
+            secondNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineFive, options: .numeric) == .orderedDescending {
-            firstPartNextNewThreeImage.tintColor = .red
+            firstPartNextNewThreeImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineTen, options: .numeric) == .orderedDescending {
-            secondPartNextNewFourImage.tintColor = .red
+            secondPartNextNewFourImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineFifteen, options: .numeric) == .orderedDescending {
             thirdNewImage.image = UIImage(named: config.redRadioButton)
-            thirdNewImage.tintColor = .red
+            thirdNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineTwentyFive, options: .numeric) == .orderedDescending {
-            firstPartNextNewFiveImage.tintColor = .red
+            firstPartNextNewFiveImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineThirtyFive, options: .numeric) == .orderedDescending {
-            secondPartNextNewSixImage.tintColor = .red
+            secondPartNextNewSixImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineFourtyFive, options: .numeric) == .orderedDescending {
             fourthNewImage.image = UIImage(named: config.redRadioButton)
-            fourthNewImage.tintColor = .red
+            fourthNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourTen, options: .numeric) == .orderedDescending {
-            firstPartNextNewSevenImage.tintColor = .red
+            firstPartNextNewSevenImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourTenFifteen, options: .numeric) == .orderedDescending {
-            secondPartNextNewEigthImage.tintColor = .red
+            secondPartNextNewEigthImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourTenThirty, options: .numeric) == .orderedDescending {
             fiveNewImage.image = UIImage(named: config.redRadioButton)
-            fiveNewImage.tintColor = .red
+            fiveNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourEleven, options: .numeric) == .orderedDescending {
-            firstPartNextNewNineImage.tintColor = UIColor.red
+            firstPartNextNewNineImage.tintColor = UIColor.systemPurple
         }
         if hours.compare(config.hourElevenThirty, options: .numeric) == .orderedDescending {
-            secondPartNextNewTenImage.tintColor = UIColor.red
+            secondPartNextNewTenImage.tintColor = UIColor.systemPurple
         }
         if hours.compare(config.hourTwelve, options: .numeric) == .orderedDescending {
             sixNewImage.image = UIImage(named: config.redRadioButton)
