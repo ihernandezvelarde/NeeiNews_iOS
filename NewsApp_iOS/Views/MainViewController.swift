@@ -33,6 +33,11 @@ class MainViewController: UIViewController {
     
     
     
+    @IBOutlet weak var fakeButtonLeft: UIView!
+    @IBOutlet weak var fakeButtonCenter: UIView!
+    @IBOutlet weak var fakeButtonRight: UIView!
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var simpleView: UIView!
     var timer : Timer?
@@ -53,8 +58,18 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        collectionView.backgroundColor = UIColor(red: CGFloat(188), green: CGFloat(170), blue: CGFloat(255), alpha: 1.0)
-       
+        let gestureLeft = UITapGestureRecognizer(target: self, action: #selector(clickLeft))
+        fakeButtonLeft.isUserInteractionEnabled = true
+        fakeButtonLeft.addGestureRecognizer(gestureLeft)
+        
+        let gestureCenter = UITapGestureRecognizer(target: self, action: #selector(clickCenter))
+        fakeButtonCenter.isUserInteractionEnabled = true
+        fakeButtonCenter.addGestureRecognizer(gestureCenter)
+        
+        let gestureRight = UITapGestureRecognizer(target: self, action: #selector(clickRight))
+        fakeButtonRight.isUserInteractionEnabled = true
+        fakeButtonRight.addGestureRecognizer(gestureRight)
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(checkTime), userInfo: nil, repeats: true)
         
         let contadorUsers = 32*8
@@ -95,6 +110,27 @@ class MainViewController: UIViewController {
         intSecondLabel.text = ("\(seconds)")
     }
     
+    @objc func clickLeft(sender:UITapGestureRecognizer) {
+            print("CLICK LEFT")
+            let controller = UIAlertController(title: "THIS SECTION IS UNDER DEVELOPMENT", message: "We are working on it, thanks!", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(ok)
+            present(controller, animated: true, completion: nil)
+    }
+    @objc func clickCenter(sender:UITapGestureRecognizer) {
+            print("CLICK CENTER")
+            let controller = UIAlertController(title: "THIS SECTION IS UNDER DEVELOPMENT", message: "We are working on it, thanks!", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(ok)
+            present(controller, animated: true, completion: nil)
+    }
+    @objc func clickRight(sender:UITapGestureRecognizer) {
+            print("CLICK RIGHT")
+            let controller = UIAlertController(title: "THIS SECTION IS UNDER DEVELOPMENT", message: "We are working on it, thanks!", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(ok)
+            present(controller, animated: true, completion: nil)
+    }
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
         
