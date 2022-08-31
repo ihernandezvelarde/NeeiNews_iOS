@@ -57,7 +57,7 @@ struct MainConfig {
 
 struct TimeLineConfig {
     var radioButton: String = "radio-button"
-    var redRadioButton: String = "radio-on-button-red"
+    var redRadioButton: String = "radio-on-button-purple"
     var line: String = "line"
     var hourEightAM: String = "8:00:00"
     var hourEightTwentyFive: String  = "8:25:00"

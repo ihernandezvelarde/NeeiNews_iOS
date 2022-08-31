@@ -156,7 +156,7 @@ class TimeLineViewController: UIViewController{
             firstPartNextNewNineImage.tintColor = UIColor.systemPurple
         }
         if hours.compare(config.hourElevenThirty, options: .numeric) == .orderedDescending {
-            secondPartNextNewTenImage.tintColor = UIColor.systemPurple
+            secondPartNextNewTenImage.tintColor = UIColor.systemPurple 
         }
         if hours.compare(config.hourTwelve, options: .numeric) == .orderedDescending {
             sixNewImage.image = UIImage(named: config.redRadioButton)
