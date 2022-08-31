@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		044F22CD28B7D10F0075CA2B /* NewsCarrouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F22CC28B7D10F0075CA2B /* NewsCarrouselCell.swift */; };
 		044F22CF28B7D3250075CA2B /* Inner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F22CE28B7D3250075CA2B /* Inner.swift */; };
+		04623B4A28BFA5030042664C /* RegisterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04623B4828BFA5030042664C /* RegisterModalViewController.swift */; };
+		04623B4B28BFA5030042664C /* RegisterModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04623B4928BFA5030042664C /* RegisterModalViewController.xib */; };
 		047C395528B624D8002C6A9E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C395428B624D8002C6A9E /* Utils.swift */; };
 		047C395728B62615002C6A9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C395628B62615002C6A9E /* Extensions.swift */; };
 		04C9EB2328AFE69E0020EF4F /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		044F22CC28B7D10F0075CA2B /* NewsCarrouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCarrouselCell.swift; sourceTree = "<group>"; };
 		044F22CE28B7D3250075CA2B /* Inner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inner.swift; sourceTree = "<group>"; };
+		04623B4828BFA5030042664C /* RegisterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModalViewController.swift; sourceTree = "<group>"; };
+		04623B4928BFA5030042664C /* RegisterModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterModalViewController.xib; sourceTree = "<group>"; };
 		047C395428B624D8002C6A9E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		047C395628B62615002C6A9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */,
 				04C9EB2228AFE69E0020EF4F /* ModalViewController.xib */,
+				04623B4828BFA5030042664C /* RegisterModalViewController.swift */,
+				04623B4928BFA5030042664C /* RegisterModalViewController.xib */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -128,7 +134,6 @@
 				30E5F3DD91ED26BDFA2000CD /* Pods-NewsApp_iOS.debug.xcconfig */,
 				65D12AB5579409BC4FB80E74 /* Pods-NewsApp_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -237,6 +242,7 @@
 				04C9EB2428AFE69E0020EF4F /* ModalViewController.xib in Resources */,
 				B19D25762875CE3C0036A669 /* LaunchScreen.storyboard in Resources */,
 				B19D25732875CE3C0036A669 /* Assets.xcassets in Resources */,
+				04623B4B28BFA5030042664C /* RegisterModalViewController.xib in Resources */,
 				B19D25712875CE3A0036A669 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +303,7 @@
 				B17792E2287F0901008E8334 /* OptionsViewController.swift in Sources */,
 				B19D256A2875CE3A0036A669 /* AppDelegate.swift in Sources */,
 				047C395528B624D8002C6A9E /* Utils.swift in Sources */,
+				04623B4A28BFA5030042664C /* RegisterModalViewController.swift in Sources */,
 				B1F83EA4287C6F9A00B2A228 /* ButtonCell.swift in Sources */,
 				B19D256C2875CE3A0036A669 /* SceneDelegate.swift in Sources */,
 				B1F744AD288E9846004DB82C /* APICaller.swift in Sources */,

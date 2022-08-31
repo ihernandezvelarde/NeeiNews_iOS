@@ -10,23 +10,41 @@ import UIKit
 class ButtonCell: UICollectionViewCell {
         
     
-    @IBOutlet weak var myFirstViewButton: UIView!
-    @IBOutlet weak var mySecondViewButton: UIView!
-    @IBOutlet weak var myThirdViewButton: UIView!
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var thirdView: UIView!
     
- 
-    @IBOutlet weak var myFirstViewImage: UIImageView!
-    @IBOutlet weak var mySecondViewImage: UIImageView!
-    @IBOutlet weak var myThirdViewImage: UIImageView!
-    
-    @IBOutlet weak var firstViewLabel: UILabel!
-    @IBOutlet weak var secondViewLabel: UILabel!
-    @IBOutlet weak var thirdViewLabel: UILabel!
+    @IBOutlet weak var firstIcon: UIImageView!
+    @IBOutlet weak var secondIcon: UIImageView!
+    @IBOutlet weak var thirdIcon: UIImageView!
     
     
-    @IBOutlet weak var myFirstButton: UIButton!
-    @IBOutlet weak var mySecondButton: UIButton!
-    @IBOutlet weak var myThirdButton: UIButton!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var thirdLabel: UILabel!
+    
+    
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
+    
+    //    @IBOutlet weak var myFirstViewButton: UIView!
+//    @IBOutlet weak var mySecondViewButton: UIView!
+//    @IBOutlet weak var myThirdViewButton: UIView!
+//    
+// 
+//    @IBOutlet weak var myFirstViewImage: UIImageView!
+//    @IBOutlet weak var mySecondViewImage: UIImageView!
+//    @IBOutlet weak var myThirdViewImage: UIImageView!
+//    
+//    @IBOutlet weak var firstViewLabel: UILabel!
+//    @IBOutlet weak var secondViewLabel: UILabel!
+//    @IBOutlet weak var thirdViewLabel: UILabel!
+//    
+//    
+//    @IBOutlet weak var myFirstButton: UIButton!
+//    @IBOutlet weak var mySecondButton: UIButton!
+//    @IBOutlet weak var myThirdButton: UIButton!
     
     var config = ButtonCellConfig()
     var cornerRadius: CGFloat = 25.0
@@ -35,56 +53,42 @@ class ButtonCell: UICollectionViewCell {
         super.awakeFromNib()
         contentView.layer.cornerRadius = cornerRadius
         layer.cornerRadius = cornerRadius
-        if myFirstViewButton != nil && mySecondViewButton != nil && myThirdViewButton != nil {
-            myFirstButton.setTitle("", for: .normal)
-            mySecondButton.setTitle("", for: .normal)
-            myThirdButton.setTitle("", for: .normal)
-        }
-        if myFirstViewImage != nil && mySecondViewImage != nil && myThirdViewImage != nil {
-            myFirstViewImage.image = UIImage(named: config.square)?.withRenderingMode(.alwaysTemplate)
-            myFirstViewImage.tintColor = UIColor.purple
-                
-            mySecondViewImage.image = UIImage(named: config.square)?.withRenderingMode(.alwaysTemplate)
-            mySecondViewImage.tintColor = UIColor.purple
-                
-            myThirdViewImage.image = UIImage(named: config.square)?.withRenderingMode(.alwaysTemplate)
-            myThirdViewImage.tintColor = UIColor.purple
-        }
+        firstButton.setTitle("", for: .normal)
+        secondButton.setTitle("", for: .normal)
+        thirdButton.setTitle("", for: .normal)
         
-        if myFirstViewButton != nil && mySecondViewButton != nil && myThirdViewButton != nil {
-            myFirstViewButton.layer.cornerRadius = config.cornerRadius
-            mySecondViewButton.layer.cornerRadius = config.cornerRadius
-            myThirdViewButton.layer.cornerRadius = config.cornerRadius
-            
-            myFirstViewButton.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
-            myFirstViewButton.layer.shadowOpacity = config.shadowOpacity
-            myFirstViewButton.layer.shadowRadius = config.shadowRadius
-            
-            mySecondViewButton.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
-            mySecondViewButton.layer.shadowOpacity = config.shadowOpacity
-            mySecondViewButton.layer.shadowRadius = config.shadowRadius
         
-            myThirdViewButton.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
-            myThirdViewButton.layer.shadowOpacity = config.shadowOpacity
-            myThirdViewButton.layer.shadowRadius = config.shadowRadius
-
-        } else {
-            print("Doesn’t contain a value.")
-        }
+        firstView.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
+        firstView.layer.cornerRadius = config.cornerRadius
+        firstView.layer.shadowOpacity = config.shadowOpacity
+        firstView.layer.shadowRadius = config.shadowRadius
+        
+        secondView.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
+        secondView.layer.cornerRadius = config.cornerRadius
+        secondView.layer.shadowOpacity = config.shadowOpacity
+        secondView.layer.shadowRadius = config.shadowRadius
+        
+        thirdView.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
+        thirdView.layer.cornerRadius = config.cornerRadius
+        thirdView.layer.shadowOpacity = config.shadowOpacity
+        thirdView.layer.shadowRadius = config.shadowRadius
+        
+        firstLabel.text = "Trending"
+        secondLabel.text = "Featured"
+        thirdLabel.text = "Novelty"
+    
     }
-
-    @IBAction func myFirstButtonIsPressed(_ sender: UIButton) {
-        print("PRESIONADOOOO PRIMERO")
+    @IBAction func clickFirstButton(_ sender: UIButton) {
+        print("CLICK BUTTON 1")
     }
     
-    @IBAction func mySecondButtonIsPressed(_ sender: UIButton) {
-        print("PRESIONADOOOO SEGUNDO")
-
+    
+    @IBAction func clickSecondButton(_ sender: UIButton) {
+        print("CLICK BUTTON 2")
     }
     
-    @IBAction func myThirdButtonIsPressed(_ sender: UIButton) {
-        print("PRESIONADOOOO TERCERO")
-
+    @IBAction func clickThirdButton(_ sender: UIButton) {
+        print("CLICK BUTTON 3")
     }
     
 }
