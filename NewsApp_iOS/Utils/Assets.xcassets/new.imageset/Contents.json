@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "new.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "youtube.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

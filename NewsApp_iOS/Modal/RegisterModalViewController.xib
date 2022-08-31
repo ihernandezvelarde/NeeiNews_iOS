@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterModalViewController" customModule="NewsApp_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="contenedorLabels" destination="ek8-Od-kjY" id="t3y-zn-AXk"/>
+                <outlet property="logoImage" destination="Q9X-UB-7MH" id="5ee-mc-BnX"/>
+                <outlet property="myCloseButton" destination="6YH-BT-zWA" id="cGA-uU-rH6"/>
+                <outlet property="registerButton" destination="8w6-WI-bnO" id="mtc-0i-06d"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NeeiNews_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-UB-7MH">
+                    <rect key="frame" x="93" y="63" width="229" height="172"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="229" id="drD-YX-0NA"/>
+                        <constraint firstAttribute="height" constant="172" id="hfo-ga-Dfo"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek8-Od-kjY">
+                    <rect key="frame" x="35" y="269" width="344" height="522"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YH-BT-zWA">
+                    <rect key="frame" x="354" y="65" width="45" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1u3-ez-rsi"/>
+                        <constraint firstAttribute="width" constant="45" id="KpS-a5-Tt6"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="X">
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="closeModalViewButton:" destination="-1" eventType="touchUpInside" id="k4X-qK-pPa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w6-WI-bnO">
+                    <rect key="frame" x="133" y="824" width="148" height="31"/>
+                    <color key="backgroundColor" red="0.68627450980000004" green="0.18500682500000001" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="83L-n8-GVl"/>
+                        <constraint firstAttribute="width" constant="148" id="TqH-dw-GxQ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="_REGISTER">
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.91302419239999999" green="0.87487624149999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="6YH-BT-zWA" firstAttribute="leading" secondItem="Q9X-UB-7MH" secondAttribute="trailing" constant="32" id="0eg-SX-go2"/>
+                <constraint firstItem="ek8-Od-kjY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DBM-ds-tLh"/>
+                <constraint firstItem="ek8-Od-kjY" firstAttribute="top" secondItem="Q9X-UB-7MH" secondAttribute="bottom" constant="34" id="Fsw-AE-HjM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q9X-UB-7MH" secondAttribute="trailing" constant="92" id="IpL-mG-WVu"/>
+                <constraint firstItem="ek8-Od-kjY" firstAttribute="top" secondItem="6YH-BT-zWA" secondAttribute="bottom" constant="154" id="JFD-L6-WU8"/>
+                <constraint firstItem="Q9X-UB-7MH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="19" id="U7J-iK-4Fz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8w6-WI-bnO" secondAttribute="bottom" constant="7" id="ULu-jv-nXk"/>
+                <constraint firstItem="6YH-BT-zWA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="21" id="b62-sH-XUt"/>
+                <constraint firstItem="Q9X-UB-7MH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="93" id="cfU-Zb-mPU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ek8-Od-kjY" secondAttribute="trailing" constant="35" id="dfU-lW-CMw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ek8-Od-kjY" secondAttribute="bottom" constant="71" id="me5-Gw-nFX"/>
+                <constraint firstItem="8w6-WI-bnO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="133" id="ogL-O0-7q9"/>
+                <constraint firstItem="8w6-WI-bnO" firstAttribute="top" secondItem="ek8-Od-kjY" secondAttribute="bottom" constant="33" id="tvC-qM-F6n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6YH-BT-zWA" secondAttribute="trailing" constant="15" id="vL9-p4-QjS"/>
+                <constraint firstItem="ek8-Od-kjY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="xmJ-Uo-IGZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8w6-WI-bnO" secondAttribute="trailing" constant="133" id="zdR-Zj-Hx2"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NeeiNews_icon" width="345" height="345"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

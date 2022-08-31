@@ -108,13 +108,13 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
         }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var vc = UIViewController()
-        if articlesArray?.count != config.cero {
-            vc = ModalViewController(article: articlesArray?[indexPath.row] ?? Utils().factory(number: config.numberOfNews)[indexPath.row])
-        } else {
-            vc = ModalViewController(article: Utils().factory(number: config.numberOfNews)[indexPath.row])
-        }
-        vc.modalPresentationStyle = .fullScreen
-        self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+                if articlesArray?.count != config.cero {
+                    vc = ModalViewController(article: articlesArray?[indexPath.row] ?? Utils().factory(number: config.numberOfNews)[indexPath.row])
+                } else {
+                    vc = ModalViewController(article: Utils().factory(number: config.numberOfNews)[indexPath.row])
+                }
+                vc.modalPresentationStyle = .fullScreen
+                self.window?.rootViewController?.present(vc, animated: true, completion: nil)
         }
 }
 extension NewsCarrouselCell: UICollectionViewDelegateFlowLayout {

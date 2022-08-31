@@ -58,13 +58,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let gestureLeft = UITapGestureRecognizer(target: self, action: #selector(clickLeft))
-        fakeButtonLeft.isUserInteractionEnabled = true
-        fakeButtonLeft.addGestureRecognizer(gestureLeft)
-        
-        let gestureCenter = UITapGestureRecognizer(target: self, action: #selector(clickCenter))
-        fakeButtonCenter.isUserInteractionEnabled = true
-        fakeButtonCenter.addGestureRecognizer(gestureCenter)
         
         let gestureRight = UITapGestureRecognizer(target: self, action: #selector(clickRight))
         fakeButtonRight.isUserInteractionEnabled = true
@@ -110,26 +103,11 @@ class MainViewController: UIViewController {
         intSecondLabel.text = ("\(seconds)")
     }
     
-    @objc func clickLeft(sender:UITapGestureRecognizer) {
-            print("CLICK LEFT")
-            let controller = UIAlertController(title: "THIS SECTION IS UNDER DEVELOPMENT", message: "We are working on it, thanks!", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-            controller.addAction(ok)
-            present(controller, animated: true, completion: nil)
-    }
-    @objc func clickCenter(sender:UITapGestureRecognizer) {
-            print("CLICK CENTER")
-            let controller = UIAlertController(title: "THIS SECTION IS UNDER DEVELOPMENT", message: "We are working on it, thanks!", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-            controller.addAction(ok)
-            present(controller, animated: true, completion: nil)
-    }
     @objc func clickRight(sender:UITapGestureRecognizer) {
             print("CLICK RIGHT")
-            let controller = UIAlertController(title: "THIS SECTION IS UNDER DEVELOPMENT", message: "We are working on it, thanks!", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-            controller.addAction(ok)
-            present(controller, animated: true, completion: nil)
+            let vc = RegisterModalViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
     }
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
