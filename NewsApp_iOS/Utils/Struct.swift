@@ -51,7 +51,7 @@ struct MainConfig {
     var bounceY: Int = 100
     var bounceX: Int = 100
     var numberOfCells: Int = 3
-    var widthLayout: Int = 375
+    var widthLayout: Int = 365
     var heightLayout: Int = 165
 }
 

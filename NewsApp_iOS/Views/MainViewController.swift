@@ -9,13 +9,37 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    
+    @IBOutlet weak var newsAppTitleLabel: UILabel!
+    
+    @IBOutlet weak var intHourLabel: UILabel!
+    @IBOutlet weak var textHourLabel: UILabel!
+    
+    @IBOutlet weak var intMinuteLabel: UILabel!
+    @IBOutlet weak var textMinuteLabel: UILabel!
+    
+    @IBOutlet weak var intSecondLabel: UILabel!
+    @IBOutlet weak var textSecondLabel: UILabel!
+    
+    
+    @IBOutlet weak var intNewsCounterLabel: UILabel!
+    @IBOutlet weak var textNewsCounterLabel: UILabel!
+    
+    @IBOutlet weak var intUsersCounterLabel: UILabel!
+    @IBOutlet weak var textUsersCounterLabel: UILabel!
+    
+    @IBOutlet weak var iconMoreInfoLabel: UILabel!
+    @IBOutlet weak var textMoreInfoLabel: UILabel!
+    
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var simpleView: UIView!
-    
+    var timer : Timer?
     var config = MainConfig()
     let launchImage = UIImageView(image: UIImage(named: "news_icon")!)
     let splashView = UIView()
-    
+    let counterArticles = Article()
     override func viewDidAppear(_ animated: Bool) {
         if Reachability.isConnectedToNetwork() == true {
             print("Connected")
@@ -26,11 +50,25 @@ class MainViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        collectionView.backgroundColor = UIColor(red: CGFloat(188), green: CGFloat(170), blue: CGFloat(255), alpha: 1.0)
-
+       
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(checkTime), userInfo: nil, repeats: true)
+        
+        let contadorUsers = 32*8
+        let contador = ((counterArticles.title?.count ?? 20))*18
+        newsAppTitleLabel.text = "#NEWS"
+        textHourLabel.text = "HOURS"
+        textMinuteLabel.text = "MINUTES"
+        textSecondLabel.text = "SECONDS"
+        textNewsCounterLabel.text = "NEWS"
+        textUsersCounterLabel.text = "USERS"
+        textMoreInfoLabel.text = "INFO"
+        intNewsCounterLabel.text = ("\(contador)")
+        intUsersCounterLabel.text = ("\(contadorUsers)")
+        
         splashView.backgroundColor = UIColor(red: CGFloat(config.redColor), green: CGFloat(config.greenColor), blue: CGFloat(config.blueColor), alpha: 1.0)
         view.addSubview(splashView)
         launchImage.contentMode = .scaleAspectFit
@@ -45,6 +83,17 @@ class MainViewController: UIViewController {
         scrollView.bounces = scrollView.contentOffset.y > CGFloat(config.bounceY)
         scrollView.bounces = scrollView.contentOffset.x > CGFloat(config.bounceX)
     }
+    @objc func checkTime(){
+        
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component(.second, from: date)
+        intHourLabel.text = ("\(hour)")
+        intMinuteLabel.text = ("\(minutes)")
+        intSecondLabel.text = ("\(seconds)")
+    }
     
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -52,17 +101,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return config.numberOfCells
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        var vc = UIViewController()
-//        if articlesArray.count != 0 {
-//            vc = ModalViewController(article: articlesArray[indexPath.row])
-//        } else {
-//            vc = ModalViewController(article: Utils().factory(number: 6)[indexPath.row])
-//        }
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
-//    }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
