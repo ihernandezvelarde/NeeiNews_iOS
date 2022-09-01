@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = GooglePlaces;
+			productName = GooglePlaces;
 		};
 		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
 			isa = PBXAggregateTarget;
@@ -24,140 +25,208 @@
 			dependencies = (
 			);
 			name = GoogleMaps;
+			productName = GoogleMaps;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		30CCE7AD9B45A307CF62E8B9AF77CBDE /* Pods-NewsApp_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 586CE72EA0B9859C45E4BD0996A5BAA4 /* Pods-NewsApp_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AF297685F4EC8D0A1CBFE7859D56429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A2B114615B4E3616ABBE95B2889E34F6 /* Pods-NewsApp_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D772D8DB7516C78EAE1914FB53DA6306 /* Pods-NewsApp_iOS-dummy.m */; };
+		34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		47B7C90091F22A2EABEAA0F5C5DDD95D /* Pods-NewsApp_iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E4B044CD8D0E3568618ECFAE0643F1C /* Pods-NewsApp_iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B751C4F37A691374CBD4617DD3E369 /* DropDown+Appearance.swift */; };
+		68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB42B41B44BDC5C5D9480BC04D309CB /* DropDownCell.xib */; };
+		74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B690217621D4D36D0A47D90CB1AB70 /* DPDConstants.swift */; };
+		84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73912C0F0C6DB2ECF7AD95A7042E0F8D /* DropDown.swift */; };
+		89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6D0C51A7267DE8176970F4CA6BFF9F /* DPDKeyboardListener.swift */; };
+		907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B29AC27DA2C377EB8093B544EC795AC /* DropDown-dummy.m */; };
+		B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BDD01CD3FA9D447F5E208B50307240 /* DPDUIView+Extension.swift */; };
+		BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D283D19AE45FB6C8057A52ADDF41B2AC /* DropDownCell.swift */; };
+		E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBC24233C51A62E5CCA75B5A2EABE20C /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E126108BF7F7CC2434D4AFF646B86453 /* Pods-NewsApp_iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C735C50571E08343FF0199BE65B5B4 /* Pods-NewsApp_iOS-dummy.m */; };
+		E764F339D0F73A07CCFB5A1544627EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		67E684315DB18E48D85BCE3955FD0677 /* PBXContainerItemProxy */ = {
+		925A1A44F46153286CC52C4392285B0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
 			remoteInfo = GooglePlaces;
 		};
-		B5856F3E94FE55B3C366CD772E91DF8D /* PBXContainerItemProxy */ = {
+		B5259828D67A2C634359112743B5B623 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
 			remoteInfo = GoogleMaps;
 		};
+		EF640B294FAE1A98E19106E99644EE6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
+			remoteInfo = DropDown;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B9FB1478208DE50E4070C23D4AFD946 /* Pods-NewsApp_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewsApp_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		149FF594C63AC39130592553FD015134 /* Pods-NewsApp_iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NewsApp_iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		20ADB8F5ED8FF76495AA488A6E965AE7 /* Pods-NewsApp_iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NewsApp_iOS-resources.sh"; sourceTree = "<group>"; };
-		23F651581A8A5A322B46718DD384709B /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
-		4E256CB72E069B4C851E32F3924687B3 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
-		586CE72EA0B9859C45E4BD0996A5BAA4 /* Pods-NewsApp_iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NewsApp_iOS-umbrella.h"; sourceTree = "<group>"; };
+		0B29AC27DA2C377EB8093B544EC795AC /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		0E282CF2DFE333D814BB2A1BEB01D7B8 /* Pods-NewsApp_iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewsApp_iOS-Info.plist"; sourceTree = "<group>"; };
+		1C92662280C5E9177CA0C9263D7B57B7 /* Pods-NewsApp_iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NewsApp_iOS-frameworks.sh"; sourceTree = "<group>"; };
+		21C735C50571E08343FF0199BE65B5B4 /* Pods-NewsApp_iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NewsApp_iOS-dummy.m"; sourceTree = "<group>"; };
+		22DFA8191B88046FB986282F23A30D9F /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
+		3E4B044CD8D0E3568618ECFAE0643F1C /* Pods-NewsApp_iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NewsApp_iOS-umbrella.h"; sourceTree = "<group>"; };
+		420575CC775638EA07854F366099E954 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		45CE45AA2ECE67D96B153B33E9998C6A /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		491DAE8A6311309E4E7278A735664946 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		498A5917B57521BC063A47D734B4BD97 /* DropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.debug.xcconfig; sourceTree = "<group>"; };
+		598D3E90A8A7B887A3DC0871C3A95AE6 /* Pods-NewsApp_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewsApp_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		69B69DF14E27E740434947BA7D879828 /* Pods-NewsApp_iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewsApp_iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8704E7734F2D03B8EF86CFC319C943BC /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		8EBF4D65DD3B0EDCC39AF1C317B7FF1D /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		9022485D5C3EC683F34AF0CED814967D /* Pods-NewsApp_iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewsApp_iOS.modulemap"; sourceTree = "<group>"; };
-		9671616A5A8BBC9E8DFDCDA1DF5F3FD0 /* Pods-NewsApp_iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewsApp_iOS-Info.plist"; sourceTree = "<group>"; };
-		9C729F3714998C7C3F3D788777A06264 /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E830DD9530F13E283DEC78352A2F03D /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
-		A4658982FD89F2A77A672D9AFC716B28 /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
-		AD2EBA5B086B9182FE2424FE83067442 /* Pods-NewsApp_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewsApp_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B7E624A7163BB3EAF8097D6546961A70 /* Pods-NewsApp_iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NewsApp_iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		73912C0F0C6DB2ECF7AD95A7042E0F8D /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		7975191505EEE277BC389E5B1525DA0B /* Pods-NewsApp_iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NewsApp_iOS-resources.sh"; sourceTree = "<group>"; };
+		7A762D0612C1C5079E4EC28C9E480A8E /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		7EB42B41B44BDC5C5D9480BC04D309CB /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		83C23BAD953A617E85FECE43DC0E1ADE /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
+		844753B911364A92DBC968FAE57CC11C /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		8B7191C708CF110F9ADBAE3CB675D1A4 /* Pods-NewsApp_iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NewsApp_iOS.modulemap"; sourceTree = "<group>"; };
+		902D43F87E72B2E1B0A1089A24CE6066 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA03EC3B03DC1B1B5F5D05558C97C7B /* Pods-NewsApp_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NewsApp_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AC468811D0C640D494F4626C6C92E3EE /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
+		AD62979D8C4605263F1E7528F0EBB4D2 /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
+		BBC24233C51A62E5CCA75B5A2EABE20C /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		BE00D7BE847FBEB336E437ABF4DFEA8F /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
+		C6B2C225F277381E33E16B5DED00DAB9 /* Pods-NewsApp_iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NewsApp_iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CB2C89897F69CCEA3A7590645480591D /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
 		D1130C6DC021B2F2C8167CD7F7126D54 /* Pods-NewsApp_iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NewsApp_iOS"; path = Pods_NewsApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D772D8DB7516C78EAE1914FB53DA6306 /* Pods-NewsApp_iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NewsApp_iOS-dummy.m"; sourceTree = "<group>"; };
-		E74A4A5FDDD4F90A8A55EB206C7681BC /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		F8C3BB261D41EB0A05EAE541E50E3DAB /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		FA12A18F12A10F6BE94B10C390987756 /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		D283D19AE45FB6C8057A52ADDF41B2AC /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		D30E06E6C4341581A36AC029D0309AB9 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		DD6D0C51A7267DE8176970F4CA6BFF9F /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		E4B690217621D4D36D0A47D90CB1AB70 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		E6BDD01CD3FA9D447F5E208B50307240 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		E9B751C4F37A691374CBD4617DD3E369 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		EB3A5508FCBD465CDBA4011343176BCF /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B68956F2B40C3D4A9D78A96286860388 /* Frameworks */ = {
+		808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF297685F4EC8D0A1CBFE7859D56429 /* Foundation.framework in Frameworks */,
+				34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D784BA3215916E62F66BFFA239488E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E764F339D0F73A07CCFB5A1544627EEA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01178CDE9E7F5E928EDC642D6B628FE0 /* Frameworks */ = {
+		0325CA86EC041114A938971C80C6B6A1 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				8EBF4D65DD3B0EDCC39AF1C317B7FF1D /* GoogleMapsBase.framework */,
+				0E40F4940E41CA928C233FD335B06E66 /* Frameworks */,
+				5D1DE47DC52F4BEE2745DBCAA9F22DAD /* Resources */,
 			);
-			name = Frameworks;
+			name = Maps;
 			sourceTree = "<group>";
 		};
-		0883B537F1FDF67277437486C4066E63 /* GoogleMaps */ = {
+		0742282211B64859112639BADB009E33 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E86A34344FF943F078B6064D778D230A /* Base */,
-				A38D68C78C032F2CEEEEED36818D37F0 /* Maps */,
-				6C8EBDD6FEE473D639E9FF7A802869C0 /* Support Files */,
-			);
-			name = GoogleMaps;
-			path = GoogleMaps;
-			sourceTree = "<group>";
-		};
-		0C064E3A5BDBF114C6F0307FF1557B9A /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2CDCEC708B0E85AE427A432801748836 /* Pods-NewsApp_iOS */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		2CDCEC708B0E85AE427A432801748836 /* Pods-NewsApp_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				9022485D5C3EC683F34AF0CED814967D /* Pods-NewsApp_iOS.modulemap */,
-				149FF594C63AC39130592553FD015134 /* Pods-NewsApp_iOS-acknowledgements.markdown */,
-				B7E624A7163BB3EAF8097D6546961A70 /* Pods-NewsApp_iOS-acknowledgements.plist */,
-				D772D8DB7516C78EAE1914FB53DA6306 /* Pods-NewsApp_iOS-dummy.m */,
-				9671616A5A8BBC9E8DFDCDA1DF5F3FD0 /* Pods-NewsApp_iOS-Info.plist */,
-				20ADB8F5ED8FF76495AA488A6E965AE7 /* Pods-NewsApp_iOS-resources.sh */,
-				586CE72EA0B9859C45E4BD0996A5BAA4 /* Pods-NewsApp_iOS-umbrella.h */,
-				AD2EBA5B086B9182FE2424FE83067442 /* Pods-NewsApp_iOS.debug.xcconfig */,
-				0B9FB1478208DE50E4070C23D4AFD946 /* Pods-NewsApp_iOS.release.xcconfig */,
-			);
-			name = "Pods-NewsApp_iOS";
-			path = "Target Support Files/Pods-NewsApp_iOS";
-			sourceTree = "<group>";
-		};
-		3582EF5F85D78C1DB07F01BC0BFA167E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C729F3714998C7C3F3D788777A06264 /* GooglePlaces.debug.xcconfig */,
-				A4658982FD89F2A77A672D9AFC716B28 /* GooglePlaces.release.xcconfig */,
+				BE00D7BE847FBEB336E437ABF4DFEA8F /* GooglePlaces.debug.xcconfig */,
+				22DFA8191B88046FB986282F23A30D9F /* GooglePlaces.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GooglePlaces";
 			sourceTree = "<group>";
 		};
-		3FE4CC4B7B0241873FFF96886667937D /* Frameworks */ = {
+		093B6C0CCABF0E8FA19641B68FA524B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8704E7734F2D03B8EF86CFC319C943BC /* GooglePlaces.framework */,
+				491DAE8A6311309E4E7278A735664946 /* GoogleMapsBase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		446F55954A1B4F44697D4CD53ABC566B /* GooglePlaces */ = {
+		0E40F4940E41CA928C233FD335B06E66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3FE4CC4B7B0241873FFF96886667937D /* Frameworks */,
-				7DDA47E3D8C82ADCB64F7C6FC9641D65 /* Resources */,
-				3582EF5F85D78C1DB07F01BC0BFA167E /* Support Files */,
+				EB3A5508FCBD465CDBA4011343176BCF /* GoogleMaps.framework */,
+				902D43F87E72B2E1B0A1089A24CE6066 /* GoogleMapsCore.framework */,
 			);
-			name = GooglePlaces;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20C05F00280EB0B1E839DF4E06D4F315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
+				D1130C6DC021B2F2C8167CD7F7126D54 /* Pods-NewsApp_iOS */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		301A2E0F3F34AB0AF611DBD22342D8E3 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				60CF12F5688542DF422D1DB73A4FEB39 /* Base */,
+				0325CA86EC041114A938971C80C6B6A1 /* Maps */,
+				E3C147C2F95A90A1908EA0C36B09E611 /* Support Files */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		3557C938B1AA309082A1EE72425A0202 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				420575CC775638EA07854F366099E954 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		485EDD21986F760D320BD27E7006EC31 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D374A587C3ED34DFAB01C8ADBC2E7A3 /* Pods-NewsApp_iOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4EA8FCD117C90672AC0B5B762BE98DE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64F9146233A8B8052A4322AE987A3A1F /* DropDown */,
+				301A2E0F3F34AB0AF611DBD22342D8E3 /* GoogleMaps */,
+				4EC7B25F113D40A8CE258741D0447395 /* GooglePlaces */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4EC7B25F113D40A8CE258741D0447395 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				502E6E31888C43291AB18430548A660F /* Frameworks */,
+				3557C938B1AA309082A1EE72425A0202 /* Resources */,
+				0742282211B64859112639BADB009E33 /* Support Files */,
+			);
 			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		502E6E31888C43291AB18430548A660F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D30E06E6C4341581A36AC029D0309AB9 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -168,39 +237,61 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		668475E54C7FEBCD137CC23F7EBE457E /* Products */ = {
+		5D1DE47DC52F4BEE2745DBCAA9F22DAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D1130C6DC021B2F2C8167CD7F7126D54 /* Pods-NewsApp_iOS */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6C8EBDD6FEE473D639E9FF7A802869C0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FA12A18F12A10F6BE94B10C390987756 /* GoogleMaps.debug.xcconfig */,
-				9E830DD9530F13E283DEC78352A2F03D /* GoogleMaps.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleMaps";
-			sourceTree = "<group>";
-		};
-		7DDA47E3D8C82ADCB64F7C6FC9641D65 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4E256CB72E069B4C851E32F3924687B3 /* GooglePlaces.bundle */,
+				844753B911364A92DBC968FAE57CC11C /* GoogleMaps.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		A38D68C78C032F2CEEEEED36818D37F0 /* Maps */ = {
+		60CF12F5688542DF422D1DB73A4FEB39 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				E435AD63DBCE250679648002DC9F8442 /* Frameworks */,
-				FAF4CAFF608973234241B6D824C4FC0F /* Resources */,
+				093B6C0CCABF0E8FA19641B68FA524B2 /* Frameworks */,
 			);
-			name = Maps;
+			name = Base;
+			sourceTree = "<group>";
+		};
+		64F9146233A8B8052A4322AE987A3A1F /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				E4B690217621D4D36D0A47D90CB1AB70 /* DPDConstants.swift */,
+				DD6D0C51A7267DE8176970F4CA6BFF9F /* DPDKeyboardListener.swift */,
+				E6BDD01CD3FA9D447F5E208B50307240 /* DPDUIView+Extension.swift */,
+				73912C0F0C6DB2ECF7AD95A7042E0F8D /* DropDown.swift */,
+				E9B751C4F37A691374CBD4617DD3E369 /* DropDown+Appearance.swift */,
+				D283D19AE45FB6C8057A52ADDF41B2AC /* DropDownCell.swift */,
+				B2C2FD3723B63DF746BF78B79FFAB8BE /* Resources */,
+				DAD0058E9390C5E80FE7706660ED8B71 /* Support Files */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		8D374A587C3ED34DFAB01C8ADBC2E7A3 /* Pods-NewsApp_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B7191C708CF110F9ADBAE3CB675D1A4 /* Pods-NewsApp_iOS.modulemap */,
+				C6B2C225F277381E33E16B5DED00DAB9 /* Pods-NewsApp_iOS-acknowledgements.markdown */,
+				69B69DF14E27E740434947BA7D879828 /* Pods-NewsApp_iOS-acknowledgements.plist */,
+				21C735C50571E08343FF0199BE65B5B4 /* Pods-NewsApp_iOS-dummy.m */,
+				1C92662280C5E9177CA0C9263D7B57B7 /* Pods-NewsApp_iOS-frameworks.sh */,
+				0E282CF2DFE333D814BB2A1BEB01D7B8 /* Pods-NewsApp_iOS-Info.plist */,
+				7975191505EEE277BC389E5B1525DA0B /* Pods-NewsApp_iOS-resources.sh */,
+				3E4B044CD8D0E3568618ECFAE0643F1C /* Pods-NewsApp_iOS-umbrella.h */,
+				9DA03EC3B03DC1B1B5F5D05558C97C7B /* Pods-NewsApp_iOS.debug.xcconfig */,
+				598D3E90A8A7B887A3DC0871C3A95AE6 /* Pods-NewsApp_iOS.release.xcconfig */,
+			);
+			name = "Pods-NewsApp_iOS";
+			path = "Target Support Files/Pods-NewsApp_iOS";
+			sourceTree = "<group>";
+		};
+		B2C2FD3723B63DF746BF78B79FFAB8BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7EB42B41B44BDC5C5D9480BC04D309CB /* DropDownCell.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -208,9 +299,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				E858A99A3564099E88E4CF05F26A517D /* Pods */,
-				668475E54C7FEBCD137CC23F7EBE457E /* Products */,
-				0C064E3A5BDBF114C6F0307FF1557B9A /* Targets Support Files */,
+				4EA8FCD117C90672AC0B5B762BE98DE2 /* Pods */,
+				20C05F00280EB0B1E839DF4E06D4F315 /* Products */,
+				485EDD21986F760D320BD27E7006EC31 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,48 +313,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E435AD63DBCE250679648002DC9F8442 /* Frameworks */ = {
+		DAD0058E9390C5E80FE7706660ED8B71 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8C3BB261D41EB0A05EAE541E50E3DAB /* GoogleMaps.framework */,
-				23F651581A8A5A322B46718DD384709B /* GoogleMapsCore.framework */,
+				83C23BAD953A617E85FECE43DC0E1ADE /* DropDown.modulemap */,
+				0B29AC27DA2C377EB8093B544EC795AC /* DropDown-dummy.m */,
+				AC468811D0C640D494F4626C6C92E3EE /* DropDown-Info.plist */,
+				7A762D0612C1C5079E4EC28C9E480A8E /* DropDown-prefix.pch */,
+				BBC24233C51A62E5CCA75B5A2EABE20C /* DropDown-umbrella.h */,
+				498A5917B57521BC063A47D734B4BD97 /* DropDown.debug.xcconfig */,
+				AD62979D8C4605263F1E7528F0EBB4D2 /* DropDown.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
 			sourceTree = "<group>";
 		};
-		E858A99A3564099E88E4CF05F26A517D /* Pods */ = {
+		E3C147C2F95A90A1908EA0C36B09E611 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0883B537F1FDF67277437486C4066E63 /* GoogleMaps */,
-				446F55954A1B4F44697D4CD53ABC566B /* GooglePlaces */,
+				CB2C89897F69CCEA3A7590645480591D /* GoogleMaps.debug.xcconfig */,
+				45CE45AA2ECE67D96B153B33E9998C6A /* GoogleMaps.release.xcconfig */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E86A34344FF943F078B6064D778D230A /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				01178CDE9E7F5E928EDC642D6B628FE0 /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		FAF4CAFF608973234241B6D824C4FC0F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E74A4A5FDDD4F90A8A55EB206C7681BC /* GoogleMaps.bundle */,
-			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2E982779B87F09C7920EB2914E5CAE2C /* Headers */ = {
+		97CE91431E229797751455423C79CA4F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30CCE7AD9B45A307CF62E8B9AF77CBDE /* Pods-NewsApp_iOS-umbrella.h in Headers */,
+				E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF8D18FE4C4FA628FBB5E7B9EE6DC27 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B7C90091F22A2EABEAA0F5C5DDD95D /* Pods-NewsApp_iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,22 +362,41 @@
 /* Begin PBXNativeTarget section */
 		39F06DF34A982C55F92874CAA75C2025 /* Pods-NewsApp_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E46AF8C1E4D6598B58F718A3CDA224A3 /* Build configuration list for PBXNativeTarget "Pods-NewsApp_iOS" */;
+			buildConfigurationList = 50703B89D1021DE7B016805DF6252BF9 /* Build configuration list for PBXNativeTarget "Pods-NewsApp_iOS" */;
 			buildPhases = (
-				2E982779B87F09C7920EB2914E5CAE2C /* Headers */,
-				6C387D8C29620E890112FCE96B338673 /* Sources */,
-				B68956F2B40C3D4A9D78A96286860388 /* Frameworks */,
-				2418DD50C772CE609CE945D152AB17B0 /* Resources */,
+				BAF8D18FE4C4FA628FBB5E7B9EE6DC27 /* Headers */,
+				38DD81F23225EDE340EFDA332674E97E /* Sources */,
+				D784BA3215916E62F66BFFA239488E1D /* Frameworks */,
+				85749B04F4503EE33A38F973675FDF5D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				54468BEFCDD395C3677A965F2B073F36 /* PBXTargetDependency */,
-				6682080F8A51F8A32AA004F75316FFA5 /* PBXTargetDependency */,
+				4E0AC770CBE58909CA0091E90524CFEB /* PBXTargetDependency */,
+				17340C1FB04947D9149869828CB75BDB /* PBXTargetDependency */,
+				69E85FF2490DDE396C94EBF109D62F6B /* PBXTargetDependency */,
 			);
 			name = "Pods-NewsApp_iOS";
 			productName = Pods_NewsApp_iOS;
 			productReference = D1130C6DC021B2F2C8167CD7F7126D54 /* Pods-NewsApp_iOS */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				97CE91431E229797751455423C79CA4F /* Headers */,
+				48864C435B3DB37698CF568C638CF98F /* Sources */,
+				808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */,
+				EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -297,7 +406,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1340;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -308,10 +417,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 668475E54C7FEBCD137CC23F7EBE457E /* Products */;
+			productRefGroup = 20C05F00280EB0B1E839DF4E06D4F315 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
 				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
 				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
 				39F06DF34A982C55F92874CAA75C2025 /* Pods-NewsApp_iOS */,
@@ -320,45 +430,73 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2418DD50C772CE609CE945D152AB17B0 /* Resources */ = {
+		85749B04F4503EE33A38F973675FDF5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6C387D8C29620E890112FCE96B338673 /* Sources */ = {
+		38DD81F23225EDE340EFDA332674E97E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B114615B4E3616ABBE95B2889E34F6 /* Pods-NewsApp_iOS-dummy.m in Sources */,
+				E126108BF7F7CC2434D4AFF646B86453 /* Pods-NewsApp_iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48864C435B3DB37698CF568C638CF98F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */,
+				89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */,
+				B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */,
+				84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */,
+				515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */,
+				907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */,
+				BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		54468BEFCDD395C3677A965F2B073F36 /* PBXTargetDependency */ = {
+		17340C1FB04947D9149869828CB75BDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleMaps;
 			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = B5856F3E94FE55B3C366CD772E91DF8D /* PBXContainerItemProxy */;
+			targetProxy = B5259828D67A2C634359112743B5B623 /* PBXContainerItemProxy */;
 		};
-		6682080F8A51F8A32AA004F75316FFA5 /* PBXTargetDependency */ = {
+		4E0AC770CBE58909CA0091E90524CFEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
+			targetProxy = EF640B294FAE1A98E19106E99644EE6B /* PBXContainerItemProxy */;
+		};
+		69E85FF2490DDE396C94EBF109D62F6B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GooglePlaces;
 			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
-			targetProxy = 67E684315DB18E48D85BCE3955FD0677 /* PBXContainerItemProxy */;
+			targetProxy = 925A1A44F46153286CC52C4392285B0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0657E6247C7E8744275AACEBAB511440 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA12A18F12A10F6BE94B10C390987756 /* GoogleMaps.debug.xcconfig */;
+			baseConfigurationReference = CB2C89897F69CCEA3A7590645480591D /* GoogleMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -441,7 +579,7 @@
 		};
 		24069BB3B6E16DED8CC95987BEACAF82 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4658982FD89F2A77A672D9AFC716B28 /* GooglePlaces.release.xcconfig */;
+			baseConfigurationReference = 22DFA8191B88046FB986282F23A30D9F /* GooglePlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,9 +657,9 @@
 			};
 			name = Release;
 		};
-		3437BBAC86AD77616013B65F9BD24248 /* Release */ = {
+		35FAE0E45CF2186DEC1F249AFA727EEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B9FB1478208DE50E4070C23D4AFD946 /* Pods-NewsApp_iOS.release.xcconfig */;
+			baseConfigurationReference = 598D3E90A8A7B887A3DC0871C3A95AE6 /* Pods-NewsApp_iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -557,26 +695,9 @@
 			};
 			name = Release;
 		};
-		C36EC2744E968A453E8CE2CB5CCFAA85 /* Debug */ = {
+		B604EA07CC95B7E1B90E7A3D2B03F130 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C729F3714998C7C3F3D788777A06264 /* GooglePlaces.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DF6B773A331F8B185B43BB6EEA3116D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD2EBA5B086B9182FE2424FE83067442 /* Pods-NewsApp_iOS.debug.xcconfig */;
+			baseConfigurationReference = 9DA03EC3B03DC1B1B5F5D05558C97C7B /* Pods-NewsApp_iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -611,9 +732,95 @@
 			};
 			name = Debug;
 		};
+		C24518E891FAA59668669823639498EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD62979D8C4605263F1E7528F0EBB4D2 /* DropDown.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C36EC2744E968A453E8CE2CB5CCFAA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE00D7BE847FBEB336E437ABF4DFEA8F /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498A5917B57521BC063A47D734B4BD97 /* DropDown.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		EC690621027EA58B5D021A1004DD63B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E830DD9530F13E283DEC78352A2F03D /* GoogleMaps.release.xcconfig */;
+			baseConfigurationReference = 45CE45AA2ECE67D96B153B33E9998C6A /* GoogleMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -650,20 +857,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		50703B89D1021DE7B016805DF6252BF9 /* Build configuration list for PBXNativeTarget "Pods-NewsApp_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B604EA07CC95B7E1B90E7A3D2B03F130 /* Debug */,
+				35FAE0E45CF2186DEC1F249AFA727EEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */,
+				C24518E891FAA59668669823639498EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9C94FBBEEFB700C4478289AF59ED693A /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C36EC2744E968A453E8CE2CB5CCFAA85 /* Debug */,
 				24069BB3B6E16DED8CC95987BEACAF82 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E46AF8C1E4D6598B58F718A3CDA224A3 /* Build configuration list for PBXNativeTarget "Pods-NewsApp_iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DF6B773A331F8B185B43BB6EEA3116D1 /* Debug */,
-				3437BBAC86AD77616013B65F9BD24248 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

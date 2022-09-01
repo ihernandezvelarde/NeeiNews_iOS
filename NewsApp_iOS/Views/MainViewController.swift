@@ -67,7 +67,7 @@ class MainViewController: UIViewController {
         
         let contadorUsers = 32*8
         let contador = ((counterArticles.title?.count ?? 20))*18
-        newsAppTitleLabel.text = "#NEWS"
+        newsAppTitleLabel.text = "NEEI NEWS"
         textHourLabel.text = "HOURS"
         textMinuteLabel.text = "MINUTES"
         textSecondLabel.text = "SECONDS"
