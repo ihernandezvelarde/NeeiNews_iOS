@@ -37,13 +37,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXJ-nj-zih">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_nombre" translatesAutoresizingMaskIntoConstraints="NO" id="mJD-Zf-6AW">
-                                    <rect key="frame" x="93" y="35" width="229" height="172"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="172" id="VaK-Wk-bzM"/>
-                                        <constraint firstAttribute="width" constant="229" id="pRv-8z-TLg"/>
-                                    </constraints>
-                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tJ-di-Qi9" userLabel="closeButton">
                                     <rect key="frame" x="349" y="10" width="45" height="31"/>
                                     <state key="normal" title="Button"/>
@@ -220,6 +213,13 @@
                                         <action selector="clickRegisterButton:" destination="-1" eventType="touchUpInside" id="AS5-bN-Pie"/>
                                     </connections>
                                 </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NeeiNews_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mJD-Zf-6AW">
+                                    <rect key="frame" x="119" y="29" width="177" height="156"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="177" id="bgz-rB-jWG"/>
+                                        <constraint firstAttribute="height" constant="156" id="jyC-hq-jJj"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -236,10 +236,10 @@
                                 <constraint firstItem="Hvg-O1-6Kw" firstAttribute="top" secondItem="d0X-ue-Sjn" secondAttribute="bottom" id="9WR-qd-F1P"/>
                                 <constraint firstAttribute="trailing" secondItem="Hvg-O1-6Kw" secondAttribute="trailing" constant="50" id="9fF-bI-KD1"/>
                                 <constraint firstAttribute="trailing" secondItem="hwN-VV-FPm" secondAttribute="trailing" constant="50" id="BGF-0l-lpA"/>
-                                <constraint firstItem="mJD-Zf-6AW" firstAttribute="top" secondItem="qXJ-nj-zih" secondAttribute="top" constant="35" id="DYU-1F-sOt"/>
                                 <constraint firstItem="dku-kI-wbQ" firstAttribute="top" secondItem="3RU-3x-kyM" secondAttribute="bottom" constant="15" id="EVB-ZK-euT"/>
-                                <constraint firstAttribute="trailing" secondItem="mJD-Zf-6AW" secondAttribute="trailing" constant="92" id="F5a-e2-0eA"/>
                                 <constraint firstItem="0tJ-di-Qi9" firstAttribute="top" secondItem="qXJ-nj-zih" secondAttribute="top" constant="10" id="G36-0r-lto"/>
+                                <constraint firstItem="mJD-Zf-6AW" firstAttribute="top" secondItem="qXJ-nj-zih" secondAttribute="top" constant="29" id="G7S-yb-Ws9"/>
+                                <constraint firstItem="d0X-ue-Sjn" firstAttribute="top" secondItem="mJD-Zf-6AW" secondAttribute="bottom" constant="62" id="HUy-SZ-AT5"/>
                                 <constraint firstItem="EzI-vB-OOj" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="142" id="HVo-Dh-ZIL"/>
                                 <constraint firstAttribute="trailing" secondItem="zmS-vl-21t" secondAttribute="trailing" constant="50" id="JGz-Vy-XjH"/>
                                 <constraint firstAttribute="trailing" secondItem="bOB-Hb-nok" secondAttribute="trailing" constant="50" id="Jmu-vQ-2wg"/>
@@ -247,12 +247,13 @@
                                 <constraint firstItem="WZC-oO-yeL" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="O32-js-vhM"/>
                                 <constraint firstItem="WZC-oO-yeL" firstAttribute="top" secondItem="dku-kI-wbQ" secondAttribute="bottom" id="Q9F-ai-TbI"/>
                                 <constraint firstItem="VQ5-8h-NTO" firstAttribute="top" secondItem="slq-6d-dJv" secondAttribute="bottom" constant="17" id="Q9y-wD-Mg9"/>
+                                <constraint firstAttribute="trailing" secondItem="mJD-Zf-6AW" secondAttribute="trailing" constant="118" id="R7J-et-uvn"/>
                                 <constraint firstItem="zmS-vl-21t" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="Sqc-eR-q6Y"/>
                                 <constraint firstItem="3RU-3x-kyM" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="V6H-5y-KN0"/>
-                                <constraint firstItem="mJD-Zf-6AW" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="93" id="VIM-gt-IKw"/>
                                 <constraint firstItem="dRd-ou-Bkf" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="WNi-P3-vGt"/>
                                 <constraint firstItem="bOB-Hb-nok" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="Y9Z-6O-4jK"/>
                                 <constraint firstItem="3RU-3x-kyM" firstAttribute="top" secondItem="hwN-VV-FPm" secondAttribute="bottom" id="YGd-rA-qe3"/>
+                                <constraint firstItem="mJD-Zf-6AW" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="119" id="aV0-nS-dir"/>
                                 <constraint firstAttribute="trailing" secondItem="EzI-vB-OOj" secondAttribute="trailing" constant="142" id="aoV-7X-5lv"/>
                                 <constraint firstAttribute="trailing" secondItem="mM5-eC-EQt" secondAttribute="trailing" constant="50" id="d13-Iy-q4e"/>
                                 <constraint firstAttribute="trailing" secondItem="dRd-ou-Bkf" secondAttribute="trailing" constant="50" id="dpx-11-w1U"/>
@@ -265,7 +266,6 @@
                                 <constraint firstItem="VQ5-8h-NTO" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="qv5-Vw-dtD"/>
                                 <constraint firstAttribute="trailing" secondItem="WZC-oO-yeL" secondAttribute="trailing" constant="50" id="sra-X2-Aea"/>
                                 <constraint firstAttribute="trailing" secondItem="Pvu-b6-z3W" secondAttribute="trailing" constant="50" id="tPu-38-iio"/>
-                                <constraint firstItem="d0X-ue-Sjn" firstAttribute="top" secondItem="mJD-Zf-6AW" secondAttribute="bottom" constant="40" id="uie-6x-x4C"/>
                                 <constraint firstAttribute="trailing" secondItem="dku-kI-wbQ" secondAttribute="trailing" constant="50" id="uv6-IF-YDR"/>
                                 <constraint firstItem="slq-6d-dJv" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="v7z-BA-Htd"/>
                                 <constraint firstItem="mM5-eC-EQt" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="vO0-3b-yBJ"/>
@@ -298,7 +298,7 @@
         </view>
     </objects>
     <resources>
-        <image name="logo_nombre" width="209" height="226"/>
+        <image name="NeeiNews_icon" width="345" height="345"/>
         <image name="x.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

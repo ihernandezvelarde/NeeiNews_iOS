@@ -33,9 +33,17 @@ class RegisterModalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //iconImage.layer.shadowOffset = CGSize(width: -5,height: 5)
+        //iconImage.layer.shadowRadius = 5.0
+//        iconImage.layer.shadowColor = CGColor(red: 148, green: 85, blue: 255, alpha: 1.0)
+//        iconImage.layer.shadowOpacity = 0.7
+//        iconImage.layer.shadowRadius = 10
         registerButton.setTitle("Register", for: .normal)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
         dropDownLabel.text = "Profile type*"
         dropDown.anchorView = dropDownView
         dropDown.dataSource = dropDownValues
