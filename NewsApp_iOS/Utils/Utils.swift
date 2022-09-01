@@ -17,5 +17,10 @@ class Utils {
         }
         return array
       }
+    
+//    func ckeck(register: Register) -> [Register] {
+//        
+//        
+//    }
 }
 

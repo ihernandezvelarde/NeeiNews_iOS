@@ -15,8 +15,15 @@ class RegisterModalViewController: UIViewController {
     @IBOutlet weak var dropDownButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var iconImage: UIImageView!
-    
     @IBOutlet weak var registerButton: UIButton!
+    
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var rePasswordTextField: UITextField!
     
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -26,6 +33,7 @@ class RegisterModalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerButton.setTitle("Register", for: .normal)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         dropDownLabel.text = "Profile type*"
@@ -36,6 +44,7 @@ class RegisterModalViewController: UIViewController {
         dropDown.direction = .bottom
         dropDown.selectionAction = {[unowned self] (index: Int, item: String) in print("Selected item: \(item). At index: \(index)")
             self.dropDownLabel.text = dropDownValues[index]
+            
         }
     }
 
@@ -49,7 +58,7 @@ class RegisterModalViewController: UIViewController {
         contentInset.bottom = keyboardFrame.size.height + 20
         scrollView.contentInset = contentInset
     }
-
+    
     @objc func keyboardWillHide(notification:NSNotification) {
 
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero

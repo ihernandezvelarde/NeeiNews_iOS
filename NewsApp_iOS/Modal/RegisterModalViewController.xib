@@ -10,11 +10,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterModalViewController" customModule="NewsApp_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="ageTextField" destination="AQn-AO-XWn" id="OFz-HV-Rtd"/>
                 <outlet property="closeButton" destination="0tJ-di-Qi9" id="yfA-ms-eWk"/>
                 <outlet property="dropDownButton" destination="HMP-YT-b4u" id="nCy-je-xef"/>
                 <outlet property="dropDownLabel" destination="C0w-BX-0GA" id="pib-z3-OkC"/>
                 <outlet property="dropDownView" destination="dku-kI-wbQ" id="nLy-w8-DAx"/>
+                <outlet property="emailTextField" destination="hwN-VV-FPm" id="67s-1x-QLw"/>
                 <outlet property="iconImage" destination="mJD-Zf-6AW" id="Nqy-Kt-uph"/>
+                <outlet property="lastNameTextField" destination="bOB-Hb-nok" id="Xzi-HV-0Sn"/>
+                <outlet property="nameTextField" destination="d0X-ue-Sjn" id="9X3-wc-Kvu"/>
+                <outlet property="passwordTextField" destination="zmS-vl-21t" id="X3b-St-nMg"/>
+                <outlet property="rePasswordTextField" destination="VQ5-8h-NTO" id="4LX-8J-D99"/>
                 <outlet property="registerButton" destination="EzI-vB-OOj" id="T02-XT-paq"/>
                 <outlet property="scrollView" destination="ha4-hm-Zgd" id="sRt-Qj-mL9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

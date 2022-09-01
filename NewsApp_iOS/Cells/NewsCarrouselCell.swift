@@ -37,7 +37,6 @@ class NewsCarrouselCell: UICollectionViewCell, UICollectionViewDelegate, UIColle
         self.myCollectionView.collectionViewLayout = layout
         startTimer()
         myPageControll.numberOfPages = config.numberOfNews
-        print("AQUI\(article)")
     }
     
     func startTimer(){
