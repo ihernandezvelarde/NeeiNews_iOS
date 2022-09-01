@@ -84,7 +84,6 @@
 				B1911DB4288AE262004FE91B /* Reachability.swift */,
 				B19D25692875CE3A0036A669 /* AppDelegate.swift */,
 				B19D256B2875CE3A0036A669 /* SceneDelegate.swift */,
-				B19D25722875CE3C0036A669 /* Assets.xcassets */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +163,7 @@
 				04C9EB2028AFE64C0020EF4F /* Modal */,
 				047C395328B624B6002C6A9E /* Utils */,
 				B19D25772875CE3C0036A669 /* Info.plist */,
+				B19D25722875CE3C0036A669 /* Assets.xcassets */,
 			);
 			path = NewsApp_iOS;
 			sourceTree = "<group>";

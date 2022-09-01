@@ -19,8 +19,8 @@ class Utils {
       }
     
 //    func ckeck(register: Register) -> [Register] {
-//        
-//        
+//
+//
 //    }
 }
 
