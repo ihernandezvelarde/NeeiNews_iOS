@@ -7,4 +7,5 @@ target 'NewsApp_iOS' do
 
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'DropDown'
 end

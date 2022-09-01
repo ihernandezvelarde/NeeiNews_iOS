@@ -79,16 +79,25 @@ class ButtonCell: UICollectionViewCell {
     
     }
     @IBAction func clickFirstButton(_ sender: UIButton) {
-        print("CLICK BUTTON 1")
+        let controller = UIAlertController(title: "En desarrollo", message: "Estamos trabajando en ello, gracias!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(ok)
+        self.window?.rootViewController?.present(controller, animated: true, completion: nil)
     }
     
     
     @IBAction func clickSecondButton(_ sender: UIButton) {
-        print("CLICK BUTTON 2")
+        let controller = UIAlertController(title: "En desarrollo", message: "Estamos trabajando en ello, gracias!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(ok)
+        self.window?.rootViewController?.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func clickThirdButton(_ sender: UIButton) {
-        print("CLICK BUTTON 3")
+        let controller = UIAlertController(title: "En desarrollo", message: "Estamos trabajando en ello, gracias!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        controller.addAction(ok)
+        self.window?.rootViewController?.present(controller, animated: true, completion: nil)
     }
     
 }

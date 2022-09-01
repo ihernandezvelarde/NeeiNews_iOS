@@ -1,4 +1,5 @@
 PODS:
+  - DropDown (2.3.13)
   - GoogleMaps (7.1.0):
     - GoogleMaps/Maps (= 7.1.0)
   - GoogleMaps/Base (7.1.0)
@@ -7,18 +8,21 @@ PODS:
   - GooglePlaces (7.1.0)
 
 DEPENDENCIES:
+  - DropDown
   - GoogleMaps
   - GooglePlaces
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - GoogleMaps
     - GooglePlaces
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   GoogleMaps: bc56ffb0324e345a2d91bac1a64a920f9c8f1b20
   GooglePlaces: 187946335ec3dc624de71c0a9ddcc712f19b0ee1
 
-PODFILE CHECKSUM: a02e6ccd9d02a7520017f160bebfabdf19d32432
+PODFILE CHECKSUM: 49b1cbd7ba39823b7848d51e5adb60d9fbbac9f5
 
 COCOAPODS: 1.11.3
