@@ -116,7 +116,7 @@ class RegisterModalViewController: UIViewController {
             //TODO: Hacer que se printen todos los campos uno a uno
             let controller = UIAlertController(title: "Something went wrong!", message: "", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-                controller.addAction(ok)
+            controller.addAction(ok)
             self.present(controller, animated: true, completion: nil)
             
         }
