@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "splashController")
         self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()
-        // FIXME: -- Change timeInterval when the project it's done.
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(dismissSplashController), userInfo: nil, repeats: false)
     }
     @objc func dismissSplashController(){

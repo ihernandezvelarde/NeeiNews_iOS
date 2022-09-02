@@ -25,6 +25,7 @@
                 <outlet property="registerButton" destination="EzI-vB-OOj" id="T02-XT-paq"/>
                 <outlet property="scrollView" destination="ha4-hm-Zgd" id="sRt-Qj-mL9"/>
                 <outlet property="showPassword" destination="odC-D3-qXj" id="l7C-U1-ses"/>
+                <outlet property="showRePassword" destination="fHh-64-D93" id="WnS-Be-Pfd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -190,7 +191,7 @@
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Dnw-0t-KUi"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-b6-z3W" userLabel="seventh_line">
                                     <rect key="frame" x="50" y="604" width="314" height="2"/>
@@ -222,12 +223,8 @@
                                         <constraint firstAttribute="height" constant="156" id="jyC-hq-jJj"/>
                                     </constraints>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odC-D3-qXj">
-                                    <rect key="frame" x="321" y="519" width="37" height="27"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="27" id="WeV-bH-K3G"/>
-                                        <constraint firstAttribute="width" constant="37" id="hMD-KK-CX3"/>
-                                    </constraints>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odC-D3-qXj" userLabel="showPassword">
+                                    <rect key="frame" x="312" y="517" width="37" height="31"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain">
                                         <imageReference key="image" image="eye" catalog="system" symbolScale="medium"/>
@@ -235,6 +232,17 @@
                                     </buttonConfiguration>
                                     <connections>
                                         <action selector="showPaswordClick:" destination="-1" eventType="touchUpInside" id="Nog-Xx-WVV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHh-64-D93" userLabel="showRePassword">
+                                    <rect key="frame" x="312" y="571" width="37" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <imageReference key="image" image="eye" catalog="system" symbolScale="medium"/>
+                                        <color key="baseForegroundColor" systemColor="placeholderTextColor"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="showRePasswordClick:" destination="-1" eventType="touchUpInside" id="2Li-DX-bas"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -253,18 +261,18 @@
                                 <constraint firstItem="Hvg-O1-6Kw" firstAttribute="top" secondItem="d0X-ue-Sjn" secondAttribute="bottom" id="9WR-qd-F1P"/>
                                 <constraint firstAttribute="trailing" secondItem="Hvg-O1-6Kw" secondAttribute="trailing" constant="50" id="9fF-bI-KD1"/>
                                 <constraint firstAttribute="trailing" secondItem="hwN-VV-FPm" secondAttribute="trailing" constant="50" id="BGF-0l-lpA"/>
-                                <constraint firstItem="odC-D3-qXj" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="321" id="BYk-wX-N0C"/>
                                 <constraint firstItem="dku-kI-wbQ" firstAttribute="top" secondItem="3RU-3x-kyM" secondAttribute="bottom" constant="15" id="EVB-ZK-euT"/>
-                                <constraint firstItem="odC-D3-qXj" firstAttribute="top" secondItem="WZC-oO-yeL" secondAttribute="bottom" constant="21" id="EfP-QC-9uq"/>
                                 <constraint firstItem="0tJ-di-Qi9" firstAttribute="top" secondItem="qXJ-nj-zih" secondAttribute="top" constant="10" id="G36-0r-lto"/>
                                 <constraint firstItem="mJD-Zf-6AW" firstAttribute="top" secondItem="qXJ-nj-zih" secondAttribute="top" constant="29" id="G7S-yb-Ws9"/>
                                 <constraint firstItem="d0X-ue-Sjn" firstAttribute="top" secondItem="mJD-Zf-6AW" secondAttribute="bottom" constant="62" id="HUy-SZ-AT5"/>
                                 <constraint firstItem="EzI-vB-OOj" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="142" id="HVo-Dh-ZIL"/>
-                                <constraint firstItem="slq-6d-dJv" firstAttribute="top" secondItem="odC-D3-qXj" secondAttribute="bottom" constant="4" id="IAa-jE-miL"/>
+                                <constraint firstItem="fHh-64-D93" firstAttribute="top" secondItem="slq-6d-dJv" secondAttribute="bottom" constant="19" id="IVm-tp-k7e"/>
                                 <constraint firstAttribute="trailing" secondItem="zmS-vl-21t" secondAttribute="trailing" constant="50" id="JGz-Vy-XjH"/>
                                 <constraint firstAttribute="trailing" secondItem="bOB-Hb-nok" secondAttribute="trailing" constant="50" id="Jmu-vQ-2wg"/>
                                 <constraint firstItem="slq-6d-dJv" firstAttribute="top" secondItem="zmS-vl-21t" secondAttribute="bottom" id="Kcr-JQ-bN1"/>
                                 <constraint firstItem="WZC-oO-yeL" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="O32-js-vhM"/>
+                                <constraint firstAttribute="trailing" secondItem="odC-D3-qXj" secondAttribute="trailing" constant="65" id="OUa-Uy-v2F"/>
+                                <constraint firstAttribute="trailing" secondItem="fHh-64-D93" secondAttribute="trailing" constant="65" id="OXy-x1-kVE"/>
                                 <constraint firstItem="WZC-oO-yeL" firstAttribute="top" secondItem="dku-kI-wbQ" secondAttribute="bottom" id="Q9F-ai-TbI"/>
                                 <constraint firstItem="VQ5-8h-NTO" firstAttribute="top" secondItem="slq-6d-dJv" secondAttribute="bottom" constant="17" id="Q9y-wD-Mg9"/>
                                 <constraint firstAttribute="trailing" secondItem="mJD-Zf-6AW" secondAttribute="trailing" constant="118" id="R7J-et-uvn"/>
@@ -279,10 +287,12 @@
                                 <constraint firstAttribute="trailing" secondItem="dRd-ou-Bkf" secondAttribute="trailing" constant="50" id="dpx-11-w1U"/>
                                 <constraint firstItem="dku-kI-wbQ" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="fmy-gq-LcT"/>
                                 <constraint firstItem="hwN-VV-FPm" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="ghv-ca-cGZ"/>
+                                <constraint firstItem="odC-D3-qXj" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="312" id="gv9-Rz-JyW"/>
+                                <constraint firstItem="odC-D3-qXj" firstAttribute="top" secondItem="WZC-oO-yeL" secondAttribute="bottom" constant="19" id="hR6-Np-UT5"/>
                                 <constraint firstItem="Pvu-b6-z3W" firstAttribute="top" secondItem="VQ5-8h-NTO" secondAttribute="bottom" id="hTw-dQ-InY"/>
                                 <constraint firstAttribute="trailing" secondItem="slq-6d-dJv" secondAttribute="trailing" constant="50" id="iH9-ct-eT2"/>
+                                <constraint firstItem="fHh-64-D93" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="312" id="iLY-OJ-hIn"/>
                                 <constraint firstItem="hwN-VV-FPm" firstAttribute="top" secondItem="mM5-eC-EQt" secondAttribute="bottom" constant="17" id="jWn-En-bdG"/>
-                                <constraint firstAttribute="trailing" secondItem="odC-D3-qXj" secondAttribute="trailing" constant="56" id="mAv-yK-w3h"/>
                                 <constraint firstAttribute="trailing" secondItem="d0X-ue-Sjn" secondAttribute="trailing" constant="50" id="oc0-h8-btk"/>
                                 <constraint firstItem="VQ5-8h-NTO" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="qv5-Vw-dtD"/>
                                 <constraint firstAttribute="trailing" secondItem="WZC-oO-yeL" secondAttribute="trailing" constant="50" id="sra-X2-Aea"/>

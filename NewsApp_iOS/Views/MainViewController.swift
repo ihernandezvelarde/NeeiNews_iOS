@@ -83,7 +83,6 @@ class MainViewController: UIViewController {
         splashView.addSubview(launchImage)
         splashView.removeFromSuperview()
     
-        // FIXME: -- Change background color when design it's done.
         //simpleView?.backgroundColor = .systemPurple
     }
     
