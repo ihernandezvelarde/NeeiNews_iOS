@@ -91,23 +91,19 @@ struct OptionsConfig {
 }
 
 struct Register {
-    var name: String?
-    var lastName: String?
-    var age: String?
-    var email: String?
-    var profileType: String?
-    var password: String?
-    var rePassword: String?
+    var name: String
+    var lastName: String
+    var age: String
+    var email: String
+//    var profileType: String?
+//    var password: String?
+//    var rePassword: String?
     
-    init(textos: RegisterModalViewController) {
-        name = textos.nameTextField.text
-        lastName = textos.lastNameTextField.text
-        age = textos.ageTextField.text
-        email = textos.emailTextField.text
-        profileType = textos.dropDownLabel.text
-        password = textos.passwordTextField.text
-        rePassword = textos.rePasswordTextField.text
-        
+    init(nombre: String, apellido: String, edad: String, correo: String) {
+        self.name = nombre
+        self.lastName = apellido
+        self.age = edad
+        self.email = correo
     }
 }
 
