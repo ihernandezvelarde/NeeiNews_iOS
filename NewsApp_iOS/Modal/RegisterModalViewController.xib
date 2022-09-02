@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,6 +24,7 @@
                 <outlet property="rePasswordTextField" destination="VQ5-8h-NTO" id="4LX-8J-D99"/>
                 <outlet property="registerButton" destination="EzI-vB-OOj" id="T02-XT-paq"/>
                 <outlet property="scrollView" destination="ha4-hm-Zgd" id="sRt-Qj-mL9"/>
+                <outlet property="showPassword" destination="odC-D3-qXj" id="l7C-U1-ses"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -171,7 +173,7 @@
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="314" id="kNj-vZ-Zw4"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slq-6d-dJv" userLabel="sixth_line">
                                     <rect key="frame" x="50" y="550" width="314" height="2"/>
@@ -220,6 +222,21 @@
                                         <constraint firstAttribute="height" constant="156" id="jyC-hq-jJj"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odC-D3-qXj">
+                                    <rect key="frame" x="321" y="519" width="37" height="27"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="27" id="WeV-bH-K3G"/>
+                                        <constraint firstAttribute="width" constant="37" id="hMD-KK-CX3"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <imageReference key="image" image="eye" catalog="system" symbolScale="medium"/>
+                                        <color key="baseForegroundColor" systemColor="placeholderTextColor"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="showPaswordClick:" destination="-1" eventType="touchUpInside" id="Nog-Xx-WVV"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -236,11 +253,14 @@
                                 <constraint firstItem="Hvg-O1-6Kw" firstAttribute="top" secondItem="d0X-ue-Sjn" secondAttribute="bottom" id="9WR-qd-F1P"/>
                                 <constraint firstAttribute="trailing" secondItem="Hvg-O1-6Kw" secondAttribute="trailing" constant="50" id="9fF-bI-KD1"/>
                                 <constraint firstAttribute="trailing" secondItem="hwN-VV-FPm" secondAttribute="trailing" constant="50" id="BGF-0l-lpA"/>
+                                <constraint firstItem="odC-D3-qXj" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="321" id="BYk-wX-N0C"/>
                                 <constraint firstItem="dku-kI-wbQ" firstAttribute="top" secondItem="3RU-3x-kyM" secondAttribute="bottom" constant="15" id="EVB-ZK-euT"/>
+                                <constraint firstItem="odC-D3-qXj" firstAttribute="top" secondItem="WZC-oO-yeL" secondAttribute="bottom" constant="21" id="EfP-QC-9uq"/>
                                 <constraint firstItem="0tJ-di-Qi9" firstAttribute="top" secondItem="qXJ-nj-zih" secondAttribute="top" constant="10" id="G36-0r-lto"/>
                                 <constraint firstItem="mJD-Zf-6AW" firstAttribute="top" secondItem="qXJ-nj-zih" secondAttribute="top" constant="29" id="G7S-yb-Ws9"/>
                                 <constraint firstItem="d0X-ue-Sjn" firstAttribute="top" secondItem="mJD-Zf-6AW" secondAttribute="bottom" constant="62" id="HUy-SZ-AT5"/>
                                 <constraint firstItem="EzI-vB-OOj" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="142" id="HVo-Dh-ZIL"/>
+                                <constraint firstItem="slq-6d-dJv" firstAttribute="top" secondItem="odC-D3-qXj" secondAttribute="bottom" constant="4" id="IAa-jE-miL"/>
                                 <constraint firstAttribute="trailing" secondItem="zmS-vl-21t" secondAttribute="trailing" constant="50" id="JGz-Vy-XjH"/>
                                 <constraint firstAttribute="trailing" secondItem="bOB-Hb-nok" secondAttribute="trailing" constant="50" id="Jmu-vQ-2wg"/>
                                 <constraint firstItem="slq-6d-dJv" firstAttribute="top" secondItem="zmS-vl-21t" secondAttribute="bottom" id="Kcr-JQ-bN1"/>
@@ -262,6 +282,7 @@
                                 <constraint firstItem="Pvu-b6-z3W" firstAttribute="top" secondItem="VQ5-8h-NTO" secondAttribute="bottom" id="hTw-dQ-InY"/>
                                 <constraint firstAttribute="trailing" secondItem="slq-6d-dJv" secondAttribute="trailing" constant="50" id="iH9-ct-eT2"/>
                                 <constraint firstItem="hwN-VV-FPm" firstAttribute="top" secondItem="mM5-eC-EQt" secondAttribute="bottom" constant="17" id="jWn-En-bdG"/>
+                                <constraint firstAttribute="trailing" secondItem="odC-D3-qXj" secondAttribute="trailing" constant="56" id="mAv-yK-w3h"/>
                                 <constraint firstAttribute="trailing" secondItem="d0X-ue-Sjn" secondAttribute="trailing" constant="50" id="oc0-h8-btk"/>
                                 <constraint firstItem="VQ5-8h-NTO" firstAttribute="leading" secondItem="qXJ-nj-zih" secondAttribute="leading" constant="50" id="qv5-Vw-dtD"/>
                                 <constraint firstAttribute="trailing" secondItem="WZC-oO-yeL" secondAttribute="trailing" constant="50" id="sra-X2-Aea"/>
@@ -299,6 +320,7 @@
     </objects>
     <resources>
         <image name="NeeiNews_icon" width="345" height="345"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="x.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

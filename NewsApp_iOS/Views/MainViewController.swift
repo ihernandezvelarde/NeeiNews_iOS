@@ -104,7 +104,6 @@ class MainViewController: UIViewController {
     }
     
     @objc func clickRight(sender:UITapGestureRecognizer) {
-            print("CLICK RIGHT")
             let vc = RegisterModalViewController()
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
