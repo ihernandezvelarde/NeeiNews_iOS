@@ -18,6 +18,7 @@ class RegisterModalViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     @IBOutlet weak var showPassword: UIButton!
+    @IBOutlet weak var showRePassword: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -76,7 +77,14 @@ class RegisterModalViewController: UIViewController {
         }else{
             passwordTextField.isSecureTextEntry = false
         }
-        
+    }
+    
+    @IBAction func showRePasswordClick(_ sender: UIButton) {
+        if rePasswordTextField.isSecureTextEntry == false{
+            rePasswordTextField.isSecureTextEntry = true
+        }else{
+            rePasswordTextField.isSecureTextEntry = false
+        }
     }
     
     
@@ -94,8 +102,24 @@ class RegisterModalViewController: UIViewController {
         let apellidos: String = lastNameTextField.text ?? ""
         let edad: String = ageTextField.text ?? ""
         let email: String = emailTextField.text ?? ""
-        let hola = Utils().ckeck(register: Register(nombre: nombre, apellido: apellidos, edad: edad, correo: email))
-        print("AQUI\(hola)")
+        let tipo: String = dropDownLabel.text ?? "Profile type*"
+        let contra : String = passwordTextField.text ?? ""
+        let recontra: String = rePasswordTextField.text ?? ""
+        
+        let wrongValues = Utils().ckeck(register: Register(nombre: nombre, apellido: apellidos, edad: edad, correo: email, tipo: tipo, contra: contra, reContra: recontra))
+        if wrongValues == [] {
+            let controller = UIAlertController(title: "Everything is correct!", message: "Your registration has been completed successfully.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(ok)
+            self.present(controller, animated: true, completion: nil)
+        }else{
+            //TODO: Hacer que se printen todos los campos uno a uno
+            let controller = UIAlertController(title: "Something went wrong!", message: "", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+                controller.addAction(ok)
+            self.present(controller, animated: true, completion: nil)
+            
+        }
     }
 }
 

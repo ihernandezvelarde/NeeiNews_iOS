@@ -24,30 +24,39 @@ class Utils {
         var characterSetTwo = CharacterSet()
         characterSet.insert(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
         characterSetTwo.insert(charactersIn: "0123456789")
+        
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
         if register.name.rangeOfCharacter(from: characterSet) != nil && register.name.rangeOfCharacter(from: characterSetTwo) == nil && register.name != " " {
-            lista.append("Nombre correcto")
         }else{
-            lista.append("Nombre incorrecto")
+            lista.append("Name")
         }
         if register.lastName.rangeOfCharacter(from: characterSet) != nil && register.lastName.rangeOfCharacter(from: characterSetTwo) == nil && register.lastName != " " {
-            lista.append("Apellidos correctos")
         }else{
-            lista.append("Apellidos incorrectos")
+            lista.append("Last name")
         }
         if register.age.rangeOfCharacter(from: characterSetTwo) != nil && register.age.rangeOfCharacter(from: characterSet) == nil && Int(register.age) ?? 0 >= 16 && Int(register.age) ?? 0 <= 150 {
-            lista.append("Edad correcta")
         }else{
-            lista.append("Edad incorrecta")
+            lista.append("Age")
         }
         if emailPred.evaluate(with: register.email) == true {
-            lista.append("Email correcto")
         }else{
-            lista.append("Email incorrecto")
+            lista.append("Email")
         }
-        
+        if register.profileType != "Profile type*" {
+        }else{
+            lista.append("Profile type")
+        }
+        if register.password.rangeOfCharacter(from: characterSet) != nil && register.password.rangeOfCharacter(from: characterSetTwo) != nil && register.password != " " && register.password.count > 6 {
+        }else{
+            lista.append("Password")
+        }
+        if register.rePassword == register.password{
+            
+        }else{
+            lista.append("Re-password")
+        }
         return lista
     }
 }

@@ -95,15 +95,18 @@ struct Register {
     var lastName: String
     var age: String
     var email: String
-//    var profileType: String?
-//    var password: String?
-//    var rePassword: String?
+    var profileType: String
+    var password: String
+    var rePassword: String
     
-    init(nombre: String, apellido: String, edad: String, correo: String) {
+    init(nombre: String, apellido: String, edad: String, correo: String, tipo: String, contra: String, reContra: String) {
         self.name = nombre
         self.lastName = apellido
         self.age = edad
         self.email = correo
+        self.profileType = tipo
+        self.password = contra
+        self.rePassword = reContra
     }
 }
 
