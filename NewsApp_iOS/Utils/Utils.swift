@@ -30,50 +30,50 @@ class Utils {
         
         if register.name.rangeOfCharacter(from: characterSet) != nil && register.name.rangeOfCharacter(from: characterSetTwo) != nil {
             lista.append("Name can't contain numbers.")
-        }else if register.name == "" {
+        } else if register.name == "" {
             lista.append("Name can't be empty.")
-        }else {}
+        }
         
         if register.lastName.rangeOfCharacter(from: characterSet) != nil && register.lastName.rangeOfCharacter(from: characterSetTwo) != nil {
             lista.append("Last name can't contain numbers.")
-        }else if register.lastName == "" {
+        } else if register.lastName == "" {
             lista.append("Last name can't be empty.")
-        }else {}
+        }
         
         let edad = (register.age as NSString).integerValue
-        if edad < 16 || edad > 150 {
-            lista.append("You must be over 16 years old and under 150 years old.")
-        }else if register.age == "" || register.age == "0" {
+        if register.age == "" {
             lista.append("Age can't be empty.")
-        }else if register.age.rangeOfCharacter(from: characterSetTwo) == nil && register.age.rangeOfCharacter(from: characterSet) != nil {
+        } else if edad < 16 || edad > 150 {
+            lista.append("You must be over 16 years old and under 150 years old.")
+        } else if register.age.rangeOfCharacter(from: characterSetTwo) == nil && register.age.rangeOfCharacter(from: characterSet) != nil {
             lista.append("Age can't be letters.")
-        }else {}
+        }
       
         if register.email == "" {
             lista.append("Email can't be empty.")
-        }else if emailPred.evaluate(with: register.email) == false {
+        } else if emailPred.evaluate(with: register.email) == false {
             lista.append("Email must have this structure: characters@characters.characters")
-        }else {}
+        }
         
         if register.profileType == "Profile type*" {
             lista.append("You must select a type of profile.")
-        }else {}
+        }
         
         if register.password == "" {
             lista.append("Password can't be empty.")
-        }else if register.password.rangeOfCharacter(from: characterSet) == nil  {
+        } else if register.password.rangeOfCharacter(from: characterSet) == nil  {
             lista.append("Password can't be just numbers.")
-        }else if register.password.rangeOfCharacter(from: characterSetTwo) == nil {
+        } else if register.password.rangeOfCharacter(from: characterSetTwo) == nil {
             lista.append("Password can't be just letters.")
-        }else if register.password.count < 6 {
+        } else if register.password.count < 6 {
             lista.append("Password must have at least 6 characters.")
-        }else {}
+        }
         
-        if register.rePassword != register.password {
-            lista.append("The confirmation must be equal to the password.")
-        }else if register.rePassword != "" {
-            lista.append("You need to confirm the password.")
-        }else {}
+//        if register.rePassword != register.password {
+//            lista.append("The confirmation must be equal to the password.")
+//        } else if register.rePassword != "" {
+//            lista.append("You need to confirm the password.")
+//        }
         return lista
     }
 }

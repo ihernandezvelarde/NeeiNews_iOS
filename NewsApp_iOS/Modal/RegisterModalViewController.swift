@@ -43,7 +43,7 @@ class RegisterModalViewController: UIViewController {
         myUIView.layer.shadowColor = UIColor.systemPurple.cgColor
         myUIView.layer.shadowOpacity = 40
         myUIView.layer.shadowOffset = CGSize.zero
-        myUIView.layer.shadowRadius = 2
+        myUIView.layer.shadowRadius = 5
         
 //        myView.layer.cornerRadius = myView.frame.size.height/2
 //        myView.translatesAutoresizingMaskIntoConstraints = true
