@@ -14,9 +14,11 @@ class RegisterModalViewController: UIViewController {
     @IBOutlet weak var dropDownLabel: UILabel!
     @IBOutlet weak var dropDownButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var myImageView: UIImageView!
+    
+    @IBOutlet weak var myUIView: UIView!
     @IBOutlet weak var showPassword: UIButton!
     @IBOutlet weak var showRePassword: UIButton!
     
@@ -29,14 +31,27 @@ class RegisterModalViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     let dropDown = DropDown()
+    let config = ButtonCellConfig()
     let dropDownValues = ["Reader","Editor","Professional","Admin"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        //iconImage.layer.shadowOffset = CGSize(width: -5,height: 5)
-        //iconImage.layer.shadowRadius = 5.0
-//        iconImage.layer.shadowColor = CGColor(red: 148, green: 85, blue: 255, alpha: 1.0)
-//        iconImage.layer.shadowOpacity = 0.7
-//        iconImage.layer.shadowRadius = 10
+        myImageView.layer.cornerRadius = myImageView.frame.size.height/2
+        myImageView.translatesAutoresizingMaskIntoConstraints = true
+        
+        myUIView.layer.cornerRadius = myImageView.frame.size.height/2
+        myUIView.translatesAutoresizingMaskIntoConstraints = true
+        myUIView.layer.shadowColor = UIColor.systemPurple.cgColor
+        myUIView.layer.shadowOpacity = 40
+        myUIView.layer.shadowOffset = CGSize.zero
+        myUIView.layer.shadowRadius = 2
+        
+//        myView.layer.cornerRadius = myView.frame.size.height/2
+//        myView.translatesAutoresizingMaskIntoConstraints = true
+        //        myImage.layer.cornerRadius = myImage.frame.size.width/2
+//        myImage.clipsToBounds = true
+//        myImage.layer.shadowColor = .init(red: 255, green: 255, blue: 255, alpha: 1.0)
+//        myImage.layer.shadowRadius = 10
+        
         registerButton.setTitle("Register", for: .normal)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
