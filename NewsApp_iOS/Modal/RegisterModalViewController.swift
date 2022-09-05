@@ -49,8 +49,9 @@ class RegisterModalViewController: UIViewController {
         dropDown.direction = .bottom
         dropDown.selectionAction = {[unowned self] (index: Int, item: String) in print("Selected item: \(item). At index: \(index)")
             self.dropDownLabel.text = dropDownValues[index]
-            
+            self.dropDownLabel.textColor = .black
         }
+        
     }
 
     @objc func keyboardWillShow(notification:NSNotification) {
@@ -72,7 +73,7 @@ class RegisterModalViewController: UIViewController {
     
     
     @IBAction func showPaswordClick(_ sender: UIButton) {
-        if passwordTextField.isSecureTextEntry == false{
+        if passwordTextField.isSecureTextEntry == false {
             passwordTextField.isSecureTextEntry = true
         }else{
             passwordTextField.isSecureTextEntry = false
@@ -80,7 +81,7 @@ class RegisterModalViewController: UIViewController {
     }
     
     @IBAction func showRePasswordClick(_ sender: UIButton) {
-        if rePasswordTextField.isSecureTextEntry == false{
+        if rePasswordTextField.isSecureTextEntry == false {
             rePasswordTextField.isSecureTextEntry = true
         }else{
             rePasswordTextField.isSecureTextEntry = false
@@ -97,7 +98,6 @@ class RegisterModalViewController: UIViewController {
     }
     
     @IBAction func clickRegisterButton(_ sender: UIButton) {
-        //print("NOMBRE\(nameTextField.text)")
         let nombre: String = nameTextField.text ?? ""
         let apellidos: String = lastNameTextField.text ?? ""
         let edad: String = ageTextField.text ?? ""
@@ -107,6 +107,7 @@ class RegisterModalViewController: UIViewController {
         let recontra: String = rePasswordTextField.text ?? ""
         
         let wrongValues = Utils().ckeck(register: Register(nombre: nombre, apellido: apellidos, edad: edad, correo: email, tipo: tipo, contra: contra, reContra: recontra))
+        print(wrongValues)
         if wrongValues == [] {
             let controller = UIAlertController(title: "Everything is correct!", message: "Your registration has been completed successfully.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -114,7 +115,8 @@ class RegisterModalViewController: UIViewController {
             self.present(controller, animated: true, completion: nil)
         }else{
             //TODO: Hacer que se printen todos los campos uno a uno
-            let controller = UIAlertController(title: "Something went wrong!", message: "", preferredStyle: .alert)
+
+            let controller = UIAlertController(title: "Something went wrong!", message: "Please, check:\n \(wrongValues.toPrint)", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
             controller.addAction(ok)
             self.present(controller, animated: true, completion: nil)
@@ -122,4 +124,14 @@ class RegisterModalViewController: UIViewController {
         }
     }
 }
+extension Array {
+    var toPrint: String  {
+        var str = ""
+        for element in self {
+            str += "- \(element)\n "
+        }
+        return str
+    }
+}
+
 

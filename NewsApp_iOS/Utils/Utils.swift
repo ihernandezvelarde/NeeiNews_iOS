@@ -52,7 +52,7 @@ class Utils {
         }else{
             lista.append("Password")
         }
-        if register.rePassword == register.password{
+        if register.rePassword == register.password && register.rePassword != "" {
             
         }else{
             lista.append("Re-password")
