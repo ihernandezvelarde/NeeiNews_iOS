@@ -1034,8 +1034,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="116" translatesAutoresizingMaskIntoConstraints="NO" id="8pQ-cu-iQb">
-                                <rect key="frame" x="45" y="162.5" width="324" height="121.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="8pQ-cu-iQb">
+                                <rect key="frame" x="58" y="172.5" width="298" height="121.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="F6l-JY-jTj">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="121.5"/>
@@ -1049,7 +1049,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="AR" cornerStyle="fixed"/>
                                                 <connections>
-                                                    <action selector="argentinianButtonPressed:" destination="LBz-ZQ-IJb" eventType="touchUpInside" id="V1q-tj-5hU"/>
+                                                    <action selector="argentinianButtonPressed:" destination="LBz-ZQ-IJb" eventType="touchUpInside" id="Ot5-sn-gHo"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Argentinian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdp-vV-4N2">
@@ -1061,7 +1061,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Feb-LM-9pq">
-                                        <rect key="frame" x="220" y="0.0" width="104" height="121.5"/>
+                                        <rect key="frame" x="194" y="0.0" width="104" height="121.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx9-lu-pvV" userLabel="English_Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="94"/>
@@ -1085,8 +1085,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="116" translatesAutoresizingMaskIntoConstraints="NO" id="Rk9-P8-GPX">
-                                <rect key="frame" x="45" y="339" width="324" height="121.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="Rk9-P8-GPX">
+                                <rect key="frame" x="58" y="349" width="298" height="121.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="xrW-OR-Nu6">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="121.5"/>
@@ -1113,7 +1113,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="C4i-Ux-QjX">
-                                        <rect key="frame" x="220" y="0.0" width="104" height="121.5"/>
+                                        <rect key="frame" x="194" y="0.0" width="104" height="121.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c1-cK-MH5" userLabel="Italian_Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="93"/>
@@ -1147,25 +1147,27 @@
                         <viewLayoutGuide key="safeArea" id="8ar-Cj-nH9"/>
                         <color key="backgroundColor" red="0.83700658760000002" green="0.77781778999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="8pQ-cu-iQb" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="45" id="0PO-pc-JHN"/>
                             <constraint firstItem="ARr-9A-sf4" firstAttribute="centerX" secondItem="Byv-u6-1Bc" secondAttribute="centerX" id="0VZ-xd-T37"/>
                             <constraint firstItem="jBq-eG-IUm" firstAttribute="centerX" secondItem="Byv-u6-1Bc" secondAttribute="centerX" id="A66-Ev-HQE"/>
                             <constraint firstItem="lTD-gQ-0k4" firstAttribute="top" secondItem="Zgn-I8-ZcY" secondAttribute="bottom" constant="10" id="C6p-87-mgf"/>
+                            <constraint firstItem="Rk9-P8-GPX" firstAttribute="centerX" secondItem="Byv-u6-1Bc" secondAttribute="centerX" id="EYe-va-FAu"/>
+                            <constraint firstItem="Rk9-P8-GPX" firstAttribute="top" secondItem="8pQ-cu-iQb" secondAttribute="bottom" constant="55" id="FbT-pe-qxF"/>
+                            <constraint firstItem="8pQ-cu-iQb" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="58" id="GD1-wY-94H"/>
+                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="8pQ-cu-iQb" secondAttribute="trailing" constant="58" id="Jv0-Wl-wxk"/>
                             <constraint firstItem="Zgn-I8-ZcY" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="35" id="LIe-Bs-9JA"/>
                             <constraint firstItem="lTD-gQ-0k4" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="35" id="O48-Nf-NAM"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="Zgn-I8-ZcY" secondAttribute="trailing" constant="35" id="SY4-I2-aJR"/>
-                            <constraint firstItem="Rk9-P8-GPX" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="45" id="X23-LR-ppf"/>
-                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="Rk9-P8-GPX" secondAttribute="trailing" constant="45" id="ZHa-5D-3hY"/>
+                            <constraint firstItem="8pQ-cu-iQb" firstAttribute="centerX" secondItem="Byv-u6-1Bc" secondAttribute="centerX" id="Toz-9K-mzZ"/>
+                            <constraint firstItem="Rk9-P8-GPX" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="58" id="Ulj-v9-Ivq"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="ARr-9A-sf4" secondAttribute="trailing" constant="134" id="Zrn-nM-P7x"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jBq-eG-IUm" secondAttribute="trailing" id="fFT-Lf-HwV"/>
-                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="8pQ-cu-iQb" secondAttribute="trailing" constant="45" id="fR3-ze-068"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="bottom" secondItem="ARr-9A-sf4" secondAttribute="bottom" constant="40" id="gGL-N3-KKN"/>
                             <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="lTD-gQ-0k4" secondAttribute="trailing" constant="35" id="hbE-kS-reD"/>
                             <constraint firstItem="jBq-eG-IUm" firstAttribute="leading" secondItem="8ar-Cj-nH9" secondAttribute="leading" constant="143" id="llo-BL-SAS"/>
                             <constraint firstItem="Zgn-I8-ZcY" firstAttribute="top" secondItem="8ar-Cj-nH9" secondAttribute="top" constant="17" id="p7y-h5-SKA"/>
                             <constraint firstItem="ARr-9A-sf4" firstAttribute="top" secondItem="jBq-eG-IUm" secondAttribute="bottom" constant="13" id="pSb-8r-QBm"/>
-                            <constraint firstItem="8pQ-cu-iQb" firstAttribute="top" secondItem="lTD-gQ-0k4" secondAttribute="bottom" constant="35" id="q7v-yH-5DB"/>
-                            <constraint firstItem="Rk9-P8-GPX" firstAttribute="top" secondItem="8pQ-cu-iQb" secondAttribute="bottom" constant="55" id="ue7-xF-CBI"/>
+                            <constraint firstItem="8ar-Cj-nH9" firstAttribute="trailing" secondItem="Rk9-P8-GPX" secondAttribute="trailing" constant="58" id="vC7-KG-WrN"/>
+                            <constraint firstItem="8pQ-cu-iQb" firstAttribute="top" secondItem="lTD-gQ-0k4" secondAttribute="bottom" constant="45" id="yVh-8w-k4F"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="Qwo-GE-soG">
