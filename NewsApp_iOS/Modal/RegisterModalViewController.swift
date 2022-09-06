@@ -35,6 +35,23 @@ class RegisterModalViewController: UIViewController {
     let dropDownValues = ["Reader","Editor","Professional","Admin"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField.placeholder = "Name*"
+        lastNameTextField.placeholder = "Last name*"
+        ageTextField.placeholder = "Age*"
+        emailTextField.placeholder = "Email*"
+        dropDownLabel.text = "Profile type*"
+        passwordTextField.placeholder = "Password*"
+        rePasswordTextField.placeholder = "Comfirm password*"
+        
+        nameTextField.textColor = .placeholderText
+        lastNameTextField.textColor = .placeholderText
+        ageTextField.textColor = .placeholderText
+        emailTextField.textColor = .placeholderText
+        dropDownLabel.textColor = .placeholderText
+        passwordTextField.textColor = .placeholderText
+        rePasswordTextField.textColor = .placeholderText
+
         myImageView.layer.cornerRadius = myImageView.frame.size.height/2
         myImageView.translatesAutoresizingMaskIntoConstraints = true
         
@@ -45,14 +62,8 @@ class RegisterModalViewController: UIViewController {
         myUIView.layer.shadowOffset = CGSize.zero
         myUIView.layer.shadowRadius = 5
         
-//        myView.layer.cornerRadius = myView.frame.size.height/2
-//        myView.translatesAutoresizingMaskIntoConstraints = true
-        //        myImage.layer.cornerRadius = myImage.frame.size.width/2
-//        myImage.clipsToBounds = true
-//        myImage.layer.shadowColor = .init(red: 255, green: 255, blue: 255, alpha: 1.0)
-//        myImage.layer.shadowRadius = 10
-        
         registerButton.setTitle("Register", for: .normal)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
         
@@ -86,7 +97,6 @@ class RegisterModalViewController: UIViewController {
         scrollView.contentInset = contentInset
     }
     
-    
     @IBAction func showPaswordClick(_ sender: UIButton) {
         if passwordTextField.isSecureTextEntry == false {
             passwordTextField.isSecureTextEntry = true
@@ -102,7 +112,6 @@ class RegisterModalViewController: UIViewController {
             rePasswordTextField.isSecureTextEntry = false
         }
     }
-    
     
     @IBAction func dropDownButtonClick(_ sender: UIButton) {
         dropDown.show()
