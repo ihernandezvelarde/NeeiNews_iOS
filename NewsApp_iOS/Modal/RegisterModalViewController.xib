@@ -92,7 +92,7 @@
                                         <constraint firstAttribute="width" constant="314" id="uy6-gA-ZBO"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mM5-eC-EQt" userLabel="third_line">
                                     <rect key="frame" x="50" y="406" width="314" height="2"/>

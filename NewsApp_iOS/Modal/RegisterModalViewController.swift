@@ -43,7 +43,7 @@ class RegisterModalViewController: UIViewController {
         myUIView.layer.shadowColor = UIColor.systemPurple.cgColor
         myUIView.layer.shadowOpacity = 40
         myUIView.layer.shadowOffset = CGSize.zero
-        myUIView.layer.shadowRadius = 2
+        myUIView.layer.shadowRadius = 5
         
 //        myView.layer.cornerRadius = myView.frame.size.height/2
 //        myView.translatesAutoresizingMaskIntoConstraints = true
@@ -125,19 +125,29 @@ class RegisterModalViewController: UIViewController {
         print(wrongValues)
         if wrongValues == [] {
             let controller = UIAlertController(title: "Everything is correct!", message: "Your registration has been completed successfully.", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+            })
             controller.addAction(ok)
             self.present(controller, animated: true, completion: nil)
+            nameTextField.text = ""
+            lastNameTextField.text = ""
+            ageTextField.text = ""
+            emailTextField.text = ""
+            dropDownLabel.textColor = .placeholderText
+            dropDownLabel.text = "Profile type*"
+            passwordTextField.text = ""
+            rePasswordTextField.text = ""
+            
         }else{
-            //TODO: Hacer que se printen todos los campos uno a uno
-
             let controller = UIAlertController(title: "Something went wrong!", message: "Please, check:\n \(wrongValues.toPrint)", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
             controller.addAction(ok)
             self.present(controller, animated: true, completion: nil)
-            
         }
     }
+    
 }
 extension Array {
     var toPrint: String  {
