@@ -22,31 +22,49 @@ class Utils {
         var lista: [String] = []
         var characterSet = CharacterSet()
         var characterSetTwo = CharacterSet()
+        var characterSetThree = CharacterSet()
+        
         characterSet.insert(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
         characterSetTwo.insert(charactersIn: "0123456789")
+        characterSetThree.insert(charactersIn: "\\/:*?\"<>|@!.,;-_´`{}^+[]ªº()&¬%¢$·#¿¡¨'")
         
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z-]+.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
-        if register.name.rangeOfCharacter(from: characterSet) != nil && register.name.rangeOfCharacter(from: characterSetTwo) != nil {
-            lista.append("Name can't contain numbers.")
-        } else if register.name == "" {
+        //TODO: Hacer las cambiar las comprobaciones de register.name/ register.LastName por las trimmed
+        let trimmedName = register.name.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedLastName = register.lastName.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if trimmedName == "" || register.name == "" {
             lista.append("Name can't be empty.")
         }
-        
-        if register.lastName.rangeOfCharacter(from: characterSet) != nil && register.lastName.rangeOfCharacter(from: characterSetTwo) != nil {
-            lista.append("Last name can't contain numbers.")
-        } else if register.lastName == "" {
-            lista.append("Last name can't be empty.")
+        if register.name.rangeOfCharacter(from: characterSet) != nil && register.name.rangeOfCharacter(from: characterSetTwo) != nil {
+            lista.append("Name can't contain numbers and letters.")
+        } else if register.name.rangeOfCharacter(from: characterSetTwo) != nil {
+            lista.append("Name can't be only numbers.")
+        } else if register.name.rangeOfCharacter(from: characterSetThree) != nil{
+            lista.append("Name can't contains special characters.")
         }
         
-        let edad = (register.age as NSString).integerValue
+        if trimmedLastName == "" || register.lastName == "" {
+            lista.append("Last name can't be empty.")
+        }
+        if register.lastName.rangeOfCharacter(from: characterSet) != nil && register.lastName.rangeOfCharacter(from: characterSetTwo) != nil {
+            lista.append("Last name can't contain numbers.")
+        } else if register.lastName.rangeOfCharacter(from: characterSetTwo) != nil {
+            lista.append("Last name can't be only numbers.")
+        } else if register.lastName.rangeOfCharacter(from: characterSetThree) != nil{
+            lista.append("Last name can't contains special characters.")
+        }
+        
         if register.age == "" {
             lista.append("Age can't be empty.")
-        } else if edad < 16 || edad > 150 {
-            lista.append("You must be over 16 years old and under 150 years old.")
-        } else if register.age.rangeOfCharacter(from: characterSetTwo) == nil && register.age.rangeOfCharacter(from: characterSet) != nil {
+        } else if register.age.rangeOfCharacter(from: characterSetTwo) != nil && register.age.rangeOfCharacter(from: characterSet) != nil {
+            lista.append("Age can't be letters and numbers.")
+        } else if register.age.rangeOfCharacter(from: characterSet) != nil {
             lista.append("Age can't be letters.")
+        }else if (register.age as NSString).integerValue < 16 || (register.age as NSString).integerValue > 150 {
+            lista.append("You must be over 16 years old and under 150 years old.")
         }
       
         if register.email == "" {
@@ -68,12 +86,13 @@ class Utils {
         } else if register.password.count < 6 {
             lista.append("Password must have at least 6 characters.")
         }
-        
-//        if register.rePassword != register.password {
-//            lista.append("The confirmation must be equal to the password.")
-//        } else if register.rePassword != "" {
-//            lista.append("You need to confirm the password.")
-//        }
+        if register.password != "" {
+            if register.rePassword == "" {
+            lista.append("You need to confirm the password.")
+            } else if register.rePassword != register.password {
+            lista.append("The confirmation must be equal to the password.")
+            }
+        }
         return lista
     }
 }
