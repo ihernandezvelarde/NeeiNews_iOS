@@ -78,11 +78,10 @@ class OptionsViewController: UIViewController {
     }
     
     @IBAction func sobreLaAppButtonPressed(_ sender: UIButton) {
-        print("SOBRE LA APP BUTTON IS PRESSED!")
+        print("ABOUT APP BUTTON IS PRESSED!")
     }
     
-    
     @IBAction func permisosButtonPressed(_ sender: UIButton) {
-        print("PERMISOS BUTTON IS PRESSED!")
+        print("PERMISSIONS BUTTON IS PRESSED!")
     }
 }

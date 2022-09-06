@@ -84,10 +84,7 @@ struct OptionsConfig {
     var language: String = "LANGUAGE"
     var textFont: String = "Copperplate-Bold"
     var sobreLaApp: String = "About app"
-    var permisos: String = "Dermissions"
-    var catalan: String = "Catalan"
-    var castellano: String = "Spanish"
-    var ingles: String = "English"
+    var permisos: String = "Permissions"
 }
 
 struct Register {
