@@ -10,15 +10,18 @@ import UIKit
 
 class OptionsViewController: UIViewController {
     
-    @IBOutlet weak var lenguageLabel: UILabel!
     
-    @IBOutlet weak var castellanoLabel: UILabel!
-    @IBOutlet weak var catalanLabel: UILabel!
-    @IBOutlet weak var inglesLabel: UILabel!
+    @IBOutlet weak var tileLabel: UILabel!
+    @IBOutlet weak var choseYourLanguajeLabel: UILabel!
     
-    @IBOutlet weak var castellanoButton: UIButton!
-    @IBOutlet weak var catalanButton: UIButton!
-    @IBOutlet weak var inglesButton: UIButton!
+    @IBOutlet weak var argentinianButton: UIButton!
+    @IBOutlet weak var argentinianLabel: UILabel!
+    @IBOutlet weak var englishButton: UIButton!
+    @IBOutlet weak var englishLabel: UILabel!
+    @IBOutlet weak var japaneseButton: UIButton!
+    @IBOutlet weak var japaneseLabel: UILabel!
+    @IBOutlet weak var italianButton: UIButton!
+    @IBOutlet weak var italianLabel: UILabel!
     
     @IBOutlet weak var sobreLaAppButton: UIButton!
     @IBOutlet weak var permisosButton: UIButton!
@@ -28,9 +31,21 @@ class OptionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //myview.backgroundColor = .darkGray
-        lenguageLabel.text = config.language
-        lenguageLabel.textColor = .black
+        
+        tileLabel.text = "LANGUAGE"
+        choseYourLanguajeLabel.text = "Chose your language."
+        argentinianLabel.text = "Argentinian"
+        englishLabel.text = "English"
+        japaneseLabel.text = "Japanese"
+        italianLabel.text = "Italian"
+        argentinianButton.setTitle("", for: .normal)
+        englishButton.setTitle("", for: .normal)
+        japaneseButton.setTitle("", for: .normal)
+        italianButton.setTitle("", for: .normal)
+        argentinianButton.setImage(UIImage (named: "AR"), for: .normal)
+        englishButton.setImage(UIImage (named: "US"), for: .normal)
+        japaneseButton.setImage(UIImage (named: "JP"), for: .normal)
+        italianButton.setImage(UIImage (named: "IT"), for: .normal)
         
         sobreLaAppButton.configuration?.cornerStyle = .capsule
         sobreLaAppButton.setTitle(config.sobreLaApp, for: .normal)
@@ -42,80 +57,25 @@ class OptionsViewController: UIViewController {
         permisosButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
         permisosButton.setTitleColor(UIColor.black, for: .normal)
         
-        castellanoButton.setTitle("", for: .normal)
-        catalanButton.setTitle("", for: .normal)
-        inglesButton.setTitle("", for: .normal)
-        
-        castellanoButton.setImage(UIImage(named: config.radioButton), for: .normal)
-        catalanButton.setImage(UIImage(named: config.radioButton), for: .normal)
-        inglesButton.setImage(UIImage(named: config.radioButton), for: .normal)
-        
-        
-        castellanoLabel.text = config.castellano
-        castellanoLabel.textColor = .black
-        
-        catalanLabel.text = config.catalan
-        catalanLabel.textColor = .black
-        
-        inglesLabel.text = config.ingles
-        inglesLabel.textColor = .black
-    }
-    
-    @IBAction func castellanoButtonPressed(_ sender: UIButton) {
-        if sender.isSelected{
-            
-            sender.isSelected = false
-            catalanButton.isSelected = false
-            inglesButton.isSelected = false
-            
-        } else {
-            inglesButton.setImage(UIImage(named: config.radioButton), for: .normal)
-            catalanButton.setImage(UIImage(named: config.radioButton), for: .normal)
-            castellanoButton.setImage(UIImage(named: config.radioButtonOn), for: .normal)
-            sender.isSelected = true
-            catalanButton.isSelected = false
-            inglesButton.isSelected = false
-            print("CASTELLANO RADIO BUTTON IS SELECTED")
-        }
-        sender.isSelected = false
+       
     }
     
     
-    @IBAction func catalanButtonPressed(_ sender: UIButton) {
-        if sender.isSelected{
-            sender.isSelected = false
-            castellanoButton.isSelected = false
-            inglesButton.isSelected = false
-        } else {
-            inglesButton.setImage(UIImage(named: config.radioButton), for: .normal)
-            catalanButton.setImage(UIImage(named: config.radioButtonOn), for: .normal)
-            castellanoButton.setImage(UIImage(named: config.radioButton), for: .normal)
-            sender.isSelected = true
-            castellanoButton.isSelected = false
-            inglesButton.isSelected = false
-            print("CATALAN RADIO BUTTON IS SELECTED")
-        }
-        sender.isSelected = false
+    @IBAction func argentinianButtonPressed(_ sender: UIButton) {
+        print("ARGENTINIAN BUTTON IS PRESSED!")
+    }
+
+    @IBAction func englishButtonPressed(_ sender: UIButton) {
+        print("ENGLISH BUTTON IS PRESSED!")
     }
     
-    
-    @IBAction func inglesButtonPressed(_ sender: UIButton) {
-        if sender.isSelected{
-            sender.isSelected = false
-            catalanButton.isSelected = false
-            castellanoButton.isSelected = false
-        } else {
-            inglesButton.setImage(UIImage(named: config.radioButtonOn), for: .normal)
-            catalanButton.setImage(UIImage(named: config.radioButton), for: .normal)
-            castellanoButton.setImage(UIImage(named: config.radioButton), for: .normal)
-            sender.isSelected = true
-            catalanButton.isSelected = false
-            castellanoButton.isSelected = false
-            print("INGLÉS RADIO BUTTON IS SELECTED")
-        }
-        sender.isSelected = false
+    @IBAction func japaneseButtonPressed(_ sender: UIButton) {
+        print("JAPANESE BUTTON IS PRESSED!")
     }
     
+    @IBAction func italianButtonPressed(_ sender: UIButton) {
+        print("ITALIAN BUTTON IS PRESSED!")
+    }
     
     @IBAction func sobreLaAppButtonPressed(_ sender: UIButton) {
         print("SOBRE LA APP BUTTON IS PRESSED!")
