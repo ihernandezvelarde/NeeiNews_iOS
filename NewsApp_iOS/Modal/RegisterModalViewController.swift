@@ -44,13 +44,13 @@ class RegisterModalViewController: UIViewController {
         passwordTextField.placeholder = "Password*"
         rePasswordTextField.placeholder = "Comfirm password*"
         
-        nameTextField.textColor = .placeholderText
-        lastNameTextField.textColor = .placeholderText
-        ageTextField.textColor = .placeholderText
-        emailTextField.textColor = .placeholderText
+        nameTextField.textColor = .black
+        lastNameTextField.textColor = .black
+        ageTextField.textColor = .black
+        emailTextField.textColor = .black
         dropDownLabel.textColor = .placeholderText
-        passwordTextField.textColor = .placeholderText
-        rePasswordTextField.textColor = .placeholderText
+        passwordTextField.textColor = .black
+        rePasswordTextField.textColor = .black
 
         myImageView.layer.cornerRadius = myImageView.frame.size.height/2
         myImageView.translatesAutoresizingMaskIntoConstraints = true
