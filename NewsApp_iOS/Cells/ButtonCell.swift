@@ -28,24 +28,7 @@ class ButtonCell: UICollectionViewCell {
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
     
-    //    @IBOutlet weak var myFirstViewButton: UIView!
-//    @IBOutlet weak var mySecondViewButton: UIView!
-//    @IBOutlet weak var myThirdViewButton: UIView!
-//    
-// 
-//    @IBOutlet weak var myFirstViewImage: UIImageView!
-//    @IBOutlet weak var mySecondViewImage: UIImageView!
-//    @IBOutlet weak var myThirdViewImage: UIImageView!
-//    
-//    @IBOutlet weak var firstViewLabel: UILabel!
-//    @IBOutlet weak var secondViewLabel: UILabel!
-//    @IBOutlet weak var thirdViewLabel: UILabel!
-//    
-//    
-//    @IBOutlet weak var myFirstButton: UIButton!
-//    @IBOutlet weak var mySecondButton: UIButton!
-//    @IBOutlet weak var myThirdButton: UIButton!
-    
+
     var config = ButtonCellConfig()
     var cornerRadius: CGFloat = 25.0
     
@@ -57,6 +40,9 @@ class ButtonCell: UICollectionViewCell {
         secondButton.setTitle("", for: .normal)
         thirdButton.setTitle("", for: .normal)
         
+        firstIcon.image = UIImage(named: "trending-topic")
+        secondIcon.image = UIImage(named: "favorite")
+        thirdIcon.image = UIImage(named: "new")
         
         firstView.layer.shadowOffset = CGSize(width: config.shadowWidth,height: config.shadowHeight)
         firstView.layer.cornerRadius = config.cornerRadius

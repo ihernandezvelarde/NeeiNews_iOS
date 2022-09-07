@@ -10,13 +10,21 @@ import Foundation
 class Utils {
     
     func factory(number: Int) -> [Article] {
+        
         let config = UtilsConfig()
         var array: [Article] = []
+        if Reachability.isConnectedToNetwork() == true{
         for _ in 0...number {
             array.append(Article.init(title: config.title, description: config.text, url: config.url, urlToImage: "wrong", content: config.text, publishedAt: config.published, source: Source(id: "Id", name: "Name")))
         }
         return array
+        } else{
+            for _ in 0...number {
+                array.append(Article.init(title: config.titleTwo, description: config.text, url: "", urlToImage: "wrong", content: config.text, publishedAt: config.published, source: Source(id: "Id", name: "Name")))
+        }
+        return array
       }
+    }
     
     func ckeck(register: Register) -> [String] {
         var lista: [String] = []
