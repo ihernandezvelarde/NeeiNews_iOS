@@ -10,13 +10,21 @@ import Foundation
 class Utils {
     
     func factory(number: Int) -> [Article] {
+        
         let config = UtilsConfig()
         var array: [Article] = []
+        if Reachability.isConnectedToNetwork() == true{
         for _ in 0...number {
             array.append(Article.init(title: config.title, description: config.text, url: config.url, urlToImage: "wrong", content: config.text, publishedAt: config.published, source: Source(id: "Id", name: "Name")))
         }
         return array
+        } else{
+            for _ in 0...number {
+                array.append(Article.init(title: config.titleTwo, description: config.text, url: "", urlToImage: "wrong", content: config.text, publishedAt: config.published, source: Source(id: "Id", name: "Name")))
+        }
+        return array
       }
+    }
     
     func ckeck(register: Register) -> [String] {
         var lista: [String] = []
@@ -85,6 +93,9 @@ class Utils {
             lista.append("Password can't be just letters.")
         } else if register.password.count < 6 {
             lista.append("Password must have at least 6 characters.")
+        }
+        if register.rePassword == "" {
+            lista.append("Confirmation can't be empty.")
         }
         if register.password != "" {
             if register.rePassword == "" {

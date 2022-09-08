@@ -52,7 +52,6 @@ class ModalViewController: UIViewController {
     
     @IBAction func pressLinkButton(_ sender: UIButton) {
         if Reachability.isConnectedToNetwork() == true{
-            print("Connected")
             if let url = URL(string: article.url ?? "") {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {

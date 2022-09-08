@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 struct UtilsConfig {
-    var title:String = "Sorry something went wrong, we are working on it, please try again. We leave you with different curiosities and a link to the Dino game."
+    var title: String = "Sorry something went wrong. We leave you with different curiosities and a link to the Dino game."
+    var titleTwo: String = "Sorry something went wrong. We leave you with different curiosities."
     var text: String = "· The elephant is the only mammal that cannot jump.                                                                           · A man named Charles Osborne had hiccups for 69 years.                                                                         · We blink more than 10,000,000 times in a year.                                                                            · A person has more than 1,460 dreams a year."
     var description: String = "This is the description,consectetur adipiscing elit. Nunc cursus convallis sapien eget semper. Nulla a metus nec nisl volutpat vulputate a sed metus. Etiam aliquam malesuada arcu vitae pellentesque."
     var published: String = "24-08-2022 11:00:05"
@@ -57,7 +58,7 @@ struct MainConfig {
 
 struct TimeLineConfig {
     var radioButton: String = "radio-button"
-    var redRadioButton: String = "radio-on-button-purple"
+    var purpleRadioButton: String = "radio-on-button-purple"
     var line: String = "line"
     var hourEightAM: String = "8:00:00"
     var hourEightTwentyFive: String  = "8:25:00"
@@ -79,8 +80,6 @@ struct TimeLineConfig {
 }
 
 struct OptionsConfig {
-    var radioButton: String = "radio-button"
-    var radioButtonOn: String = "radio-on-button"
     var language: String = "LANGUAGE"
     var textFont: String = "Copperplate-Bold"
     var sobreLaApp: String = "About app"

@@ -109,7 +109,7 @@ class TimeLineViewController: UIViewController{
         let hours = ("\(hour):\(minutes):\(seconds)")
         
         if hours.compare(config.hourEightAM, options: .numeric) == .orderedDescending {
-            firstNewImage.image = UIImage(named: config.redRadioButton)
+            firstNewImage.image = UIImage(named: config.purpleRadioButton)
             firstNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourEightTwentyFive, options: .numeric) == .orderedDescending {
@@ -119,7 +119,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewTwoImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineAM, options: .numeric) == .orderedDescending {
-            secondNewImage.image = UIImage(named: config.redRadioButton)
+            secondNewImage.image = UIImage(named: config.purpleRadioButton)
             secondNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineFive, options: .numeric) == .orderedDescending {
@@ -129,7 +129,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewFourImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineFifteen, options: .numeric) == .orderedDescending {
-            thirdNewImage.image = UIImage(named: config.redRadioButton)
+            thirdNewImage.image = UIImage(named: config.purpleRadioButton)
             thirdNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineTwentyFive, options: .numeric) == .orderedDescending {
@@ -139,7 +139,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewSixImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourNineFourtyFive, options: .numeric) == .orderedDescending {
-            fourthNewImage.image = UIImage(named: config.redRadioButton)
+            fourthNewImage.image = UIImage(named: config.purpleRadioButton)
             fourthNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourTen, options: .numeric) == .orderedDescending {
@@ -149,7 +149,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewEigthImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourTenThirty, options: .numeric) == .orderedDescending {
-            fiveNewImage.image = UIImage(named: config.redRadioButton)
+            fiveNewImage.image = UIImage(named: config.purpleRadioButton)
             fiveNewImage.tintColor = .systemPurple
         }
         if hours.compare(config.hourEleven, options: .numeric) == .orderedDescending {
@@ -159,7 +159,7 @@ class TimeLineViewController: UIViewController{
             secondPartNextNewTenImage.tintColor = UIColor.systemPurple 
         }
         if hours.compare(config.hourTwelve, options: .numeric) == .orderedDescending {
-            sixNewImage.image = UIImage(named: config.redRadioButton)
+            sixNewImage.image = UIImage(named: config.purpleRadioButton)
         }
     }
 }
