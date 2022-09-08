@@ -30,11 +30,27 @@ class RegisterModalViewController: UIViewController {
     @IBOutlet weak var rePasswordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    
+    @IBOutlet weak var nameErrorLabel: UILabel!
+    @IBOutlet weak var errorLastNameLabel: UILabel!
+    @IBOutlet weak var ageErrorLabel: UILabel!
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    @IBOutlet weak var profileTypeErrorLabel: UILabel!
+    @IBOutlet weak var passwordErrorLabel: UILabel!
+    @IBOutlet weak var rePasswordErrorLabel: UILabel!
+    
     let dropDown = DropDown()
     let config = ButtonCellConfig()
     let dropDownValues = ["Reader","Editor","Professional","Admin"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameErrorLabel.isHidden = true
+        errorLastNameLabel.isHidden = true
+        ageErrorLabel.isHidden = true
+        emailErrorLabel.isHidden = true
+        profileTypeErrorLabel.isHidden = true
+        passwordErrorLabel.isHidden = true
+        rePasswordErrorLabel.isHidden = true
         
         nameTextField.placeholder = "Name*"
         lastNameTextField.placeholder = "Last name*"
@@ -133,6 +149,13 @@ class RegisterModalViewController: UIViewController {
         let wrongValues = Utils().ckeck(register: Register(nombre: nombre, apellido: apellidos, edad: edad, correo: email, tipo: tipo, contra: contra, reContra: recontra))
         print(wrongValues)
         if wrongValues == [] {
+            nameErrorLabel.isHidden = true
+            errorLastNameLabel.isHidden = true
+            ageErrorLabel.isHidden = true
+            emailErrorLabel.isHidden = true
+            profileTypeErrorLabel.isHidden = true
+            passwordErrorLabel.isHidden = true
+            rePasswordErrorLabel.isHidden = true
             let controller = UIAlertController(title: "Everything is correct!", message: "Your registration has been completed successfully.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
                 self.navigationController?.popViewController(animated: true)
@@ -149,15 +172,90 @@ class RegisterModalViewController: UIViewController {
             passwordTextField.text = ""
             rePasswordTextField.text = ""
             
-        }else{
-            let controller = UIAlertController(title: "Something went wrong!", message: "Please, check:\n \(wrongValues.toPrint)", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-            controller.addAction(ok)
-            self.present(controller, animated: true, completion: nil)
+        } else {
+            nameErrorLabel.isHidden = true
+            errorLastNameLabel.isHidden = true
+            ageErrorLabel.isHidden = true
+            emailErrorLabel.isHidden = true
+            profileTypeErrorLabel.isHidden = true
+            passwordErrorLabel.isHidden = true
+            rePasswordErrorLabel.isHidden = true
+            for i in wrongValues {
+                switch i {
+                case "Name can't be empty.":
+                    nameErrorLabel.isHidden = false
+                    nameErrorLabel.text = "Name can't be empty."
+                case "Name can't contain numbers and letters.":
+                    nameErrorLabel.isHidden = false
+                    nameErrorLabel.text = "Name can't contain numbers and letters."
+                case "Name can't be only numbers.":
+                    nameErrorLabel.isHidden = false
+                    nameErrorLabel.text = "Name can't be only numbers."
+                case "Name can't contains special characters.":
+                    nameErrorLabel.isHidden = false
+                    nameErrorLabel.text = "Name can't contains special characters."
+                case "Last name can't be empty.":
+                    errorLastNameLabel.isHidden = false
+                    errorLastNameLabel.text = "Last name can't be empty."
+                case "Last name can't contain numbers.":
+                    errorLastNameLabel.isHidden = false
+                    errorLastNameLabel.text = "Last name can't contain numbers."
+                case "Last name can't be only numbers.":
+                    errorLastNameLabel.isHidden = false
+                    errorLastNameLabel.text = "Last name can't be only numbers."
+                case "Last name can't contains special characters.":
+                    errorLastNameLabel.isHidden = false
+                    errorLastNameLabel.text = "Last name can't contains special chars."
+                case "Age can't be empty.":
+                    ageErrorLabel.isHidden = false
+                    ageErrorLabel.text = "Age can't be empty."
+                case "Age can't be letters and numbers.":
+                    ageErrorLabel.isHidden = false
+                    ageErrorLabel.text = "Age can't be letters and numbers."
+                case "Age can't be letters.":
+                    ageErrorLabel.isHidden = false
+                    ageErrorLabel.text = "Age can't be letters."
+                case "You must be over 16 years old and under 150 years old.":
+                    ageErrorLabel.isHidden = false
+                    ageErrorLabel.text = "Age must be over 16 and under 150."
+                case "Email can't be empty.":
+                    emailErrorLabel.isHidden = false
+                    emailErrorLabel.text = "Email can't be empty."
+                case "Email must have this structure: characters@characters.characters":
+                    emailErrorLabel.isHidden = false
+                    emailErrorLabel.text = "Structure: chars@chars.chars."
+                case "You must select a type of profile.":
+                    profileTypeErrorLabel.isHidden = false
+                    profileTypeErrorLabel.text = "You must select a type of profile."
+                case "Password can't be empty.":
+                    passwordErrorLabel.isHidden = false
+                    passwordErrorLabel.text = "Password can't be empty."
+                case "Password can't be just numbers.":
+                    passwordErrorLabel.isHidden = false
+                    passwordErrorLabel.text = "Password can't be just numbers."
+                case "Password can't be just letters.":
+                    passwordErrorLabel.isHidden = false
+                    passwordErrorLabel.text = "Password can't be just letters."
+                case "Password must have at least 6 characters.":
+                    passwordErrorLabel.isHidden = false
+                    passwordErrorLabel.text = "Password must have 6 characters."
+                case "Confirmation can't be empty.":
+                    rePasswordErrorLabel.isHidden = false
+                    rePasswordErrorLabel.text = "Confirmation can't be empty."
+                case "You need to confirm the password.":
+                    rePasswordErrorLabel.isHidden = false
+                    rePasswordErrorLabel.text = "You need to confirm the password."
+                case "The confirmation must be equal to the password.":
+                    rePasswordErrorLabel.isHidden = false
+                    rePasswordErrorLabel.text = "Passwords don't match."
+                default:
+                    print("Enjoy your day!")
+                }
+            }
         }
     }
-    
 }
+
 extension Array {
     var toPrint: String  {
         var str = ""
@@ -167,5 +265,3 @@ extension Array {
         return str
     }
 }
-
-

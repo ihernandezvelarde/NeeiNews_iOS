@@ -94,6 +94,9 @@ class Utils {
         } else if register.password.count < 6 {
             lista.append("Password must have at least 6 characters.")
         }
+        if register.rePassword == "" {
+            lista.append("Confirmation can't be empty.")
+        }
         if register.password != "" {
             if register.rePassword == "" {
             lista.append("You need to confirm the password.")
