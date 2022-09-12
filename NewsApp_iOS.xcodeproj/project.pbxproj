@@ -11,6 +11,7 @@
 		044F22CF28B7D3250075CA2B /* Inner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F22CE28B7D3250075CA2B /* Inner.swift */; };
 		04623B4A28BFA5030042664C /* RegisterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04623B4828BFA5030042664C /* RegisterModalViewController.swift */; };
 		04623B4B28BFA5030042664C /* RegisterModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04623B4928BFA5030042664C /* RegisterModalViewController.xib */; };
+		046A69ED28CF17F800817742 /* Localizable.string.strings in Resources */ = {isa = PBXBuildFile; fileRef = 046A69EF28CF17F800817742 /* Localizable.string.strings */; };
 		047C395528B624D8002C6A9E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C395428B624D8002C6A9E /* Utils.swift */; };
 		047C395728B62615002C6A9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C395628B62615002C6A9E /* Extensions.swift */; };
 		04C9EB2328AFE69E0020EF4F /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */; };
@@ -37,6 +38,7 @@
 		044F22CE28B7D3250075CA2B /* Inner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inner.swift; sourceTree = "<group>"; };
 		04623B4828BFA5030042664C /* RegisterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModalViewController.swift; sourceTree = "<group>"; };
 		04623B4928BFA5030042664C /* RegisterModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterModalViewController.xib; sourceTree = "<group>"; };
+		046A69EE28CF17F800817742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.string.strings; sourceTree = "<group>"; };
 		047C395428B624D8002C6A9E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		047C395628B62615002C6A9E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		04C9EB2128AFE69E0020EF4F /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				047C395328B624B6002C6A9E /* Utils */,
 				B19D25772875CE3C0036A669 /* Info.plist */,
 				B19D25722875CE3C0036A669 /* Assets.xcassets */,
+				046A69EF28CF17F800817742 /* Localizable.string.strings */,
 			);
 			path = NewsApp_iOS;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C9EB2428AFE69E0020EF4F /* ModalViewController.xib in Resources */,
+				046A69ED28CF17F800817742 /* Localizable.string.strings in Resources */,
 				B19D25762875CE3C0036A669 /* LaunchScreen.storyboard in Resources */,
 				B19D25732875CE3C0036A669 /* Assets.xcassets in Resources */,
 				04623B4B28BFA5030042664C /* RegisterModalViewController.xib in Resources */,
@@ -337,6 +341,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		046A69EF28CF17F800817742 /* Localizable.string.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046A69EE28CF17F800817742 /* en */,
+			);
+			name = Localizable.string.strings;
+			sourceTree = "<group>";
+		};
 		B19D256F2875CE3A0036A669 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
