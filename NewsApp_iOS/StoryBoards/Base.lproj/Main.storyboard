@@ -305,10 +305,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IKP-Eg-FON">
-                                <rect key="frame" x="0.0" y="289" width="414" height="524"/>
+                                <rect key="frame" x="0.0" y="305" width="414" height="508"/>
                                 <color key="backgroundColor" red="0.83700658760000002" green="0.77781778999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="524" id="pcZ-0Q-6vM"/>
+                                    <constraint firstAttribute="height" constant="508" id="pcZ-0Q-6vM"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JOu-8F-4b9">
                                     <size key="itemSize" width="128" height="128"/>
@@ -382,12 +382,12 @@
                                                     </cells>
                                                 </collectionView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="cAj-Ju-03K">
-                                                    <rect key="frame" x="106" y="125" width="201" height="26"/>
+                                                    <rect key="frame" x="106" y="117" width="201" height="26"/>
                                                     <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </pageControl>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXV-Bt-fuU">
-                                                    <rect key="frame" x="30" y="120" width="45" height="31"/>
+                                                    <rect key="frame" x="30" y="115" width="45" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="KHL-Cv-LLj"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="PYq-pv-kU6"/>
@@ -401,7 +401,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSC-BS-J1g">
-                                                    <rect key="frame" x="339" y="120" width="45" height="31"/>
+                                                    <rect key="frame" x="339" y="115" width="45" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="Xrd-j3-Tc0"/>
                                                         <constraint firstAttribute="height" constant="31" id="svA-XK-kAI"/>
@@ -420,12 +420,12 @@
                                                 <constraint firstItem="cAj-Ju-03K" firstAttribute="leading" secondItem="YXV-Bt-fuU" secondAttribute="trailing" constant="31" id="2Ld-oI-Bbv"/>
                                                 <constraint firstAttribute="trailing" secondItem="cAj-Ju-03K" secondAttribute="trailing" constant="107" id="4Im-Q9-pJV"/>
                                                 <constraint firstItem="Nkh-ZE-Uxw" firstAttribute="leading" secondItem="I37-wG-9Cg" secondAttribute="leading" id="81e-VL-nme"/>
-                                                <constraint firstItem="YXV-Bt-fuU" firstAttribute="top" secondItem="I37-wG-9Cg" secondAttribute="top" constant="120" id="HmL-rK-5fV"/>
-                                                <constraint firstItem="cAj-Ju-03K" firstAttribute="top" secondItem="I37-wG-9Cg" secondAttribute="top" constant="125" id="OnC-qs-UuG"/>
-                                                <constraint firstItem="YXV-Bt-fuU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I37-wG-9Cg" secondAttribute="leading" constant="20" symbolic="YES" id="Pnr-gN-em9"/>
+                                                <constraint firstItem="YXV-Bt-fuU" firstAttribute="top" secondItem="I37-wG-9Cg" secondAttribute="top" constant="115" id="HmL-rK-5fV"/>
+                                                <constraint firstItem="cAj-Ju-03K" firstAttribute="top" secondItem="I37-wG-9Cg" secondAttribute="top" constant="117" id="OnC-qs-UuG"/>
+                                                <constraint firstItem="YXV-Bt-fuU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I37-wG-9Cg" secondAttribute="leading" constant="30" id="Pnr-gN-em9"/>
                                                 <constraint firstAttribute="bottom" secondItem="Nkh-ZE-Uxw" secondAttribute="bottom" id="bNV-DX-9nI"/>
                                                 <constraint firstAttribute="trailing" secondItem="XSC-BS-J1g" secondAttribute="trailing" constant="30" id="dpS-Uc-Ait"/>
-                                                <constraint firstItem="XSC-BS-J1g" firstAttribute="top" secondItem="I37-wG-9Cg" secondAttribute="top" constant="120" id="nbl-sv-sQD"/>
+                                                <constraint firstItem="XSC-BS-J1g" firstAttribute="top" secondItem="I37-wG-9Cg" secondAttribute="top" constant="115" id="nbl-sv-sQD"/>
                                                 <constraint firstItem="cAj-Ju-03K" firstAttribute="leading" secondItem="I37-wG-9Cg" secondAttribute="leading" constant="106" id="wI8-Fc-Q89"/>
                                                 <constraint firstAttribute="trailing" secondItem="Nkh-ZE-Uxw" secondAttribute="trailing" id="xJX-x6-YCS"/>
                                                 <constraint firstItem="Nkh-ZE-Uxw" firstAttribute="top" secondItem="I37-wG-9Cg" secondAttribute="top" id="xgY-n2-9yZ"/>
@@ -936,7 +936,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1I8-ff-aL3"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.83529411764705885" green="0.77647058823529413" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="1I8-ff-aL3" firstAttribute="bottom" secondItem="IKP-Eg-FON" secondAttribute="bottom" id="81W-1C-s6U"/>
                             <constraint firstItem="9UZ-Zy-tT0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DIE-s1-0eu"/>
@@ -945,7 +945,7 @@
                             <constraint firstItem="IKP-Eg-FON" firstAttribute="leading" secondItem="1I8-ff-aL3" secondAttribute="leading" id="ak2-ib-89k"/>
                             <constraint firstItem="9UZ-Zy-tT0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="itp-hz-Ayf"/>
                             <constraint firstItem="1I8-ff-aL3" firstAttribute="trailing" secondItem="IKP-Eg-FON" secondAttribute="trailing" id="rcP-tL-KaO"/>
-                            <constraint firstItem="IKP-Eg-FON" firstAttribute="top" secondItem="9UZ-Zy-tT0" secondAttribute="bottom" constant="-2" id="vdC-k1-7PH"/>
+                            <constraint firstItem="IKP-Eg-FON" firstAttribute="top" secondItem="9UZ-Zy-tT0" secondAttribute="bottom" constant="14" id="vdC-k1-7PH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="xXS-yW-DYm">
@@ -1219,9 +1219,6 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -73,7 +73,7 @@ class MainViewController: UIViewController {
         textSecondLabel.text = "SECONDS"
         textNewsCounterLabel.text = "NEWS"
         textUsersCounterLabel.text = "USERS"
-        textMoreInfoLabel.text = "INFO"
+        textMoreInfoLabel.text = "REGIST"
         intNewsCounterLabel.text = ("\(contador)")
         intUsersCounterLabel.text = ("\(contadorUsers)")
         
