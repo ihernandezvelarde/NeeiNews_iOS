@@ -1200,15 +1200,15 @@
         <image name="IT" width="80" height="79"/>
         <image name="JP" width="80" height="80"/>
         <image name="US" width="80" height="80"/>
-        <image name="arrow.left.circle" catalog="system" width="128" height="121"/>
-        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
-        <image name="chart.xyaxis.line" catalog="system" width="128" height="101"/>
+        <image name="arrow.left.circle" catalog="system" width="32" height="32"/>
+        <image name="arrow.right.circle" catalog="system" width="32" height="32"/>
+        <image name="chart.xyaxis.line" catalog="system" width="32" height="32"/>
         <image name="facebook" width="35" height="35"/>
         <image name="favorite" width="512" height="512"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="gear" catalog="system" width="32" height="32"/>
+        <image name="house" catalog="system" width="32" height="32"/>
         <image name="line" width="40" height="40"/>
-        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map" catalog="system" width="32" height="32"/>
         <image name="new" width="512" height="512"/>
         <image name="trending-topic" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">

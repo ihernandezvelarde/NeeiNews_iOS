@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 import GoogleMaps
-import MapKit
-
 
 class MapsViewController: UIViewController, GMSMapViewDelegate {
 

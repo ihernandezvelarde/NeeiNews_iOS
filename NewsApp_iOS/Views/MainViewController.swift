@@ -33,13 +33,14 @@ class MainViewController: UIViewController {
     
     
     
-    @IBOutlet weak var fakeButtonLeft: UIView!
-    @IBOutlet weak var fakeButtonCenter: UIView!
+//    @IBOutlet weak var fakeButtonLeft: UIView!
+//    @IBOutlet weak var fakeButtonCenter: UIView!
     @IBOutlet weak var fakeButtonRight: UIView!
     
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var simpleView: UIView!
+    
     var timer : Timer?
     var config = MainConfig()
     let launchImage = UIImageView(image: UIImage(named: "news_icon")!)
