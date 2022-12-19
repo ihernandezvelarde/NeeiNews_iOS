@@ -1,4 +1,4 @@
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/title.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/title.png)
 
 Neei News is an application that contains the latest and most popular news.
 
@@ -55,7 +55,7 @@ To make this application I have decided to apply the MVC software design pattern
 
 The great advantage of this programming technique is that it allows you to modify each one of them without having to modify the others.
 
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/MVC.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/MVC.png)
 
 
 ## Components <a name="components"></a>
@@ -79,9 +79,9 @@ The components that I used in the application:
 ## Project Structure<a name="structure"></a>
 In the following images you can see the structure that I created for the project.
 
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-08.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-08.png)
 
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-36.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-36.png)
 
 ## Frameworks<a name="frameworks"></a>
 The frameworks that I used in the application have been:
@@ -107,9 +107,12 @@ https://newsapi.org/v2/everything?q=apple&sortBy={keyword}&apiKey={API key}
 ### User Interface<a name="userInterface"></a>
 
 | Main Screen   | DetailsView   |
-| ------------- |:------------- |
+|:-------------:| :-------------: |
+| ![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/MainScreen.png)|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/DetailsView.png) | 
 | Register      | TimeLine      |
+|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Register.png)|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/TimeLine.png)
 | Maps          | Language      |
+|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Maps.png)          | ![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/LANGUAGE.png)      |
 
 # Get Started<a name="getStarted"></a>
 ## Requirements<a name="requirements"></a>
