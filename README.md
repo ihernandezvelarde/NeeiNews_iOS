@@ -74,7 +74,6 @@ The components that I used in the application:
 ## Project Structure<a name="structure"></a>
 In the following images you can see the structure that I created for the project.
 
-![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-08.png)
 ![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-36.png)
 
 ## Frameworks<a name="frameworks"></a>
