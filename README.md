@@ -27,10 +27,6 @@ Finally, there would be the view of the application's language change, which con
        - [User Interface](#userInterface)
 - [Get Started](#getStarted)
    - [Requirements](#requirements)
-   - [Fork the repo](#fork)
-   - [Clone the repo](#clone)
-      - [Command line Git](#command)
-   - [Configure Fork](#configFork)
 - [To do's](#toDo)
 - [Contributing](#contributing)
 ----
@@ -122,22 +118,6 @@ https://newsapi.org/v2/everything?q=apple&sortBy={keyword}&apiKey={API key}
     - Add import DropDown in the .swift files where you want to use it.
 - Xcode 13.4.1
 - Device or Simulator iPhone 13 running iOS 15.5 or later.
-
-## Fork the repository<a name="fork"></a>
-Fork the [News App](https://github.com/ihernandezvelarde/NewsApp_iOS/fork) repository.
-
-## Clone the repository<a name="clone"></a>
-Once you have forked the repository, you can make a clone and open NewsApp_iOS.xcodeproj in Xcode.
-
-### Command line Git<a name="command"></a>
-1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the NewsApp_iOS project.
-2. cd into the NewsApp_iOS folder.
-3. Make your changes and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
-
-## Configuring a Remote for a Fork<a name="configFork"></a>
-If you make changes in the fork and would like to [sync](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) those changes with the upstream repository, you must first [configure the remote](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork). This will be required when you have created local branches and would like to make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to your upstream branch.
-- [Instructions for Mac](https://docs.github.com/en/get-started/quickstart/fork-a-repo?tool=webui).
-- [Instructions for Windows](https://docs.github.com/en/get-started/quickstart/fork-a-repo?tool=webui&platform=windows).
 
 ## To do’s<a name="toDo"></a>
 - [ ] Implement the functions of the Trending, Features and Novelty buttons on the main screen.
