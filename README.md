@@ -1,4 +1,4 @@
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/title.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/title.png)
 
 Neei News is an application that contains the latest and most popular news.
 
@@ -27,12 +27,7 @@ Finally, there would be the view of the application's language change, which con
        - [User Interface](#userInterface)
 - [Get Started](#getStarted)
    - [Requirements](#requirements)
-   - [Fork the repo](#fork)
-   - [Clone the repo](#clone)
-      - [Command line Git](#command)
-   - [Configure Fork](#configFork)
 - [To do's](#toDo)
-- [Contributing](#contributing)
 ----
 # Features<a name="features"></a>
 - The data was retrieved using the news [API](#API).
@@ -55,7 +50,7 @@ To make this application I have decided to apply the MVC software design pattern
 
 The great advantage of this programming technique is that it allows you to modify each one of them without having to modify the others.
 
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/MVC.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/MVC.png)
 
 
 ## Components <a name="components"></a>
@@ -79,9 +74,9 @@ The components that I used in the application:
 ## Project Structure<a name="structure"></a>
 In the following images you can see the structure that I created for the project.
 
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-08.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-08.png)
 
-[](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-36.png)
+![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Untitled_2022-12-18_19-17-36.png)
 
 ## Frameworks<a name="frameworks"></a>
 The frameworks that I used in the application have been:
@@ -107,9 +102,12 @@ https://newsapi.org/v2/everything?q=apple&sortBy={keyword}&apiKey={API key}
 ### User Interface<a name="userInterface"></a>
 
 | Main Screen   | DetailsView   |
-| ------------- |:------------- |
+|:-------------:| :-------------: |
+| ![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/MainScreen.png)|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/DetailsView.png) | 
 | Register      | TimeLine      |
+|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Register.png)|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/TimeLine.png)
 | Maps          | Language      |
+|![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/Maps.png)          | ![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/LANGUAGE.png)      |
 
 # Get Started<a name="getStarted"></a>
 ## Requirements<a name="requirements"></a>
@@ -120,31 +118,8 @@ https://newsapi.org/v2/everything?q=apple&sortBy={keyword}&apiKey={API key}
 - Xcode 13.4.1
 - Device or Simulator iPhone 13 running iOS 15.5 or later.
 
-## Fork the repository<a name="fork"></a>
-Fork the [News App](https://github.com/ihernandezvelarde/NewsApp_iOS/fork) repository.
-
-## Clone the repository<a name="clone"></a>
-Once you have forked the repository, you can make a clone and open NewsApp_iOS.xcodeproj in Xcode.
-
-### Command line Git<a name="command"></a>
-1. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the NewsApp_iOS project.
-2. cd into the NewsApp_iOS folder.
-3. Make your changes and create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
-
-## Configuring a Remote for a Fork<a name="configFork"></a>
-If you make changes in the fork and would like to [sync](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) those changes with the upstream repository, you must first [configure the remote](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork). This will be required when you have created local branches and would like to make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to your upstream branch.
-- [Instructions for Mac](https://docs.github.com/en/get-started/quickstart/fork-a-repo?tool=webui).
-- [Instructions for Windows](https://docs.github.com/en/get-started/quickstart/fork-a-repo?tool=webui&platform=windows).
-
-## To do’s<a name="toDo"></a>
+# To do’s<a name="toDo"></a>
 - [ ] Implement the functions of the Trending, Features and Novelty buttons on the main screen.
 - [ ] Change the registry to save the data in the cloud.
 - [ ] Implement the functionalities of the language change buttons, on the app and permissions.
 - [ ] On the main screen, change the number of news and users depending on the news that is displayed in the app and the people who enter it.
-
-## Contributing<a name="contributing"></a>
-Anyone and everyone is welcome to contribute. We do accept pull requests.
-1. Get involved.
-2. Report issues.
-3. Contribute code.
-4. Improve documentation.
