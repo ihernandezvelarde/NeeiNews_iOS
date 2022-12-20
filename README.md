@@ -28,7 +28,6 @@ Finally, there would be the view of the application's language change, which con
 - [Get Started](#getStarted)
    - [Requirements](#requirements)
 - [To do's](#toDo)
-- [Contributing](#contributing)
 ----
 # Features<a name="features"></a>
 - The data was retrieved using the news [API](#API).
@@ -119,15 +118,8 @@ https://newsapi.org/v2/everything?q=apple&sortBy={keyword}&apiKey={API key}
 - Xcode 13.4.1
 - Device or Simulator iPhone 13 running iOS 15.5 or later.
 
-## To do’s<a name="toDo"></a>
+# To do’s<a name="toDo"></a>
 - [ ] Implement the functions of the Trending, Features and Novelty buttons on the main screen.
 - [ ] Change the registry to save the data in the cloud.
 - [ ] Implement the functionalities of the language change buttons, on the app and permissions.
 - [ ] On the main screen, change the number of news and users depending on the news that is displayed in the app and the people who enter it.
-
-## Contributing<a name="contributing"></a>
-Anyone and everyone is welcome to contribute. We do accept pull requests.
-1. Get involved.
-2. Report issues.
-3. Contribute code.
-4. Improve documentation.
