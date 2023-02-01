@@ -18,7 +18,6 @@ Finally, there would be the view of the application's language change, which con
 
 - [Features](#features)
 - [Detailed Documentation](#detailedDocu)
-    - [Arquitecture](#arquitecture)
     - [Components](#components)
     - [Project Structure](#structure)
     - [Frameworks](#frameworks)
@@ -43,15 +42,6 @@ Finally, there would be the view of the application's language change, which con
 # Detailed Documentation<a name="detailedDocu"></a>
 
 In this section you will find a detailed explanation of the application, including its architecture, components, structure, frameworks, API call, and how you can start using the application immediately.
-
-## Arquitecture<a name="arquitecture"></a>
-
-To make this application I have decided to apply the MVC software design pattern since it is used to separate the data, the methodology and the graphical interface of an application into three components.
-
-The great advantage of this programming technique is that it allows you to modify each one of them without having to modify the others.
-
-![](https://github.com/ihernandezvelarde/NewsApp_iOS/blob/main/Images/MVC.png)
-
 
 ## Components <a name="components"></a>
 
